@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nautilus - Contacto</title>
+  
+  <!-- Tipografía Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET & GLOBALES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    .main-header {
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+      border-bottom: 1px solid #1f1f1f;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .brand-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .header-logo-img {
+      height: 38px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .logo-text h2 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-text span {
+      color: #aaaaaa;
+      font-size: 11px;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .main-nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a.active, .main-nav a:hover {
+      color: #ff1a1a;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .user-custom-icon {
+      width: 28px;        
+      height: 28px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .user-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .btn-login {
+      background-color: #0011bb;
+      color: #ffffff;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 1.2;
+      text-align: center;
+      border-radius: 2px;
+      display: inline-block;
+      letter-spacing: 0.5px;
+    }
+
+    /* MAIN CONTAINER */
+    .main-container {
+      width: 100%;
+      max-width: 1100px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    /* SECCIÓN HERO (TEXTO Y BANNER DE IMAGEN) */
+    .hero-contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .hero-text-col {
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .hero-title .red {
+      color: #ff0000;
+    }
+
+    .title-line {
+      width: 60px;
+      height: 3px;
+      background-color: #0d00ff;
+      margin: 10px 0 20px 0;
+    }
+
+    .hero-desc {
+      font-size: 0.85rem;
+      color: #d0d0d0;
+      line-height: 1.6;
+    }
+
+    /* MARCO DE LA IMAGEN (AJUSTE EXACTO A TU REFERENCIA) */
+    .hero-image-wrapper {
+      width: 540px;
+      height: 250px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .hero-art {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* GRID DE CONTENIDO (INFO + FORMULARIO) */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    /* LISTA DE INFORMACIÓN */
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .icon-square {
+      width: 52px;
+      height: 52px;
+      border: 1.5px solid #0d00ff;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .icon-square svg {
+      width: 26px;
+      height: 26px;
+      stroke: #0d00ff;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .info-data {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 6px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .info-data label {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+
+    .info-data span {
+      font-size: 0.85rem;
+      color: #e0e0e0;
+      font-weight: 400;
+    }
+
+    /* REDES SOCIALES */
+    .social-block h4 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .social-line {
+      width: 35px;
+      height: 2px;
+      background-color: #0d00ff;
+      margin: 6px 0 18px 0;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .social-icons svg {
+      width: 28px;
+      height: 28px;
+      fill: #0d00ff;
+      cursor: pointer;
+    }
+
+    /* CARD FORMULARIO */
+    .form-card {
+      border: 2px solid #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      background-color: #000000;
+    }
+
+    .form-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .form-line {
+      width: 35px;
+      height: 2px;
+      background-color: #0d00ff;
+      margin: 6px 0 25px 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #444444;
+      padding: 12px 15px;
+      color: #ffffff;
+      font-size: 0.8rem;
+      border-radius: 2px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #888888;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #0d00ff;
+    }
+
+    .btn-submit {
+      background-color: #0d00ff;
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 5px;
+      border-radius: 2px;
+    }
+
+    /* CARD COTIZACIÓN INFERIOR */
+    .cta-box {
+      border: 2px solid #ffffff;
+      border-radius: 12px;
+      padding: 25px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .cta-left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .chat-icon-box {
+      width: 65px;
+      height: 65px;
+      border: 1.5px solid #0d00ff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .chat-icon-box svg {
+      width: 36px;
+      height: 36px;
+      stroke: #0d00ff;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .cta-info h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .cta-info h3 .red {
+      color: #ff0000;
+    }
+
+    .cta-info p {
+      font-size: 0.75rem;
+      color: #cccccc;
+      line-height: 1.4;
+    }
+
+    .cta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+    }
+
+    .cta-right span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-align: right;
+      line-height: 1.2;
+    }
+
+    .btn-cta-action {
+      background-color: #03002e;
+      border: 1.5px solid #0d00ff;
+      color: #0d00ff;
+      padding: 10px 18px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* FOOTER */
+.footer {
+  width: 100%;
+  background-color: #000000;
+  border-top: 1px solid #1a1a1a;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr 0.8fr;
+  gap: 30px;
+}
+
+/* COLUMNA DEL LOGO */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand-logo-svg {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.footer-brand-col h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* TITULOS DE COLUMNA */
+.footer-col h5 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+/* LISTAS DE NAVEGACIÓN Y SERVICIOS (SIN PUNTOS Y EN BLANCO) */
+.footer-col ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-col ul li, 
+.footer-col ul li a {
+  font-size: 0.8rem;
+  color: #ffffff; /* Color blanco fijo */
+  text-decoration: none; /* Quita el subrayado */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+/* ENLACE ACTIVO (AZUL ELECTRICO EXACTO) */
+.footer-col ul li a.active {
+  color: #0b00c9;
+}
+
+/* COLUMNA DE CONTACTO CON ICONOS ALINEADOS */
+.contact-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.contact-item-footer svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-width: 1.8;
+  flex-shrink: 0;
+}
+
+/* COLUMNA DE REDES SOCIALES EN VERTICAL */
+.social-column-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.social-column-icons svg {
+  width: 26px;
+  height: 26px;
+  fill: #ffffff;
+  cursor: pointer;
+}
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .hero-contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-image-wrapper {
+        width: 100%;
+        height: 220px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .cta-right {
+        align-items: flex-start;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+/* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
+.main-header { position: relative; }
+.nav-toggle { display: none; background: none; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 6px; }
+.nav-toggle:hover { border-color: #ff2a2a; color: #ff2a2a; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; order: 3; }
+  .main-header { flex-wrap: wrap; padding: 12px 20px !important; gap: 10px; }
+  .main-nav { display: none; width: 100%; order: 4; }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; align-items: flex-start; gap: 14px; padding: 10px 0 4px; }
+}
+.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.1); }
+.legal-bar { text-align: center; padding: 6px 20px 28px; font-size: 11px; color: #888; letter-spacing: .5px; }
+.legal-bar a { color: #aaa; text-decoration: underline; cursor: pointer; margin: 0 8px; }
+.legal-bar a:hover { color: #ff2a2a; }
+.nx-modal { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+.nx-modal.open { display: flex; }
+.nx-modal-box { background: #0b0b12; border: 1px solid #2b00b0; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
+.nx-modal-box h3 { font-size: 20px; margin-bottom: 14px; }
+.nx-modal-box p { font-size: 13px; color: #ccc; margin-bottom: 12px; line-height: 1.7; }
+.nx-modal-box button { margin-top: 10px; background: #2b00b0; color: #fff; border: 2px solid #4a15f0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+.nx-modal-box button:hover { background: #3b00e0; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR HEADER ACTUALIZADO EN contacto.html -->
+<header class="main-header">
+    <div class="brand-container">
+        <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="header-logo-img">
+        <div class="logo-text">
+            <h2>Nautilus</h2>
+            <span>Agencia multimedial</span>
+        </div>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="contacto.html" class="active">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-actions">
+        <a href="ingreso.html" class="user-icon">
+            <img src="imagenes/perfil.jpg.svg" alt="Perfil" class="user-custom-icon">
+        </a>
+        <a href="ingreso.html" class="btn-login">
+            INICIO DE SESIÓN
+        </a>
+    </div>
+</header>
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-container">
+    
+    <!-- SECCIÓN HERO (TÍTULO A LA IZQUIERDA, IMAGEN A LA DERECHA) -->
+    <section class="hero-contact-section">
+      <div class="hero-text-col">
+        <h1 class="hero-title">CONTÁCT<span class="red">ANOS</span></h1>
+        <div class="title-line"></div>
+        <p class="hero-desc">
+          Estamos aquí para escucharte. Cuéntanos tu idea, resolvemos tus dudas o solicita una cotización. Será un gusto ayudarte a llevar tu marca al siguiente nivel.
+        </p>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="imagenes/contac_0.jpg.png" alt="Ilustración principal" class="hero-art">
+      </div>
+    </section>
+
+    <!-- SECCIÓN DATOS Y FORMULARIO -->
+    <div class="contact-grid">
+      
+      <!-- COLUMNA IZQUIERDA: INFORMACIÓN DE CONTACTO -->
+      <div class="left-col">
+        <div class="info-list">
+          <!-- EMAIL -->
+          <div class="info-item">
+            <div class="icon-square">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="info-data">
+              <label>EMAIL</label>
+              <span>HolaNautilus@gmail.com</span>
+            </div>
+          </div>
+
+          <!-- TELÉFONO -->
+          <div class="info-item">
+            <div class="icon-square">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="info-data">
+              <label>TELÉFONO</label>
+              <span>+57 320 545 4084</span>
+            </div>
+          </div>
+
+          <!-- UBICACIÓN -->
+          <div class="info-item">
+            <div class="icon-square">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="info-data">
+              <label>UBICACIÓN</label>
+              <span>Cali, Colombia</span>
+            </div>
+          </div>
+
+          <!-- HORARIO DE ATENCIÓN -->
+          <div class="info-item">
+            <div class="icon-square">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="info-data">
+              <label>HORARIO DE ATENCIÓN</label>
+              <span>Lunes a Viernes<br>9:00 am - 6:00 pm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SÍGUENOS EN REDES -->
+        <div class="social-block">
+          <h4>SÍGUENOS EN REDES</h4>
+          <div class="social-line"></div>
+          <div class="social-icons">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA: FORMULARIO DE CONTACTO -->
+      <div class="right-col">
+        <div class="form-card">
+          <h3>ESCRÍBENOS</h3>
+          <div class="form-line"></div>
+
+          <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault();">
+            <input type="text" placeholder="Nombre completo :" required>
+            <input type="email" placeholder="Tu correo electrónico :" required>
+            <input type="text" placeholder="¿En qué podemos ayudarte?">
+            <textarea rows="4" placeholder="Cuéntanos más sobre tu proyecto :"></textarea>
+            <button type="submit" class="btn-submit">ENVIAR MENSAJE</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BANNER COTIZACIÓN INFERIOR -->
+    <div class="cta-box">
+      <div class="cta-left">
+        <div class="chat-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><line x1="8" y1="9" x2="16" y2="9"></line><line x1="8" y1="13" x2="14" y2="13"></line></svg>
+        </div>
+        <div class="cta-info">
+          <h3>¿TIENES UN PROYECTO <span class="red">EN MENTE?</span></h3>
+          <p>Hablemos de tus ideas y hagámoslas realidad.<br>En Nautilus, cada proyecto es una nueva oportunidad para crear algo increíble.</p>
+        </div>
+      </div>
+
+      <div class="cta-right">
+        <span>Solicita tu cotización<br>sin compromiso.</span>
+        <a href="#" class="btn-cta-action">
+          SOLICITAR COTIZACIÓN 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d00ff" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+  <div class="footer-content">
+    
+    <!-- COLUMNA LOGO -->
+    <div class="footer-brand-col">
+      <img src="imagenes/logo.jpg.png" alt="Nautilus Logo" class="brand-logo-svg">
+      <h2>Nautilus</h2>
+    </div>
+
+    <!-- COLUMNA NAVEGACIÓN -->
+    <div class="footer-col">
+      <h5>NAVEGACIÓN</h5>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+        <li><a href="contacto.html" class="active">CONTACTO</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA SERVICIOS -->
+    <div class="footer-col">
+      <h5>SERVICIOS</h5>
+      <ul>
+        <li>IDENTIDAD VISUAL</li>
+        <li>DISEÑO GRÁFICO</li>
+        <li>DISEÑO DIGITAL</li>
+        <li>MARKETING VISUAL</li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA CONTACTO -->
+    <div class="footer-col">
+      <h5>CONTACTO</h5>
+      <ul>
+        <li class="contact-item-footer">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          HolaNautilus@gmail.com
+        </li>
+        <li class="contact-item-footer">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +57 320 545 4084
+        </li>
+        <li class="contact-item-footer">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Cali, Colombia
+        </li>
+      </ul>
+    </div>
+
+    <!-- COLUMNA SÍGUENOS -->
+    <div class="footer-col">
+      <h5>SÍGUENOS</h5>
+      <div class="social-column-icons">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-float" href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<div class="legal-bar">&copy; 2026 Nautilus · <a data-modal="modal-privacidad">Política de privacidad</a> · <a data-modal="modal-terminos">Términos y condiciones</a></div>
+
+<div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
+  <div class="nx-modal-box">
+    <h3>Política de privacidad</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
+    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+<div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
+  <div class="nx-modal-box">
+    <h3>Términos y condiciones</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
+    <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+
+<script>
+/* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+
+  document.querySelectorAll('[data-modal]').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById(a.getAttribute('data-modal')).classList.add('open'); });
+  });
+  document.querySelectorAll('.nx-modal').forEach(function (m) {
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') document.querySelectorAll('.nx-modal.open').forEach(function (m) { m.classList.remove('open'); });
+  });
+
+  var targets = document.querySelectorAll('section');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.08 });
+    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+  }
+})();
+</script>

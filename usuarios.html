@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautilus - Dashboard Usuario</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- LÓGICA DE SEGURIDAD PREVIA A LA RENDERIZACIÓN -->
+    <script>
+        // Si no existe usuario en sesión, redirige inmediatamente a ingreso.html
+        if (!sessionStorage.getItem('usuarioActivo')) {
+            window.location.href = "ingreso.html";
+        }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #050508;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* --- HEADER / NAVBAR CON DATOS DE USUARIO --- */
+        header.main-header {
+            background-color: #000000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-logo-img {
+            height: 40px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: #aaaaaa;
+            font-weight: 400;
+        }
+
+        nav.main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav.main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav.main-nav a.active, nav.main-nav a:hover {
+            color: #ff2a2a;
+        }
+
+        /* PERFIL DE USUARIO EN HEADER */
+        .user-profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #0d0d14;
+            padding: 6px 15px;
+            border-radius: 30px;
+            border: 1px solid #222233;
+        }
+
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #2b00b0;
+        }
+
+        .user-info-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .user-email-display {
+            font-size: 11px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .user-login-time {
+            font-size: 9px;
+            color: #00ff66;
+        }
+
+        .btn-logout {
+            background-color: transparent;
+            color: #ff2a2a;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: transform 0.2s;
+        }
+
+        .btn-logout:hover {
+            transform: scale(1.2);
+        }
+
+        /* --- HERO BANNER DE BIENVENIDA --- */
+        .welcome-banner {
+            background: linear-gradient(90deg, #110033 0%, #000000 100%);
+            border: 1px solid #2b00b0;
+            margin: 15px;
+            padding: 20px 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .welcome-banner h2 {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+
+        .welcome-banner span.user-highlight {
+            color: #ff3333;
+        }
+
+        /* --- HERO SECTION REPLICADA DE INDEX.HTML --- */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px;
+            background-color: #000000;
+            margin: 15px;
+            border: 1px solid #1f1f1f;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+        }
+
+        .hero-content {
+            max-width: 50%;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .hero-title .highlight {
+            color: #ff3333;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 35px;
+            line-height: 1.6;
+            max-width: 400px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: #2b00b0;
+            color: #ffffff;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #4a15f0;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-danger {
+            background-color: #ff2a2a;
+            color: #ffffff;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #ff5555;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-art {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* --- PROCESS SECTION --- */
+        .process-section {
+            margin: 15px;
+            padding: 60px 40px;
+            background-image: url('imagenes/fondo.jpg.png');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid #1f1f1f;
+            text-align: center;
+        }
+
+        .process-title {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+        }
+
+        .step-icon-box {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .custom-step-icon {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .step-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .flow-arrow {
+            font-size: 28px;
+            color: #ffffff;
+            margin-top: -30px;
+            opacity: 0.8;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #000000;
+            margin: 15px;
+            padding: 50px 60px;
+            border: 1px solid #1f1f1f;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr 0.8fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo-img {
+            width: 320px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .footer-col h3 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .contact-item i {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-icon-btn {
+            color: #ffffff;
+            font-size: 26px;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            footer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    
+/* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
+.main-header { position: relative; }
+.nav-toggle { display: none; background: none; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 6px; }
+.nav-toggle:hover { border-color: #ff2a2a; color: #ff2a2a; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; order: 3; }
+  .main-header { flex-wrap: wrap; padding: 12px 20px !important; gap: 10px; }
+  .main-nav { display: none; width: 100%; order: 4; }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; align-items: flex-start; gap: 14px; padding: 10px 0 4px; }
+}
+.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.1); }
+.legal-bar { text-align: center; padding: 6px 20px 28px; font-size: 11px; color: #888; letter-spacing: .5px; }
+.legal-bar a { color: #aaa; text-decoration: underline; cursor: pointer; margin: 0 8px; }
+.legal-bar a:hover { color: #ff2a2a; }
+.nx-modal { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+.nx-modal.open { display: flex; }
+.nx-modal-box { background: #0b0b12; border: 1px solid #2b00b0; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
+.nx-modal-box h3 { font-size: 20px; margin-bottom: 14px; }
+.nx-modal-box p { font-size: 13px; color: #ccc; margin-bottom: 12px; line-height: 1.7; }
+.nx-modal-box button { margin-top: 10px; background: #2b00b0; color: #fff; border: 2px solid #4a15f0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+.nx-modal-box button:hover { background: #3b00e0; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+    <!-- NAVBAR HEADER ADAPTADO PARA SESIÓN ACTIVA -->
+    <header class="main-header">
+        <div class="brand-container">
+            <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="header-logo-img">
+            <div class="logo-text">
+                <h1>Nautilus</h1>
+                <span>Agencia multimedial</span>
+            </div>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <!-- DATOS DEL USUARIO EN SESIÓN -->
+        <div class="user-profile-header">
+            <!-- Avatar por defecto si no existe avatar.png -->
+            <img src="imagenes/avatar.png" onerror="this.src='imagenes/perfil.jpg.svg'" alt="Avatar Usuario" class="user-avatar">
+            <div class="user-info-text">
+                <span class="user-email-display" id="userEmailNav">cargando...</span>
+                <span class="user-login-time" id="userTimeNav"><i class="fa-regular fa-clock"></i> Sesión activa</span>
+            </div>
+            <button class="btn-logout" onclick="cerrarSesion()" title="Cerrar Sesión">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- BANNER DE BIENVENIDA AL DASHBOARD -->
+    <div class="welcome-banner">
+        <h2>¡HOLA DE NUEVO, <span class="user-highlight" id="welcomeUser">USUARIO</span>!</h2>
+        <span style="font-size: 12px; color: #aaaaaa;" id="loginDateFull"></span>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                ¿Qué proyecto<br>
+                <span class="highlight">vamos a hacer hoy?</span>
+            </h1>
+            <p class="hero-subtitle">
+                Agencia multimedial encargada de fortalecer tu identidad visual en el mercado.
+            </p>
+            <div class="hero-buttons">
+                <a href="servicios.html" class="btn-primary">VER MÁS &gt;</a>
+                <a href="contacto.html" class="btn-danger">CONSULTA &gt;</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img src="imagenes/ima.jpg.png" alt="Ilustración principal" class="hero-art">
+        </div>
+    </section>
+
+    <!-- PROCESO DE TRABAJO -->
+    <section class="process-section">
+        <div class="process-container">
+            <h2 class="process-title">NUESTRO PROCESO DE TRABAJO</h2>
+            
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-icon-box">
+                        <img src="imagenes/pincel.png.svg" alt="Branding" class="custom-step-icon">
+                    </div>
+                    <span class="step-name">Branding</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon-box">
+                        <img src="imagenes/engranaje.png.svg" alt="Desarrollo" class="custom-step-icon">
+                    </div>
+                    <span class="step-name">Desarrollo</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon-box">
+                        <img src="imagenes/hoja.png.svg" alt="Revisión" class="custom-step-icon">
+                    </div>
+                    <span class="step-name">Revisión</span>
+                </div>
+
+                <div class="flow-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon-box">
+                        <img src="imagenes/entrega.png.svg" alt="Entrega" class="custom-step-icon">
+                    </div>
+                    <span class="step-name">Entrega</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="footer-logo-img">
+            <h2>Nautilus</h2>
+        </div>
+
+        <div class="footer-col">
+            <h3>NAVEGACIÓN</h3>
+            <ul>
+                <li><a href="index.html" style="color: #0011bb;">INICIO</a></li>
+                <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>SERVICIOS</h3>
+            <ul>
+                <li><a href="servicios.html">IDENTIDAD VISUAL</a></li>
+                <li><a href="servicios.html">DISEÑO GRÁFICO</a></li>
+                <li><a href="servicios.html">DISEÑO DIGITAL</a></li>
+                <li><a href="servicios.html">MARKETING VISUAL</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>CONTACTO</h3>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>HolaNautilus@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+57 320 545 4084</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Cali, Colombia</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>SÍGUENOS</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LÓGICA DE USUARIO EN JAVASCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const usuario = sessionStorage.getItem('usuarioActivo');
+            const horaLogin = sessionStorage.getItem('horaLogin') || new Date().toLocaleString();
+
+            if (usuario) {
+                document.getElementById('userEmailNav').textContent = usuario;
+                document.getElementById('welcomeUser').textContent = usuario.split('@')[0].toUpperCase();
+                document.getElementById('loginDateFull').textContent = `Inicio de sesión: ${horaLogin}`;
+            }
+        });
+
+        function cerrarSesion() {
+            sessionStorage.removeItem('usuarioActivo');
+            sessionStorage.removeItem('horaLogin');
+            window.location.href = "ingreso.html";
+        }
+    </script>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-float" href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<div class="legal-bar">&copy; 2026 Nautilus · <a data-modal="modal-privacidad">Política de privacidad</a> · <a data-modal="modal-terminos">Términos y condiciones</a></div>
+
+<div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
+  <div class="nx-modal-box">
+    <h3>Política de privacidad</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
+    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+<div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
+  <div class="nx-modal-box">
+    <h3>Términos y condiciones</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
+    <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+
+<script>
+/* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+
+  document.querySelectorAll('[data-modal]').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById(a.getAttribute('data-modal')).classList.add('open'); });
+  });
+  document.querySelectorAll('.nx-modal').forEach(function (m) {
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') document.querySelectorAll('.nx-modal.open').forEach(function (m) { m.classList.remove('open'); });
+  });
+
+  var targets = document.querySelectorAll('section');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.08 });
+    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+  }
+})();
+</script>
+</body>
+</html>

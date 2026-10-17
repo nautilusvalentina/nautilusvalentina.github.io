@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautilus - Quiénes Somos</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.5;
+        }
+
+        /* --- HEADER / NAVBAR --- */
+        header {
+            background-color: #000000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: #aaaaaa;
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a.active, nav a:hover {
+            color: #ff2a2a;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-icon {
+            color: #ffffff;
+            font-size: 18px;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            background-color: #2b00b0;
+            color: #ffffff;
+            border: 2px solid #3b00e0;
+            padding: 8px 20px;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(43, 0, 176, 0.5);
+            transition: all 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #3b00e0;
+            box-shadow: 0 0 15px rgba(59, 0, 224, 0.8);
+        }
+
+        /* --- SECTION BASE CARD --- */
+        .card-section {
+            background-color: #000000;
+            margin: 15px;
+            padding: 45px 50px;
+            border: 1px solid #1f1f1f;
+            position: relative;
+        }
+
+        /* --- HERO QUIÉNES SOMOS --- */
+        .about-hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 380px;
+        }
+
+        .about-hero-content {
+            max-width: 48%;
+        }
+
+        .about-hero-title {
+            font-size: 42px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .about-hero-title .highlight {
+            color: #ff2a2a;
+            display: block;
+        }
+
+        .about-hero-text {
+            font-size: 13px;
+            color: #dddddd;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-art {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+        /* --- MISIÓN Y VISIÓN --- */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .divider-vertical {
+            background-color: #333333;
+            height: 100%;
+            width: 1px;
+        }
+
+        .mv-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .mv-icon {
+            font-size: 55px;
+            color: #2b00b0;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .mv-content h3 {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .mv-content p {
+            font-size: 12px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* --- NUESTROS VALORES --- */
+        .valores-section {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .valores-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            position: relative;
+        }
+
+        .valor-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        .valor-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background-color: #333333;
+        }
+
+        .valor-icon {
+            font-size: 38px;
+            color: #2b00b0;
+            margin-bottom: 15px;
+        }
+
+        .valor-item h4 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .valor-item p {
+            font-size: 10px;
+            color: #aaaaaa;
+            line-height: 1.5;
+        }
+
+        /* --- NUESTROS TRABAJOS --- */
+        .trabajos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .trabajo-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .trabajo-img-box {
+            width: 100%;
+            height: 220px;
+            background-color: #111;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #222;
+        }
+
+        .trabajo-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .trabajo-card:hover .trabajo-img-box img {
+            transform: scale(1.05);
+        }
+
+        .trabajo-title {
+            color: #ff2a2a;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+    background-color: #000000;
+    margin: 15px;
+    padding: 50px 60px;
+    border: 1px solid #1f1f1f;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-logo-img {
+    width: 320px;        
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+        .footer-col h3 {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul a.active-link {
+            color: #2b00b0;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .contact-item i {
+            font-size: 18px;
+            color: #ffffff;
+            width: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .social-icon-btn {
+            color: #ffffff;
+            font-size: 26px;
+            text-decoration: none;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .social-icon-btn:hover {
+            color: #ff2a2a;
+            transform: scale(1.1);
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 992px) {
+            .about-hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-hero-content, .about-hero-image {
+                max-width: 100%;
+                width: 100%;
+            }
+            .about-hero-image {
+                margin-top: 30px;
+            }
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+            }
+            .divider-vertical {
+                display: none;
+            }
+            .valores-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .valor-item:not(:last-child)::after {
+                display: none;
+            }
+            .trabajos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            footer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    
+/* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
+.main-header { position: relative; }
+.nav-toggle { display: none; background: none; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 6px; }
+.nav-toggle:hover { border-color: #ff2a2a; color: #ff2a2a; }
+@media (max-width: 900px) {
+  .nav-toggle { display: block; order: 3; }
+  .main-header { flex-wrap: wrap; padding: 12px 20px !important; gap: 10px; }
+  .main-nav { display: none; width: 100%; order: 4; }
+  .main-nav.open { display: block; }
+  .main-nav ul { flex-direction: column; align-items: flex-start; gap: 14px; padding: 10px 0 4px; }
+}
+.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.1); }
+.legal-bar { text-align: center; padding: 6px 20px 28px; font-size: 11px; color: #888; letter-spacing: .5px; }
+.legal-bar a { color: #aaa; text-decoration: underline; cursor: pointer; margin: 0 8px; }
+.legal-bar a:hover { color: #ff2a2a; }
+.nx-modal { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
+.nx-modal.open { display: flex; }
+.nx-modal-box { background: #0b0b12; border: 1px solid #2b00b0; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
+.nx-modal-box h3 { font-size: 20px; margin-bottom: 14px; }
+.nx-modal-box p { font-size: 13px; color: #ccc; margin-bottom: 12px; line-height: 1.7; }
+.nx-modal-box button { margin-top: 10px; background: #2b00b0; color: #fff; border: 2px solid #4a15f0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+.nx-modal-box button:hover { background: #3b00e0; }
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR HEADER ACTUALIZADO EN nosotros.html -->
+<header class="main-header">
+    <div class="brand-container" style="display: flex; align-items: center; gap: 12px;">
+        <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" style="height: 40px; width: auto;">
+        <div class="logo-text">
+            <h1>Nautilus</h1>
+            <span>Agencia multimedial</span>
+        </div>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="nosotros.html" class="active">QUIÉNES SOMOS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions" style="display: flex; align-items: center; gap: 15px;">
+        <a href="ingreso.html" class="user-icon" style="text-decoration: none;">
+            <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="ingreso.html" class="btn-login" style="text-decoration: none;">INICIO DE SESIÓN</a>
+    </div>
+</header>
+
+
+    <!-- HERO QUIÉNES SOMOS -->
+    <section class="card-section about-hero">
+        <div class="about-hero-content">
+            <h1 class="about-hero-title">
+                QUIÉNES
+                <span class="highlight">SOMOS</span>
+            </h1>
+            <p class="about-hero-text">
+                En Nautilus somos un equipo creativo apasionado por el diseño y la comunicación visual. Transformamos ideas en experiencias visuales que conectan, inspiran y generan valor para marcas y personas.<br><br>
+                Combinamos estrategia, creatividad y tecnología para construir identidades sólidas y soluciones visuales que hacen la diferencia.
+            </p>
+        </div>
+
+        <div class="about-hero-image">
+            <div class="hero-image-wrapper">
+           <div class="hero-image-wrapper">
+  <img src="imagenes/somos.jpg.png" alt="Ilustración principal" class="hero-art">
+</div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="card-section">
+        <div class="mission-vision-grid">
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <div class="mv-content">
+                    <h3>NUESTRA MISIÓN</h3>
+                    <p>Fortalecer la identidad visual de marcas y emprendimientos a través de soluciones creativas, estratégicas e innovadoras que generen impacto y crecimiento en el mercado.</p>
+                </div>
+            </div>
+
+            <div class="divider-vertical"></div>
+
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fa-regular fa-eye"></i>
+                </div>
+                <div class="mv-content">
+                    <h3>NUESTRA VISIÓN</h3>
+                    <p>Ser reconocidos como una agencia multimedial líder en diseño gráfico y comunicación visual, destacándonos por nuestra creatividad, compromiso y resultados que trascienden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS VALORES -->
+    <section class="card-section valores-section">
+        <h2 class="section-title">NUESTROS VALORES</h2>
+        <div class="valores-grid">
+            <div class="valor-item">
+                <div class="valor-icon">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </div>
+                <h4>CREATIVIDAD</h4>
+                <p>Pensamos diferente para crear soluciones originales y efectivas.</p>
+            </div>
+
+            <div class="valor-item">
+                <div class="valor-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h4>COMPROMISO</h4>
+                <p>Nos involucramos al 100% en cada proyecto como si fuera propio.</p>
+            </div>
+
+            <div class="valor-item">
+                <div class="valor-icon">
+                    <i class="fa-regular fa-gem"></i>
+                </div>
+                <h4>CALIDAD</h4>
+                <p>Buscamos la excelencia en cada detalle de nuestro trabajo.</p>
+            </div>
+
+            <div class="valor-item">
+                <div class="valor-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h4>TRABAJO EN EQUIPO</h4>
+                <p>Creamos en conjunto, compartimos ideas y alcanzamos grandes resultados.</p>
+            </div>
+
+            <div class="valor-item">
+                <div class="valor-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h4>INNOVACIÓN</h4>
+                <p>Exploramos nuevas ideas y tendencias para mantenernos siempre un paso adelante.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS TRABAJOS -->
+    <section class="card-section">
+        <h2 class="section-title">NUESTROS TRABAJOS</h2>
+        <div class="trabajos-grid">
+            <!-- Card 1 -->
+            <a href="#" class="trabajo-card">
+                <div class="trabajo-img-box">
+                    <img src="imagenes/somos_1.avif" alt="Identidad Corporativa">
+                </div>
+                <span class="trabajo-title">Identidad Corporativa</span>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="#" class="trabajo-card">
+                <div class="trabajo-img-box">
+                    <img src="imagenes/somos_2.avif" alt="Diseño de Empaque">
+                </div>
+                <span class="trabajo-title">Diseño de Empaque</span>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="#" class="trabajo-card">
+                <div class="trabajo-img-box">
+                    <img src="imagenes/somos_3.avif" alt="Diseño Editorial">
+                </div>
+                <span class="trabajo-title">Diseño Editorial</span>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="#" class="trabajo-card">
+                <div class="trabajo-img-box">
+                    <img src="imagenes/somos_4.avif" alt="Pop Art & Arte Multimedia">
+                </div>
+                <span class="trabajo-title">Pop Art & Arte Multimedia</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+     <footer>
+        <!-- COLUMNA 1: LOGO + TEXTO -->
+        <div class="footer-brand">
+            <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="footer-logo-img">
+            <h2>Nautilus</h2>
+        </div>
+
+        <!-- COLUMNA 2: NAVEGACIÓN -->
+        <div class="footer-col">
+            <h3>NAVEGACIÓN</h3>
+            <ul>
+                <li><a href="index.html" style="color: #0011bb;">INICIO</a></li>
+                <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+                <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMNA 3: SERVICIOS -->
+        <div class="footer-col">
+            <h3>SERVICIOS</h3>
+            <ul>
+                <li><a href="servicios.html">IDENTIDAD VISUAL</a></li>
+                <li><a href="servicios.html">DISEÑO GRÁFICO</a></li>
+                <li><a href="servicios.html">DISEÑO DIGITAL</a></li>
+                <li><a href="servicios.html">MARKETING VISUAL</a></li>
+            </ul>
+        </div>
+
+        <!-- COLUMNA 4: CONTACTO -->
+        <div class="footer-col">
+            <h3>CONTACTO</h3>
+            <div class="contact-list">
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>HolaNautilus@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+57 320 545 4084</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Cali, Colombia</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLUMNA 5: SÍGUENOS -->
+        <div class="footer-col">
+            <h3>SÍGUENOS</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="social-icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+<!-- Botón flotante de WhatsApp -->
+<a class="wa-float" href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<div class="legal-bar">&copy; 2026 Nautilus · <a data-modal="modal-privacidad">Política de privacidad</a> · <a data-modal="modal-terminos">Términos y condiciones</a></div>
+
+<div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
+  <div class="nx-modal-box">
+    <h3>Política de privacidad</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
+    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+<div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
+  <div class="nx-modal-box">
+    <h3>Términos y condiciones</h3>
+    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
+    <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
+    <button type="button" data-close>ACEPTAR</button>
+  </div>
+</div>
+
+<script>
+/* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+
+  document.querySelectorAll('[data-modal]').forEach(function (a) {
+    a.addEventListener('click', function () { document.getElementById(a.getAttribute('data-modal')).classList.add('open'); });
+  });
+  document.querySelectorAll('.nx-modal').forEach(function (m) {
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') document.querySelectorAll('.nx-modal.open').forEach(function (m) { m.classList.remove('open'); });
+  });
+
+  var targets = document.querySelectorAll('section');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.08 });
+    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
+  }
+})();
+</script>
