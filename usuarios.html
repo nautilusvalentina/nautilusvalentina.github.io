@@ -87,7 +87,7 @@
         }
 
         nav.main-nav a.active, nav.main-nav a:hover {
-            color: #ff2a2a;
+            color: #72b4c2;
         }
 
         /* PERFIL DE USUARIO EN HEADER */
@@ -98,7 +98,7 @@
             background: #0d0d14;
             padding: 6px 15px;
             border-radius: 30px;
-            border: 1px solid #222233;
+            border: 1px solid #17262b;
         }
 
         .user-avatar {
@@ -106,7 +106,7 @@
             height: 36px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #2b00b0;
+            border: 2px solid #193f49;
         }
 
         .user-info-text {
@@ -123,12 +123,12 @@
 
         .user-login-time {
             font-size: 9px;
-            color: #00ff66;
+            color: #9ad6dd;
         }
 
         .btn-logout {
             background-color: transparent;
-            color: #ff2a2a;
+            color: #72b4c2;
             border: none;
             font-size: 14px;
             cursor: pointer;
@@ -142,8 +142,8 @@
 
         /* --- HERO BANNER DE BIENVENIDA --- */
         .welcome-banner {
-            background: linear-gradient(90deg, #110033 0%, #000000 100%);
-            border: 1px solid #2b00b0;
+            background: linear-gradient(90deg, #0a1418 0%, #000000 100%);
+            border: 1px solid #193f49;
             margin: 15px;
             padding: 20px 40px;
             border-radius: 8px;
@@ -160,7 +160,7 @@
         }
 
         .welcome-banner span.user-highlight {
-            color: #ff3333;
+            color: #72b4c2;
         }
 
         /* --- HERO SECTION REPLICADA DE INDEX.HTML --- */
@@ -190,7 +190,7 @@
         }
 
         .hero-title .highlight {
-            color: #ff3333;
+            color: #72b4c2;
         }
 
         .hero-subtitle {
@@ -207,25 +207,25 @@
         }
 
         .btn-primary {
-            background-color: #2b00b0;
+            background-color: #193f49;
             color: #ffffff;
             padding: 12px 28px;
             font-size: 14px;
             font-weight: 700;
             text-decoration: none;
-            border: 2px solid #4a15f0;
+            border: 2px solid #76c3d0;
             display: inline-block;
             transition: all 0.3s;
         }
 
         .btn-danger {
-            background-color: #ff2a2a;
+            background-color: #72b4c2;
             color: #ffffff;
             padding: 12px 28px;
             font-size: 14px;
             font-weight: 700;
             text-decoration: none;
-            border: 2px solid #ff5555;
+            border: 2px solid #9ad6dd;
             display: inline-block;
             transition: all 0.3s;
         }
@@ -250,7 +250,7 @@
         .process-section {
             margin: 15px;
             padding: 60px 40px;
-            background-image: url('imagenes/fondo.jpg.png');
+            background-image: none;
             background-size: cover;
             background-position: center;
             border: 1px solid #1f1f1f;
@@ -418,7 +418,7 @@
 /* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
 .main-header { position: relative; }
 .nav-toggle { display: none; background: none; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 6px; }
-.nav-toggle:hover { border-color: #ff2a2a; color: #ff2a2a; }
+.nav-toggle:hover { border-color: #72b4c2; color: #72b4c2; }
 @media (max-width: 900px) {
   .nav-toggle { display: block; order: 3; }
   .main-header { flex-wrap: wrap; padding: 12px 20px !important; gap: 10px; }
@@ -426,29 +426,87 @@
   .main-nav.open { display: block; }
   .main-nav ul { flex-direction: column; align-items: flex-start; gap: 14px; padding: 10px 0 4px; }
 }
-.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
+.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #72b4c2; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
 .wa-float:hover { transform: scale(1.1); }
 .legal-bar { text-align: center; padding: 6px 20px 28px; font-size: 11px; color: #888; letter-spacing: .5px; }
 .legal-bar a { color: #aaa; text-decoration: underline; cursor: pointer; margin: 0 8px; }
-.legal-bar a:hover { color: #ff2a2a; }
+.legal-bar a:hover { color: #72b4c2; }
 .nx-modal { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
 .nx-modal.open { display: flex; }
-.nx-modal-box { background: #0b0b12; border: 1px solid #2b00b0; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
+.nx-modal-box { background: #0b0b12; border: 1px solid #193f49; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
 .nx-modal-box h3 { font-size: 20px; margin-bottom: 14px; }
 .nx-modal-box p { font-size: 13px; color: #ccc; margin-bottom: 12px; line-height: 1.7; }
-.nx-modal-box button { margin-top: 10px; background: #2b00b0; color: #fff; border: 2px solid #4a15f0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
-.nx-modal-box button:hover { background: #3b00e0; }
+.nx-modal-box button { margin-top: 10px; background: #193f49; color: #fff; border: 2px solid #76c3d0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
+.nx-modal-box button:hover { background: #2f7180; }
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
+
+<style>
+/* Nautilus editorial polish: legibilidad, profundidad y responsive sin cambiar la estructura base */
+:root { --cyan-muted:#72b4c2; --cyan-soft:#9ad6dd; --ink:#050607; --panel:#0d1113; --line:rgba(114,180,194,.25); }
+html { scroll-behavior:smooth; }
+body { background:#050607 !important; color:#fff; overflow-x:hidden; }
+body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; background:radial-gradient(circle at 82% 12%, rgba(114,180,194,.07), transparent 32%), radial-gradient(circle at 12% 82%, rgba(255,255,255,.035), transparent 28%); }
+.hero-section, .card-section, .process-section, .nx-section, .pf-hero, .pf-grid, .main-container, .services-grid-container, .cta-banner { position:relative; }
+.hero-section, .card-section, .process-section, .nx-section, .pf-hero, .service-card, .pf-item, .form-card, .info-item, .cta-box, .visual-story, .trust-strip, .contact-tools, .map-card, .qr-card { border-color:var(--line) !important; box-shadow:0 18px 60px rgba(0,0,0,.18); }
+.hero-section::after, .card-section::after, .nx-section::after, .pf-hero::after { content:""; position:absolute; width:180px; height:180px; border:1px solid rgba(154,214,221,.12); border-radius:50%; right:-78px; top:-78px; pointer-events:none; }
+.hero-title, .about-hero-title, .services-hero-title, .pf-hero h1 { letter-spacing:-.035em; text-wrap:balance; }
+.hero-subtitle, .about-hero-text, .services-hero-text, .pf-hero p, .nx-card p, .visual-story p, .trust-strip p, .service-info p, .contact-intro { max-width:62ch; line-height:1.8; }
+.highlight, .hero-title .highlight, .pf-hero h1 span, .nx-eyebrow, .nx-card .num, .visual-story-kicker, .trust-number { color:var(--cyan-muted) !important; }
+.btn-primary, .btn-danger, .btn-login, .cta-btn, .btn-submit, .btn-cta-action { transition:transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.btn-primary:hover, .btn-danger:hover, .btn-login:hover, .cta-btn:hover, .btn-submit:hover, .btn-cta-action:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(114,180,194,.18); }
+.visual-story { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:34px; align-items:center; margin:15px; padding:18px; background:linear-gradient(135deg,#0d1113,#07090a); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+.visual-story.reverse { grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); }
+.visual-story.reverse .visual-story-image { order:2; }
+.visual-story-image { min-height:270px; overflow:hidden; border-radius:3px; }
+.visual-story-image img { width:100%; height:100%; min-height:270px; object-fit:cover; display:block; filter:saturate(.72) contrast(1.03); transition:transform .6s ease, filter .6s ease; }
+.visual-story:hover .visual-story-image img { transform:scale(1.045); filter:saturate(.92) contrast(1.06); }
+.visual-story-copy { padding:18px clamp(8px,3vw,34px); }
+.visual-story-copy h2 { font-size:clamp(1.7rem,3vw,2.8rem); line-height:1.08; margin:8px 0 15px; }
+.visual-story-copy p { color:#c7d0d2; margin:0 0 18px; }
+.visual-story-kicker { font-size:.72rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
+.trust-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin:15px; background:var(--line); border:1px solid var(--line); }
+.trust-strip > div { background:#090c0d; padding:28px 24px; }
+.trust-number { display:block; font-size:1.7rem; font-weight:800; margin-bottom:10px; }
+.trust-strip h3 { margin:0 0 8px; font-size:1rem; }
+.trust-strip p { margin:0; color:#aeb9bc; font-size:.9rem; }
+.contact-tools { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr); gap:18px; margin:28px 0; }
+.map-card, .qr-card { background:#090c0d; border:1px solid var(--line); padding:18px; }
+.map-card h3, .qr-card h3 { margin:0 0 8px; }
+.map-card p, .qr-card p { color:#b9c4c6; line-height:1.6; margin:0 0 14px; }
+.map-frame { width:100%; min-height:260px; border:0; display:block; filter:grayscale(.85) contrast(1.08); }
+.map-link { display:inline-flex; margin-top:12px; color:var(--cyan-soft); font-weight:700; text-decoration:none; }
+.qr-card { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.qr-card img { width:min(190px,80%); background:#fff; padding:10px; border-radius:4px; margin:12px auto; }
+.qr-card a { color:var(--cyan-soft); font-size:.8rem; text-decoration:none; }
+.section-lead { max-width:680px; color:#bcc7c9; line-height:1.8; margin:0 auto 30px; text-align:center; }
+.card-section, .nx-section, .process-section, .pf-hero { overflow:hidden; }
+@media (max-width:900px) { .visual-story, .visual-story.reverse { grid-template-columns:1fr; gap:8px; } .visual-story.reverse .visual-story-image { order:0; } .visual-story-image, .visual-story-image img { min-height:210px; } .trust-strip { grid-template-columns:1fr; } .contact-tools { grid-template-columns:1fr; } }
+@media (max-width:600px) { .visual-story, .trust-strip, .contact-tools { margin:10px; } .visual-story { padding:10px; } .visual-story-copy { padding:18px 8px 12px; } .visual-story-copy h2 { font-size:1.75rem; } .map-frame { min-height:220px; } .hero-section, .card-section, .process-section, .nx-section { margin:10px !important; } }
+</style>
+
+<style>
+/* Carga de marca y mejoras de lectura */
+#site-loader{position:fixed;inset:0;background:#050607;display:grid;place-items:center;z-index:3000;transition:opacity .35s ease,visibility .35s ease}#site-loader.is-ready{opacity:0;visibility:hidden;pointer-events:none}.loader-mark{width:68px;height:68px;border-radius:50%;padding:7px;background:#fff;object-fit:cover;box-shadow:0 0 0 1px rgba(114,180,194,.35),0 0 28px rgba(114,180,194,.2);animation:loaderPulse 1.2s ease-in-out infinite}.loader-ring{position:absolute;width:86px;height:86px;border:2px solid rgba(114,180,194,.28);border-top-color:#72b4c2;border-radius:50%;animation:loaderSpin 1s linear infinite}@keyframes loaderSpin{to{transform:rotate(360deg)}}@keyframes loaderPulse{50%{transform:scale(.94);opacity:.78}}
+.pf-cap small{display:block;color:#c0cbcd;font-size:11px;line-height:1.45;margin-top:5px;max-width:28ch}.client-stars{color:#9ad6dd;letter-spacing:4px;font-size:14px;margin-bottom:12px}.client-card p{color:#c6d0d2;line-height:1.7}.client-card h3{font-size:13px;margin-top:14px;color:#fff}.service-info p{color:#c5ced0;line-height:1.75}.service-list li{line-height:1.5}
+</style>
+<link rel="icon" type="image/png" href="imagenes/01-logo.jpg.png">
+<link rel="preload" as="image" href="imagenes/01-logo.jpg.png">
+<style>
+/* Fallback de seguridad: el contenido nunca queda bloqueado por el loader */
+#site-loader{animation:loaderAutoHide .45s ease 1.35s forwards}
+@keyframes loaderAutoHide{to{opacity:0;visibility:hidden;pointer-events:none}}
+</style>
 </head>
 <body>
+<div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
 
     <!-- NAVBAR HEADER ADAPTADO PARA SESIÓN ACTIVA -->
     <header class="main-header">
         <div class="brand-container">
-            <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="header-logo-img">
+            <img src="imagenes/01-logo.jpg.png" alt="Logo Nautilus" class="header-logo-img">
             <div class="logo-text">
                 <h1>Nautilus</h1>
                 <span>Agencia multimedial</span>
@@ -462,14 +520,14 @@
                 <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="contactanos.html">CONTÁCTANOS</a></li>
             </ul>
         </nav>
 
         <!-- DATOS DEL USUARIO EN SESIÓN -->
         <div class="user-profile-header">
             <!-- Avatar por defecto si no existe avatar.png -->
-            <img src="imagenes/avatar.png" onerror="this.src='imagenes/perfil.jpg.svg'" alt="Avatar Usuario" class="user-avatar">
+            <img src="imagenes/15-perfil.svg" onerror="this.src='imagenes/15-perfil.svg'" alt="Avatar Usuario" class="user-avatar">
             <div class="user-info-text">
                 <span class="user-email-display" id="userEmailNav">cargando...</span>
                 <span class="user-login-time" id="userTimeNav"><i class="fa-regular fa-clock"></i> Sesión activa</span>
@@ -498,16 +556,20 @@
             </p>
             <div class="hero-buttons">
                 <a href="servicios.html" class="btn-primary">VER MÁS &gt;</a>
-                <a href="contacto.html" class="btn-danger">CONSULTA &gt;</a>
+                <a href="contactanos.html" class="btn-danger">CONSULTA &gt;</a>
             </div>
         </div>
 
         <div class="hero-image-wrapper">
-            <img src="imagenes/ima.jpg.png" alt="Ilustración principal" class="hero-art">
+            <img src="imagenes/03-hero.jpg.png" alt="Ilustración principal" class="hero-art">
         </div>
     </section>
 
     <!-- PROCESO DE TRABAJO -->
+    <section class="visual-story">
+      <div class="visual-story-image"><img src="imagenes/09-estrategia.jpg" alt="Estrategia visual para proyectos" loading="lazy"></div>
+      <div class="visual-story-copy"><span class="visual-story-kicker">Tu siguiente paso</span><h2>Convierte tus ideas en una presencia que inspire confianza.</h2><p>Explora nuestros servicios y encuentra el apoyo visual que tu proyecto necesita.</p><a href="contactanos.html" class="btn-primary">HABLAR CON NAUTILUS <i class="fa-solid fa-arrow-right"></i></a></div>
+    </section>
     <section class="process-section">
         <div class="process-container">
             <h2 class="process-title">NUESTRO PROCESO DE TRABAJO</h2>
@@ -515,7 +577,7 @@
             <div class="process-flow">
                 <div class="process-step">
                     <div class="step-icon-box">
-                        <img src="imagenes/pincel.png.svg" alt="Branding" class="custom-step-icon">
+                        <img src="imagenes/11-pincel.svg" alt="Branding" class="custom-step-icon">
                     </div>
                     <span class="step-name">Branding</span>
                 </div>
@@ -526,7 +588,7 @@
 
                 <div class="process-step">
                     <div class="step-icon-box">
-                        <img src="imagenes/engranaje.png.svg" alt="Desarrollo" class="custom-step-icon">
+                        <img src="imagenes/12-engranaje.svg" alt="Desarrollo" class="custom-step-icon">
                     </div>
                     <span class="step-name">Desarrollo</span>
                 </div>
@@ -537,7 +599,7 @@
 
                 <div class="process-step">
                     <div class="step-icon-box">
-                        <img src="imagenes/hoja.png.svg" alt="Revisión" class="custom-step-icon">
+                        <img src="imagenes/13-hoja.svg" alt="Revisión" class="custom-step-icon">
                     </div>
                     <span class="step-name">Revisión</span>
                 </div>
@@ -548,7 +610,7 @@
 
                 <div class="process-step">
                     <div class="step-icon-box">
-                        <img src="imagenes/entrega.png.svg" alt="Entrega" class="custom-step-icon">
+                        <img src="imagenes/14-entrega.svg" alt="Entrega" class="custom-step-icon">
                     </div>
                     <span class="step-name">Entrega</span>
                 </div>
@@ -559,18 +621,18 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-brand">
-            <img src="imagenes/logo.jpg.png" alt="Logo Nautilus" class="footer-logo-img">
+            <img src="imagenes/01-logo.jpg.png" alt="Logo Nautilus" class="footer-logo-img">
             <h2>Nautilus</h2>
         </div>
 
         <div class="footer-col">
             <h3>NAVEGACIÓN</h3>
             <ul>
-                <li><a href="index.html" style="color: #0011bb;">INICIO</a></li>
+                <li><a href="index.html" style="color: #76c3d0;">INICIO</a></li>
                 <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="contactanos.html">CONTÁCTANOS</a></li>
             </ul>
         </div>
 
@@ -585,7 +647,7 @@
         </div>
 
         <div class="footer-col">
-            <h3>CONTACTO</h3>
+            <h3>CONTÁCTANOS</h3>
             <div class="contact-list">
                 <div class="contact-item">
                     <i class="fa-regular fa-envelope"></i>
@@ -682,5 +744,19 @@
   }
 })();
 </script>
+<script>(function(){function ready(){var l=document.getElementById('site-loader');if(l)l.classList.add('is-ready')}window.addEventListener('load',ready);setTimeout(ready,1800)})();</script>
 </body>
 </html>
+
+<script>
+(function(){
+  function hideNautilusLoader(){
+    var loader=document.getElementById('site-loader');
+    if(loader){ loader.classList.add('is-ready'); loader.setAttribute('aria-hidden','true'); }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',hideNautilusLoader,{once:true});
+  else hideNautilusLoader();
+  window.addEventListener('load',hideNautilusLoader,{once:true});
+  setTimeout(hideNautilusLoader,1400);
+})();
+</script>
