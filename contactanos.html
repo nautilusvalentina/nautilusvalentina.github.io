@@ -678,6 +678,22 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 /* Distribución compacta y equilibrada de Contáctanos */
 .main-container{padding:24px 18px}.hero-contact-section{gap:28px;margin-bottom:28px}.contact-grid{gap:28px;margin-bottom:24px;align-items:stretch}.left-col,.right-col{min-width:0}.right-col{display:flex}.right-col .form-card{width:100%;height:100%;box-sizing:border-box}.info-list{gap:14px;margin-bottom:22px}.contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.contact-form input,.contact-form textarea{min-height:48px;font-family:inherit}.contact-form input:nth-of-type(3),.contact-form textarea,.contact-form .btn-submit{grid-column:1/-1}.contact-form textarea{min-height:82px;resize:vertical}.contact-tools{margin:18px 0;align-items:stretch}.map-card,.qr-card{height:100%;box-sizing:border-box}.map-frame{min-height:220px}.contact-examples{margin:8px 0 16px;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.contact-examples .demo-user{padding:11px}.contact-examples .demo-user h4{font-size:12px}.contact-examples .demo-user p{font-size:11px}.contact-examples .demo-user button{font-size:10px;padding:7px 9px}.contact-support-band{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:10px;margin:18px 0;background:#090c0d;border:1px solid var(--line);padding:16px}.contact-support-band h3{margin:0 0 5px;font-size:15px}.contact-support-band p{margin:0;color:#aebbbe;font-size:12px;line-height:1.5}.support-pill{padding:9px 10px;border-left:1px solid rgba(114,180,194,.28);color:#d2dcde;font-size:11px}.support-pill strong{display:block;color:#72b4c2;margin-bottom:3px}@media(max-width:700px){.contact-form,.contact-examples,.contact-support-band{grid-template-columns:1fr}.contact-form input:nth-of-type(3),.contact-form textarea,.contact-form .btn-submit{grid-column:auto}.support-pill{border-left:0;border-top:1px solid rgba(114,180,194,.28)}}
 </style>
+<style>
+footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,footer p{overflow-wrap:anywhere}@media(max-width:700px){footer{grid-template-columns:1fr!important;gap:22px!important;padding:28px 18px!important;margin:10px!important}.footer-content{grid-template-columns:1fr!important;gap:20px!important;padding:28px 16px!important}.footer-brand,.footer-brand-col{align-items:center!important;text-align:center!important}.footer-col{min-width:0!important}.footer-col ul{padding-left:0!important}.contact-item,.contact-item-footer{align-items:flex-start!important;overflow-wrap:anywhere}.footer-logo-img,.brand-logo-svg{max-width:180px!important}}
+</style>
+<style>/* WhatsApp: único botón con el celeste Nautilus */
+.wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
+</style>
+<style>
+/* Contáctanos: datos y redes alineados a la altura del formulario, sin tocar el cuadro derecho */
+.contact-grid{align-items:stretch}.contact-grid .left-col{display:flex;flex-direction:column;min-height:100%}.contact-grid .left-col .info-list{display:flex;flex:1;flex-direction:column;justify-content:space-between;gap:12px;margin:0 0 16px}.contact-grid .left-col .info-item{flex:1;min-height:70px;display:flex;align-items:center;padding:18px 16px}.contact-grid .left-col .social-block{margin-top:auto;min-height:102px;box-sizing:border-box;padding:18px 16px}.contact-grid .left-col .social-icons{margin-top:14px}@media(max-width:900px){.contact-grid .left-col{min-height:auto}.contact-grid .left-col .info-list{flex:none}.contact-grid .left-col .info-item{min-height:68px}.contact-grid .left-col .social-block{min-height:auto}}
+</style>
+<style>
+/* WhatsApp visible en Contáctanos */
+body .wa-float{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:fixed!important;right:22px!important;bottom:22px!important;z-index:9999!important;background:#72b4c2!important;color:#050607!important}
+body .wa-float i{display:block!important;visibility:visible!important;color:#050607!important}
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
@@ -699,7 +715,7 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
             <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
             <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="portafolio.html">PORTAFOLIO</a></li>
-            <li><a href="index.html" class="active">CONTÁCTANOS</a></li>
+            <li><a href="contactanos.html" class="active">CONTÁCTANOS</a></li>
         </ul>
     </nav>
 
@@ -728,7 +744,7 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
       </div>
 
       <div class="hero-image-wrapper">
-        <img src="imagenes/22-contacto-conversacion.webp" alt="Conversación creativa con Nautilus" class="hero-art" loading="eager" fetchpriority="high">
+        <img src="imagenes/38-contacto-equipo.webp" alt="Equipo creativo de Nautilus conversando con un cliente" class="hero-art" loading="eager" fetchpriority="high">
       </div>
     </section>
 
@@ -828,10 +844,10 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
     <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=I.E%20Eustaquio%20Palacios%2C%20Cali%2C%20Colombia" target="_blank" rel="noopener">ABRIR EN GOOGLE MAPS <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </div>
   <div class="qr-card">
-    <h3>Guarda nuestra ubicación</h3>
-    <p>Escanea el código para abrir directamente Google Maps.</p>
-    <a href="https://www.google.com/maps/search/?api=1&query=I.E%20Eustaquio%20Palacios%2C%20Cali%2C%20Colombia" target="_blank" rel="noopener"><img src="imagenes/20-qr-agencia.png" alt="Código QR de la ubicación de Nautilus" loading="lazy"></a>
-    <a href="https://www.google.com/maps/search/?api=1&query=I.E%20Eustaquio%20Palacios%2C%20Cali%2C%20Colombia" target="_blank" rel="noopener">TOCA O ESCANEA PARA IR</a>
+    <h3>Visita nuestra página</h3>
+    <p>Escanea el código para abrir directamente la página de Nautilus.</p>
+    <a href="https://8100-ihfysy6hnv1bdoexrplp2-00344511.us5.manus.computer/index.html" target="_blank" rel="noopener"><img src="imagenes/20-qr-agencia.png" alt="Código QR para visitar la página de Nautilus" loading="lazy"></a>
+    <a href="https://8100-ihfysy6hnv1bdoexrplp2-00344511.us5.manus.computer/index.html" target="_blank" rel="noopener">TOCA O ESCANEA PARA ENTRAR</a>
   </div>
 </section>
 <section class="visual-story reverse" style="margin-top:28px">
@@ -879,7 +895,7 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
         <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
         <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="portafolio.html">PORTAFOLIO</a></li>
-        <li><a href="index.html" class="active">CONTÁCTANOS</a></li>
+        <li><a href="contactanos.html" class="active">CONTÁCTANOS</a></li>
       </ul>
     </div>
 
@@ -933,7 +949,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
   <div class="nx-modal-box">
     <h3>Política de privacidad</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>En Nautilus Agencia Multimedial usamos los datos que compartes para responder solicitudes, preparar propuestas y coordinar proyectos de comunicación visual.</p>
     <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
     <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
     <button type="button" data-close>ACEPTAR</button>
@@ -942,7 +959,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
   <div class="nx-modal-box">
     <h3>Términos y condiciones</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>Al usar este sitio aceptas utilizar sus formularios, enlaces y contenidos de forma responsable y únicamente para solicitar información sobre los servicios de Nautilus.</p>
     <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
     <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
     <button type="button" data-close>ACEPTAR</button>

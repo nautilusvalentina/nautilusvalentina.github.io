@@ -619,6 +619,15 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <style>
 .client-card{display:flex;flex-direction:column;align-items:flex-start}.client-avatar{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid #72b4c2;margin-bottom:14px;filter:saturate(.8);transition:transform .3s ease,filter .3s ease}.client-card:hover .client-avatar{transform:scale(1.08);filter:saturate(1)}.client-role{color:#8fa2a5!important;font-size:11px!important;margin-top:4px}.process-step{min-width:145px;transition:transform .25s ease,filter .25s ease}.process-step:hover{transform:translateY(-5px);filter:brightness(1.15)}.process-step .step-detail{display:block;color:#aebbbe;font-size:11px;line-height:1.45;max-width:150px;margin:8px auto 0}.process-title{max-width:720px;margin-left:auto;margin-right:auto}.process-intro{max-width:680px;color:#b8c6c8;line-height:1.7;margin:0 auto 28px;text-align:center}.nx-cta-visual{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.8fr);gap:28px;align-items:center;text-align:left!important}.nx-cta-visual .cta-visual-image{overflow:hidden;border-radius:4px;border:1px solid rgba(114,180,194,.25)}.nx-cta-visual .cta-visual-image img{display:block;width:100%;height:230px;object-fit:cover;filter:saturate(.7);transition:transform .5s ease,filter .5s ease}.nx-cta-visual:hover .cta-visual-image img{transform:scale(1.04);filter:saturate(1)}.example-users{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}.example-user{background:#0c1113;border:1px solid rgba(114,180,194,.24);padding:16px;border-radius:4px}.example-user h4{margin:0 0 8px;color:#fff}.example-user p{margin:4px 0;color:#b7c4c6;font-size:12px;line-height:1.5}.example-user button{margin-top:10px;background:#193f49;color:#fff;border:1px solid #72b4c2;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer}.example-user button:hover{background:#2f7180}.example-note{color:#91a4a7;font-size:12px;margin:12px 0 0;line-height:1.5}@media(max-width:700px){.example-users,.nx-cta-visual{grid-template-columns:1fr}.nx-cta-visual{text-align:center!important}.process-step .step-detail{max-width:190px}}
 </style>
+<style>
+footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,footer p{overflow-wrap:anywhere}@media(max-width:700px){footer{grid-template-columns:1fr!important;gap:22px!important;padding:28px 18px!important;margin:10px!important}.footer-content{grid-template-columns:1fr!important;gap:20px!important;padding:28px 16px!important}.footer-brand,.footer-brand-col{align-items:center!important;text-align:center!important}.footer-col{min-width:0!important}.footer-col ul{padding-left:0!important}.contact-item,.contact-item-footer{align-items:flex-start!important;overflow-wrap:anywhere}.footer-logo-img,.brand-logo-svg{max-width:180px!important}}
+</style>
+<style>
+.login-card{overflow:hidden}.profile-setup{margin:16px 0 6px;max-width:none;display:grid;grid-template-columns:.82fr 1.18fr;gap:16px;padding:16px;background:#080f11;border:1px solid rgba(114,180,194,.34);border-radius:8px;text-align:left;box-sizing:border-box}.profile-setup-copy,.profile-setup-fields{min-width:0}.profile-setup h3{margin:0 0 7px;color:#fff}.profile-setup p{color:#aebbbe;font-size:12px;line-height:1.5;margin:0}.profile-setup-fields{display:grid;gap:7px}.profile-setup-fields label{font-size:10px;color:#b8c5c7;text-transform:uppercase;letter-spacing:.08em}.profile-setup-fields input[type=text],.profile-setup-fields input[type=file]{width:100%;box-sizing:border-box;background:#05090a;border:1px solid #34494d;color:#eaf5f6;padding:9px;border-radius:4px}.profile-setup-fields input[type=file]::file-selector-button{background:#193f49;color:#eaf5f6;border:1px solid #72b4c2;border-radius:3px;padding:6px 8px;margin-right:8px;cursor:pointer}.profile-preview{display:flex;align-items:center;gap:10px;color:#b7c4c6;font-size:12px;min-width:0}.profile-preview span{overflow-wrap:anywhere}.profile-preview img{width:40px;height:40px;flex:0 0 40px;border-radius:50%;object-fit:cover;border:1px solid #72b4c2;padding:3px;background:#081012}.profile-setup .btn-submit{margin-top:3px}@media(max-width:700px){.profile-setup{grid-template-columns:1fr;margin-top:12px;padding:14px}.example-users{grid-template-columns:1fr}.form-actions{flex-wrap:wrap}}
+</style>
+<style>/* WhatsApp: único botón con el celeste Nautilus */
+.wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
+</style>
 </head>
 <body>
 <div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
@@ -663,8 +672,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
             <div class="divider-line"></div>
             <p class="example-note">Ejemplos de inicio de sesión:</p>
             <div class="example-users login-examples" aria-label="Ejemplos de inicio de sesión">
-              <article class="example-user"><h4>Sebastián Herrera</h4><p><strong>Correo:</strong> sebastian.herrera@gmail.com</p><p><strong>Clave:</strong> Niebla#47!x</p><button type="button" onclick="usarDemo('sebastian.herrera@gmail.com','Niebla#47!x')">USAR ESTE EJEMPLO</button></article>
-              <article class="example-user"><h4>Camila Torres</h4><p><strong>Correo:</strong> camila.torres@gmail.com</p><p><strong>Clave:</strong> Cobalto$82!q</p><button type="button" onclick="usarDemo('camila.torres@gmail.com','Cobalto$82!q')">USAR ESTE EJEMPLO</button></article>
+              <article class="example-user"><h4>Sebastián</h4><p><strong>Correo:</strong> sebastian@gmail.com</p><p><strong>Clave:</strong> Sebastian#47!</p><button type="button" onclick="usarDemo('sebastian@gmail.com','Sebastian#47!')">USAR ESTE EJEMPLO</button></article>
+              <article class="example-user"><h4>Camila</h4><p><strong>Correo:</strong> camila@gmail.com</p><p><strong>Clave:</strong> Camila$82?</p><button type="button" onclick="usarDemo('camila@gmail.com','Camila$82?')">USAR ESTE EJEMPLO</button></article>
             </div>
             <form class="login-form" id="loginForm" onsubmit="validarLogin(event)">
                 <div class="form-group">
@@ -677,6 +686,10 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
                     <input type="password" id="password" placeholder="••••••••" required>
                 </div>
 
+                <section class="profile-setup" aria-label="Crear perfil">
+                  <div class="profile-setup-copy"><span class="section-kicker">Perfil</span><h3>Crea tu nombre de usuario</h3><p>Agrega un nombre y una foto para personalizar tu perfil en este dispositivo.</p></div>
+                  <div class="profile-setup-fields"><label for="profileUsername">Nombre de usuario</label><input id="profileUsername" type="text" placeholder="Ej. sebastian"><label for="profilePhoto">Foto de perfil</label><input id="profilePhoto" type="file" accept="image/*"><div class="profile-preview" id="profilePreview"><img src="imagenes/15-perfil.svg" alt="Vista previa del perfil" id="profilePreviewImage"><span id="profilePreviewName">Sin perfil guardado</span></div><button type="button" class="btn-submit" onclick="guardarPerfil()">GUARDAR PERFIL</button></div>
+                </section>
                 <!-- CAPTCHA VISUAL SIMULADO -->
                 <div class="captcha-box">
                     <div class="captcha-instructions">
@@ -707,11 +720,6 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
             </form>
         </div>
         
-<section class="profile-setup" aria-label="Crear perfil">
-  <div class="profile-setup-copy"><span class="section-kicker">Perfil</span><h3>Crea tu nombre de usuario</h3><p>Agrega un nombre y una foto para personalizar tu perfil en este dispositivo.</p></div>
-  <div class="profile-setup-fields"><label for="profileUsername">Nombre de usuario</label><input id="profileUsername" type="text" placeholder="Ej. sebastian.herrera"><label for="profilePhoto">Foto de perfil</label><input id="profilePhoto" type="file" accept="image/*"><div class="profile-preview" id="profilePreview"><img src="imagenes/15-perfil.svg" alt="Vista previa del perfil" id="profilePreviewImage"><span id="profilePreviewName">Sin perfil guardado</span></div><button type="button" class="btn-submit" onclick="guardarPerfil()">GUARDAR PERFIL</button></div>
-</section>
-
     </main>
 
     <!-- MODAL PERSONALIZADO DE ERROR -->
@@ -788,8 +796,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
     <script>
         // Arreglo de usuarios de prueba local
         const usuariosValidos = [
-            { email: "sebastian.herrera@gmail.com", password: "Niebla#47!x" },
-            { email: "camila.torres@gmail.com", password: "Cobalto$82!q" }
+            { email: "sebastian@gmail.com", password: "Sebastian#47!" },
+            { email: "camila@gmail.com", password: "Camila$82?" }
         ];
 
         function usarDemo(email, password) { document.getElementById('email').value = email; document.getElementById('password').value = password; }
@@ -851,15 +859,13 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
         }
     </script>
 
-<!-- Botón flotante de WhatsApp -->
-<a class="wa-float" href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-
 <div class="legal-bar">&copy; 2026 Nautilus · <a data-modal="modal-privacidad">Política de privacidad</a> · <a data-modal="modal-terminos">Términos y condiciones</a></div>
 
 <div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
   <div class="nx-modal-box">
     <h3>Política de privacidad</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>En Nautilus Agencia Multimedial usamos los datos que compartes para responder solicitudes, preparar propuestas y coordinar proyectos de comunicación visual.</p>
     <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
     <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
     <button type="button" data-close>ACEPTAR</button>
@@ -868,7 +874,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
   <div class="nx-modal-box">
     <h3>Términos y condiciones</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>Al usar este sitio aceptas utilizar sus formularios, enlaces y contenidos de forma responsable y únicamente para solicitar información sobre los servicios de Nautilus.</p>
     <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
     <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
     <button type="button" data-close>ACEPTAR</button>

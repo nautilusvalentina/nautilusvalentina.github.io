@@ -565,6 +565,12 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 #site-loader{animation:loaderAutoHide .45s ease 1.35s forwards}
 @keyframes loaderAutoHide{to{opacity:0;visibility:hidden;pointer-events:none}}
 </style>
+<style>
+footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,footer p{overflow-wrap:anywhere}@media(max-width:700px){footer{grid-template-columns:1fr!important;gap:22px!important;padding:28px 18px!important;margin:10px!important}.footer-content{grid-template-columns:1fr!important;gap:20px!important;padding:28px 16px!important}.footer-brand,.footer-brand-col{align-items:center!important;text-align:center!important}.footer-col{min-width:0!important}.footer-col ul{padding-left:0!important}.contact-item,.contact-item-footer{align-items:flex-start!important;overflow-wrap:anywhere}.footer-logo-img,.brand-logo-svg{max-width:180px!important}}
+</style>
+<style>/* WhatsApp: único botón con el celeste Nautilus */
+.wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
+</style>
 </head>
 <body>
 <div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
@@ -728,7 +734,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
   <div class="nx-modal-box">
     <h3>Política de privacidad</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>En Nautilus Agencia Multimedial usamos los datos que compartes para responder solicitudes, preparar propuestas y coordinar proyectos de comunicación visual.</p>
     <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
     <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
     <button type="button" data-close>ACEPTAR</button>
@@ -737,7 +744,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 <div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
   <div class="nx-modal-box">
     <h3>Términos y condiciones</h3>
-    <p><em>Texto provisional: debe ser revisado y reemplazado por el texto legal definitivo de Nautilus.</em></p>
+    
+        <p>Al usar este sitio aceptas utilizar sus formularios, enlaces y contenidos de forma responsable y únicamente para solicitar información sobre los servicios de Nautilus.</p>
     <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
     <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
     <button type="button" data-close>ACEPTAR</button>
