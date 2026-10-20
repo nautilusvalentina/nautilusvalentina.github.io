@@ -1,876 +1,2777 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nautilus - Quiénes Somos</title>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
 
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            line-height: 1.5;
-        }
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        line-height: 1.5;
+      }
 
-        /* --- HEADER / NAVBAR --- */
-        header {
-            background-color: #000000;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #1a1a1a;
-        }
+      /* --- HEADER / NAVBAR --- */
+      header {
+        background-color: #000000;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #1a1a1a;
+      }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-        }
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+      }
 
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
 
-        .logo-text h1 {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #ffffff;
-            line-height: 1.1;
-        }
+      .logo-text h1 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #ffffff;
+        line-height: 1.1;
+      }
 
-        .logo-text span {
-            font-size: 10px;
-            color: #aaaaaa;
-            font-weight: 400;
-        }
+      .logo-text span {
+        font-size: 10px;
+        color: #aaaaaa;
+        font-weight: 400;
+      }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        align-items: center;
+      }
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-        }
+      nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+      }
 
-        nav a.active, nav a:hover {
-            color: #72b4c2;
-        }
+      nav a.active,
+      nav a:hover {
+        color: #72b4c2;
+      }
 
-        .user-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+      .user-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
 
-        .user-icon {
-            color: #ffffff;
-            font-size: 18px;
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
+      .user-icon {
+        color: #ffffff;
+        font-size: 18px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
 
-        .btn-login {
-            background-color: #193f49;
-            color: #ffffff;
-            border: 2px solid #2f7180;
-            padding: 8px 20px;
-            font-weight: 700;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            box-shadow: 0 0 10px rgba(143, 216, 232, 0.28);
-            transition: all 0.3s;
-        }
+      .btn-login {
+        background-color: #193f49;
+        color: #ffffff;
+        border: 2px solid #2f7180;
+        padding: 8px 20px;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px rgba(143, 216, 232, 0.28);
+        transition: all 0.3s;
+      }
 
-        .btn-login:hover {
-            background-color: #2f7180;
-            box-shadow: 0 0 15px rgba(143, 216, 232, 0.42);
-        }
+      .btn-login:hover {
+        background-color: #2f7180;
+        box-shadow: 0 0 15px rgba(143, 216, 232, 0.42);
+      }
 
-        /* --- SECTION BASE CARD --- */
-        .card-section {
-            background-color: #000000;
-            margin: 15px;
-            padding: 45px 50px;
-            border: 1px solid #1f1f1f;
-            position: relative;
-        }
+      /* --- SECTION BASE CARD --- */
+      .card-section {
+        background-color: #000000;
+        margin: 15px;
+        padding: 45px 50px;
+        border: 1px solid #1f1f1f;
+        position: relative;
+      }
 
-        /* --- HERO QUIÉNES SOMOS --- */
+      /* --- HERO QUIÉNES SOMOS --- */
+      .about-hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 380px;
+      }
+
+      .about-hero-content {
+        max-width: 48%;
+      }
+
+      .about-hero-title {
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+      }
+
+      .about-hero-title .highlight {
+        color: #72b4c2;
+        display: block;
+      }
+
+      .about-hero-text {
+        font-size: 13px;
+        color: #dddddd;
+        line-height: 1.7;
+        font-weight: 400;
+      }
+
+      .hero-image-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+      }
+
+      .hero-art {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+      /* --- MISIÓN Y VISIÓN --- */
+      .mission-vision-grid {
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .divider-vertical {
+        background-color: #333333;
+        height: 100%;
+        width: 1px;
+      }
+
+      .mv-card {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .mv-icon {
+        font-size: 55px;
+        color: #193f49;
+        min-width: 70px;
+        text-align: center;
+      }
+
+      .mv-content h3 {
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+
+      .mv-content p {
+        font-size: 12px;
+        color: #cccccc;
+        line-height: 1.6;
+      }
+
+      /* --- NUESTROS VALORES --- */
+      .valores-section {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .valores-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: relative;
+      }
+
+      .valor-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        position: relative;
+      }
+
+      .valor-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10%;
+        height: 80%;
+        width: 1px;
+        background-color: #333333;
+      }
+
+      .valor-icon {
+        font-size: 38px;
+        color: #193f49;
+        margin-bottom: 15px;
+      }
+
+      .valor-item h4 {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .valor-item p {
+        font-size: 10px;
+        color: #aaaaaa;
+        line-height: 1.5;
+      }
+
+      /* --- SISTEMA DE MARCA --- */
+      .trabajos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .trabajo-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .trabajo-img-box {
+        width: 100%;
+        height: 220px;
+        background-color: #111;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        border: 1px solid #222;
+      }
+
+      .trabajo-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s;
+      }
+
+      .trabajo-card:hover .trabajo-img-box img {
+        transform: scale(1.05);
+      }
+
+      .trabajo-title {
+        color: #72b4c2;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+
+      /* --- FOOTER --- */
+      footer {
+        background-color: #000000;
+        margin: 15px;
+        padding: 50px 60px;
+        border: 1px solid #1f1f1f;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr 0.8fr;
+        gap: 30px;
+        align-items: start;
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer-logo-img {
+        width: 320px;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        margin-bottom: 12px;
+      }
+
+      .footer-brand h2 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #ffffff;
+      }
+      .footer-col h3 {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul {
+        list-style: none;
+      }
+
+      .footer-col ul li {
+        margin-bottom: 12px;
+      }
+
+      .footer-col ul a {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+        text-transform: uppercase;
+      }
+
+      .footer-col ul a.active-link {
+        color: #193f49;
+      }
+
+      .contact-list {
+        list-style: none;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        font-size: 12px;
+        color: #ffffff;
+      }
+
+      .contact-item i {
+        font-size: 18px;
+        color: #ffffff;
+        width: 20px;
+      }
+
+      .social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      .social-icon-btn {
+        color: #ffffff;
+        font-size: 26px;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          color 0.2s;
+      }
+
+      .social-icon-btn:hover {
+        color: #72b4c2;
+        transform: scale(1.1);
+      }
+
+      /* Media Queries para Responsividad */
+      @media (max-width: 992px) {
         .about-hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 380px;
+          flex-direction: column;
+          text-align: center;
         }
-
-        .about-hero-content {
-            max-width: 48%;
+        .about-hero-content,
+        .about-hero-image {
+          max-width: 100%;
+          width: 100%;
         }
-
-        .about-hero-title {
-            font-size: 42px;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
+        .about-hero-image {
+          margin-top: 30px;
         }
-
-        .about-hero-title .highlight {
-            color: #72b4c2;
-            display: block;
-        }
-
-        .about-hero-text {
-            font-size: 13px;
-            color: #dddddd;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .hero-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-art {
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-        /* --- MISIÓN Y VISIÓN --- */
         .mission-vision-grid {
-            display: grid;
-            grid-template-columns: 1fr 1px 1fr;
-            gap: 40px;
-            align-items: center;
+          grid-template-columns: 1fr;
         }
-
         .divider-vertical {
-            background-color: #333333;
-            height: 100%;
-            width: 1px;
+          display: none;
         }
-
-        .mv-card {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .mv-icon {
-            font-size: 55px;
-            color: #193f49;
-            min-width: 70px;
-            text-align: center;
-        }
-
-        .mv-content h3 {
-            font-size: 15px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .mv-content p {
-            font-size: 12px;
-            color: #cccccc;
-            line-height: 1.6;
-        }
-
-        /* --- NUESTROS VALORES --- */
-        .valores-section {
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
         .valores-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            position: relative;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
         }
-
-        .valor-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 15px;
-            position: relative;
-        }
-
         .valor-item:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 10%;
-            height: 80%;
-            width: 1px;
-            background-color: #333333;
+          display: none;
         }
-
-        .valor-icon {
-            font-size: 38px;
-            color: #193f49;
-            margin-bottom: 15px;
-        }
-
-        .valor-item h4 {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .valor-item p {
-            font-size: 10px;
-            color: #aaaaaa;
-            line-height: 1.5;
-        }
-
-        /* --- SISTEMA DE MARCA --- */
         .trabajos-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+          grid-template-columns: repeat(2, 1fr);
         }
-
-        .trabajo-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .trabajo-img-box {
-            width: 100%;
-            height: 220px;
-            background-color: #111;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            border: 1px solid #222;
-        }
-
-        .trabajo-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .trabajo-card:hover .trabajo-img-box img {
-            transform: scale(1.05);
-        }
-
-        .trabajo-title {
-            color: #72b4c2;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- FOOTER --- */
         footer {
-    background-color: #000000;
-    margin: 15px;
-    padding: 50px 60px;
-    border: 1px solid #1f1f1f;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr 0.8fr;
-    gap: 30px;
-    align-items: start;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-}
-
-.footer-logo-img {
-    width: 320px;        
-    height: auto;
-    display: block;
-    object-fit: contain;
-    margin-bottom: 12px;
-}
-
-.footer-brand h2 {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #ffffff;
-}
-        .footer-col h3 {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            color: #ffffff;
-            text-transform: uppercase;
+          grid-template-columns: 1fr 1fr;
         }
+      }
 
+      /* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
+      .main-header {
+        position: relative;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: 2px solid #fff;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      .nav-toggle:hover {
+        border-color: #72b4c2;
+        color: #72b4c2;
+      }
+      @media (max-width: 900px) {
+        .nav-toggle {
+          display: block;
+          order: 3;
+        }
+        .main-header {
+          flex-wrap: wrap;
+          padding: 12px 20px !important;
+          gap: 10px;
+        }
+        .main-nav {
+          display: none;
+          width: 100%;
+          order: 4;
+        }
+        .main-nav.open {
+          display: block;
+        }
+        .main-nav ul {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
+          padding: 10px 0 4px;
+        }
+      }
+      .wa-float {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: #72b4c2;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        text-decoration: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        z-index: 900;
+        transition: transform 0.2s;
+      }
+      .wa-float:hover {
+        transform: scale(1.1);
+      }
+      .legal-bar {
+        text-align: center;
+        padding: 6px 20px 28px;
+        font-size: 11px;
+        color: #888;
+        letter-spacing: 0.5px;
+      }
+      .legal-bar a {
+        color: #aaa;
+        text-decoration: underline;
+        cursor: pointer;
+        margin: 0 8px;
+      }
+      .legal-bar a:hover {
+        color: #72b4c2;
+      }
+      .nx-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        padding: 20px;
+      }
+      .nx-modal.open {
+        display: flex;
+      }
+      .nx-modal-box {
+        background: #0b0b12;
+        border: 1px solid #193f49;
+        max-width: 620px;
+        width: 100%;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 32px;
+        box-shadow: 0 0 30px rgba(43, 0, 176, 0.5);
+      }
+      .nx-modal-box h3 {
+        font-size: 20px;
+        margin-bottom: 14px;
+      }
+      .nx-modal-box p {
+        font-size: 13px;
+        color: #ccc;
+        margin-bottom: 12px;
+        line-height: 1.7;
+      }
+      .nx-modal-box button {
+        margin-top: 10px;
+        background: #193f49;
+        color: #fff;
+        border: 2px solid #76c3d0;
+        padding: 10px 28px;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+      }
+      .nx-modal-box button:hover {
+        background: #2f7180;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+
+    <style>
+      /* Nautilus editorial polish: legibilidad, profundidad y responsive sin cambiar la estructura base */
+      :root {
+        --cyan-muted: #72b4c2;
+        --cyan-soft: #9ad6dd;
+        --ink: #050607;
+        --panel: #0d1113;
+        --line: rgba(114, 180, 194, 0.25);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #050607 !important;
+        color: #fff;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        background:
+          radial-gradient(
+            circle at 82% 12%,
+            rgba(114, 180, 194, 0.07),
+            transparent 32%
+          ),
+          radial-gradient(
+            circle at 12% 82%,
+            rgba(255, 255, 255, 0.035),
+            transparent 28%
+          );
+      }
+      .hero-section,
+      .card-section,
+      .process-section,
+      .nx-section,
+      .pf-hero,
+      .pf-grid,
+      .main-container,
+      .services-grid-container,
+      .cta-banner {
+        position: relative;
+      }
+      .hero-section,
+      .card-section,
+      .process-section,
+      .nx-section,
+      .pf-hero,
+      .service-card,
+      .pf-item,
+      .form-card,
+      .info-item,
+      .cta-box,
+      .visual-story,
+      .trust-strip,
+      .contact-tools,
+      .map-card,
+      .qr-card {
+        border-color: var(--line) !important;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+      }
+      .hero-section::after,
+      .card-section::after,
+      .nx-section::after,
+      .pf-hero::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(154, 214, 221, 0.12);
+        border-radius: 50%;
+        right: -78px;
+        top: -78px;
+        pointer-events: none;
+      }
+      .hero-title,
+      .about-hero-title,
+      .services-hero-title,
+      .pf-hero h1 {
+        letter-spacing: -0.035em;
+        text-wrap: balance;
+      }
+      .hero-subtitle,
+      .about-hero-text,
+      .services-hero-text,
+      .pf-hero p,
+      .nx-card p,
+      .visual-story p,
+      .trust-strip p,
+      .service-info p,
+      .contact-intro {
+        max-width: 62ch;
+        line-height: 1.8;
+      }
+      .highlight,
+      .hero-title .highlight,
+      .pf-hero h1 span,
+      .nx-eyebrow,
+      .nx-card .num,
+      .visual-story-kicker,
+      .trust-number {
+        color: var(--cyan-muted) !important;
+      }
+      .btn-primary,
+      .btn-danger,
+      .btn-login,
+      .cta-btn,
+      .btn-submit,
+      .btn-cta-action {
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background 0.25s ease;
+      }
+      .btn-primary:hover,
+      .btn-danger:hover,
+      .btn-login:hover,
+      .cta-btn:hover,
+      .btn-submit:hover,
+      .btn-cta-action:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 26px rgba(114, 180, 194, 0.18);
+      }
+      .visual-story {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 34px;
+        align-items: center;
+        margin: 15px;
+        padding: 18px;
+        background: linear-gradient(135deg, #0d1113, #07090a);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .visual-story.reverse {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      }
+      .visual-story.reverse .visual-story-image {
+        order: 2;
+      }
+      .visual-story-image {
+        min-height: 270px;
+        overflow: hidden;
+        border-radius: 3px;
+      }
+      .visual-story-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 270px;
+        object-fit: cover;
+        display: block;
+        filter: saturate(0.72) contrast(1.03);
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+      }
+      .visual-story:hover .visual-story-image img {
+        transform: scale(1.045);
+        filter: saturate(0.92) contrast(1.06);
+      }
+      .visual-story-copy {
+        padding: 18px clamp(8px, 3vw, 34px);
+      }
+      .visual-story-copy h2 {
+        font-size: clamp(1.7rem, 3vw, 2.8rem);
+        line-height: 1.08;
+        margin: 8px 0 15px;
+      }
+      .visual-story-copy p {
+        color: #c7d0d2;
+        margin: 0 0 18px;
+      }
+      .visual-story-kicker {
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .trust-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin: 15px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+      .trust-strip > div {
+        background: #090c0d;
+        padding: 28px 24px;
+      }
+      .trust-number {
+        display: block;
+        font-size: 1.7rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .trust-strip h3 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+      .trust-strip p {
+        margin: 0;
+        color: #aeb9bc;
+        font-size: 0.9rem;
+      }
+      .contact-tools {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
+        gap: 18px;
+        margin: 28px 0;
+      }
+      .map-card,
+      .qr-card {
+        background: #090c0d;
+        border: 1px solid var(--line);
+        padding: 18px;
+      }
+      .map-card h3,
+      .qr-card h3 {
+        margin: 0 0 8px;
+      }
+      .map-card p,
+      .qr-card p {
+        color: #b9c4c6;
+        line-height: 1.6;
+        margin: 0 0 14px;
+      }
+      .map-frame {
+        width: 100%;
+        min-height: 260px;
+        border: 0;
+        display: block;
+        filter: grayscale(0.85) contrast(1.08);
+      }
+      .map-link {
+        display: inline-flex;
+        margin-top: 12px;
+        color: var(--cyan-soft);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .qr-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .qr-card img {
+        width: min(190px, 80%);
+        background: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 12px auto;
+      }
+      .qr-card a {
+        color: var(--cyan-soft);
+        font-size: 0.8rem;
+        text-decoration: none;
+      }
+      .section-lead {
+        max-width: 680px;
+        color: #bcc7c9;
+        line-height: 1.8;
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+      .card-section,
+      .nx-section,
+      .process-section,
+      .pf-hero {
+        overflow: hidden;
+      }
+      @media (max-width: 900px) {
+        .visual-story,
+        .visual-story.reverse {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .visual-story.reverse .visual-story-image {
+          order: 0;
+        }
+        .visual-story-image,
+        .visual-story-image img {
+          min-height: 210px;
+        }
+        .trust-strip {
+          grid-template-columns: 1fr;
+        }
+        .contact-tools {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .visual-story,
+        .trust-strip,
+        .contact-tools {
+          margin: 10px;
+        }
+        .visual-story {
+          padding: 10px;
+        }
+        .visual-story-copy {
+          padding: 18px 8px 12px;
+        }
+        .visual-story-copy h2 {
+          font-size: 1.75rem;
+        }
+        .map-frame {
+          min-height: 220px;
+        }
+        .hero-section,
+        .card-section,
+        .process-section,
+        .nx-section {
+          margin: 10px !important;
+        }
+      }
+    </style>
+
+    <style>
+      /* Ajustes finales: tarjetas visuales, FAQ y microinteracciones */
+      .faq-section {
+        max-width: 980px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .faq-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 26px;
+      }
+      .faq-list details {
+        background: linear-gradient(145deg, #0e1315, #080a0b);
+        border: 1px solid rgba(114, 180, 194, 0.22);
+        border-radius: 5px;
+        padding: 0 20px;
+        transition:
+          border-color 0.25s ease,
+          transform 0.25s ease,
+          background 0.25s ease;
+      }
+      .faq-list details:hover {
+        border-color: rgba(154, 214, 221, 0.65);
+        transform: translateY(-3px);
+        background: #10181a;
+      }
+      .faq-list details[open] {
+        border-color: #72b4c2;
+      }
+      .faq-list summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 20px 28px 20px 0;
+        font-weight: 700;
+        line-height: 1.35;
+        position: relative;
+      }
+      .faq-list summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-list summary::after {
+        content: "+";
+        position: absolute;
+        right: 0;
+        top: 17px;
+        color: #72b4c2;
+        font-size: 1.4rem;
+        font-weight: 400;
+        transition: transform 0.25s ease;
+      }
+      .faq-list details[open] summary::after {
+        content: "–";
+        transform: rotate(180deg);
+      }
+      .faq-list details p {
+        color: #b7c4c6;
+        line-height: 1.7;
+        padding: 0 0 20px;
+        margin: 0;
+      }
+      .service-card {
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-7px);
+        border-color: #72b4c2 !important;
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.35);
+      }
+      .service-card-media {
+        height: 150px;
+        overflow: hidden;
+        margin: -1px -1px 22px;
+        border-bottom: 1px solid rgba(114, 180, 194, 0.22);
+      }
+      .service-card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.68) contrast(1.08);
+        transition:
+          transform 0.5s ease,
+          filter 0.5s ease;
+      }
+      .service-card:hover .service-card-media img {
+        transform: scale(1.06);
+        filter: saturate(0.95) contrast(1.04);
+      }
+      .pf-item {
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .pf-item:hover {
+        transform: translateY(-6px);
+        border-color: #72b4c2;
+        box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+      }
+      .pf-item img {
+        transition:
+          transform 0.55s ease,
+          filter 0.55s ease;
+        filter: saturate(0.72);
+      }
+      .pf-item:hover img {
+        transform: scale(1.05);
+        filter: saturate(1);
+      }
+      .trabajo-card,
+      .valor-item {
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .trabajo-card:hover,
+      .valor-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
+      }
+      @media (max-width: 700px) {
+        .faq-list {
+          grid-template-columns: 1fr;
+        }
+        .service-card-media {
+          height: 170px;
+        }
+      }
+    </style>
+
+    <style>
+      /* Carga de marca y mejoras de lectura */
+      #site-loader {
+        position: fixed;
+        inset: 0;
+        background: #050607;
+        display: grid;
+        place-items: center;
+        z-index: 3000;
+        transition:
+          opacity 0.35s ease,
+          visibility 0.35s ease;
+      }
+      #site-loader.is-ready {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-mark {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        padding: 7px;
+        background: #fff;
+        object-fit: cover;
+        box-shadow:
+          0 0 0 1px rgba(114, 180, 194, 0.35),
+          0 0 28px rgba(114, 180, 194, 0.2);
+        animation: loaderPulse 1.2s ease-in-out infinite;
+      }
+      .loader-ring {
+        position: absolute;
+        width: 86px;
+        height: 86px;
+        border: 2px solid rgba(114, 180, 194, 0.28);
+        border-top-color: #72b4c2;
+        border-radius: 50%;
+        animation: loaderSpin 1s linear infinite;
+      }
+      @keyframes loaderSpin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes loaderPulse {
+        50% {
+          transform: scale(0.94);
+          opacity: 0.78;
+        }
+      }
+      .pf-cap small {
+        display: block;
+        color: #c0cbcd;
+        font-size: 11px;
+        line-height: 1.45;
+        margin-top: 5px;
+        max-width: 28ch;
+      }
+      .client-stars {
+        color: #9ad6dd;
+        letter-spacing: 4px;
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+      .client-card p {
+        color: #c6d0d2;
+        line-height: 1.7;
+      }
+      .client-card h3 {
+        font-size: 13px;
+        margin-top: 14px;
+        color: #fff;
+      }
+      .service-info p {
+        color: #c5ced0;
+        line-height: 1.75;
+      }
+      .service-list li {
+        line-height: 1.5;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="imagenes/01-logo.jpg.png" />
+    <link rel="preload" as="image" href="imagenes/01-logo.jpg.png" />
+    <style>
+      /* Fallback de seguridad: el contenido nunca queda bloqueado por el loader */
+      #site-loader {
+        animation: loaderAutoHide 0.45s ease 1.35s forwards;
+      }
+      @keyframes loaderAutoHide {
+        to {
+          opacity: 0;
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+    </style>
+    <style>
+      footer {
+        overflow: hidden;
+      }
+      footer img {
+        max-width: 100%;
+        height: auto;
+      }
+      footer a,
+      footer li,
+      footer p {
+        overflow-wrap: anywhere;
+      }
+      @media (max-width: 700px) {
+        footer {
+          grid-template-columns: 1fr !important;
+          gap: 22px !important;
+          padding: 28px 18px !important;
+          margin: 10px !important;
+        }
+        .footer-content {
+          grid-template-columns: 1fr !important;
+          gap: 20px !important;
+          padding: 28px 16px !important;
+        }
+        .footer-brand,
+        .footer-brand-col {
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .footer-col {
+          min-width: 0 !important;
+        }
         .footer-col ul {
-            list-style: none;
+          padding-left: 0 !important;
         }
-
-        .footer-col ul li {
-            margin-bottom: 12px;
+        .contact-item,
+        .contact-item-footer {
+          align-items: flex-start !important;
+          overflow-wrap: anywhere;
         }
-
-        .footer-col ul a {
-            color: #cccccc;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-            text-transform: uppercase;
+        .footer-logo-img,
+        .brand-logo-svg {
+          max-width: 180px !important;
         }
-
-        .footer-col ul a.active-link {
-            color: #193f49;
+      }
+    </style>
+    <style>
+      /* WhatsApp: único botón con el celeste Nautilus */
+      .wa-float {
+        background: #72b4c2 !important;
+        color: #050607 !important;
+        border-color: #72b4c2 !important;
+      }
+      .wa-float i {
+        color: #050607 !important;
+      }
+      @media (max-width: 700px) {
+        .wa-float {
+          background: #72b4c2 !important;
+          color: #050607 !important;
         }
-
-        .contact-list {
-            list-style: none;
+      }
+    </style>
+    <style>
+      /* Origen: composición editorial limpia y sección complementaria con interacción */
+      .origin-feature {
+        margin: 15px;
+        padding: clamp(22px, 4vw, 54px);
+        background: #000;
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+      .origin-layout {
+        display: grid;
+        grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+        gap: clamp(24px, 5vw, 64px);
+        align-items: center;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      .origin-image {
+        order: -1;
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid #1c2426;
+        border-radius: 16px;
+        background: #0b1011;
+        box-shadow:
+          18px 18px 0 rgba(114, 180, 194, 0.08),
+          0 22px 55px rgba(0, 0, 0, 0.35);
+      }
+      .origin-image img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+      }
+      .origin-image:hover img {
+        transform: scale(1.06);
+        filter: saturate(1.08);
+      }
+      .origin-copy {
+        max-width: 650px;
+      }
+      .origin-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+        margin: 0 0 18px;
+        color: #fff;
+      }
+      .origin-copy p {
+        color: #becacc;
+        line-height: 1.8;
+        max-width: 61ch;
+        margin: 0 0 12px;
+      }
+      .origin-signature {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-top: 22px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(114, 180, 194, 0.22);
+      }
+      .origin-signature span {
+        color: #72b4c2;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+      }
+      .origin-signature small {
+        color: #93a5a8;
+        font-size: 11px;
+      }
+      .brand-meaning-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        max-width: 1180px;
+        margin: 34px auto 0;
+      }
+      .brand-meaning-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #0b1011;
+        border: 1px solid rgba(114, 180, 194, 0.2);
+        padding: 18px;
+        border-radius: 10px;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .brand-meaning-card:hover {
+        transform: translateY(-7px);
+        border-color: #72b4c2;
+        box-shadow: 0 18px 35px rgba(114, 180, 194, 0.12);
+      }
+      .brand-meaning-card h3 {
+        margin: 0 0 5px;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+      }
+      .brand-meaning-card p {
+        margin: 0;
+        color: #adbabc;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+      .meaning-circle {
+        display: block;
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid #72b4c2;
+        box-shadow: 0 0 0 6px rgba(114, 180, 194, 0.06);
+      }
+      .black-mark {
+        background: #000;
+      }
+      .white-mark {
+        background: #fff;
+        border-color: #fff;
+      }
+      .cyan-mark {
+        background: linear-gradient(135deg, #72b4c2, #d5edf0);
+        border-color: #72b4c2;
+      }
+      .origin-principles {
+        margin: 28px 15px 15px;
+        padding: clamp(28px, 5vw, 62px);
+        background: linear-gradient(145deg, #0a1012, #050607);
+        border: 1px solid var(--line);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .origin-principles::before {
+        content: "";
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        border: 1px solid rgba(114, 180, 194, 0.12);
+        border-radius: 50%;
+        left: -150px;
+        bottom: -190px;
+      }
+      .origin-principles h2 {
+        max-width: 720px;
+        margin: 0 auto 12px;
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        letter-spacing: -0.035em;
+      }
+      .origin-principles-lead {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        color: #b8c5c7;
+        line-height: 1.75;
+      }
+      .principles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        max-width: 1050px;
+        margin: 0 auto;
+      }
+      .principle-card {
+        position: relative;
+        text-align: left;
+        min-height: 205px;
+        padding: 24px;
+        background: #090d0f;
+        border: 1px solid rgba(114, 180, 194, 0.2);
+        border-radius: 12px;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .principle-card:nth-child(2) {
+        transform: translateY(18px);
+      }
+      .principle-card:hover,
+      .principle-card:nth-child(2):hover {
+        transform: translateY(-8px);
+        border-color: #72b4c2;
+        box-shadow: 0 20px 38px rgba(0, 0, 0, 0.3);
+      }
+      .principle-number {
+        position: absolute;
+        right: 16px;
+        top: 14px;
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+      .principle-icon {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #72b4c2;
+        border-radius: 50%;
+        color: #72b4c2;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .principle-card h3 {
+        margin: 0 0 8px;
+        font-size: 15px;
+      }
+      .principle-card p {
+        margin: 0;
+        color: #aebbbe;
+        font-size: 13px;
+        line-height: 1.65;
+      }
+      .origin-route {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        margin-top: 34px;
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+      }
+      .origin-route i {
+        font-size: 18px;
+        font-style: normal;
+        color: #aebbbe;
+      }
+      @media (max-width: 820px) {
+        .origin-layout {
+          grid-template-columns: 1fr;
+          gap: 28px;
         }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            font-size: 12px;
-            color: #ffffff;
+        .origin-image {
+          max-width: 520px;
+          width: 100%;
+          margin: auto;
         }
-
-        .contact-item i {
-            font-size: 18px;
-            color: #ffffff;
-            width: 20px;
+        .origin-copy {
+          max-width: none;
         }
-
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: flex-start;
+        .brand-meaning-grid,
+        .principles-grid {
+          grid-template-columns: 1fr;
         }
-
-        .social-icon-btn {
-            color: #ffffff;
-            font-size: 26px;
-            text-decoration: none;
-            transition: transform 0.2s, color 0.2s;
+        .principle-card:nth-child(2) {
+          transform: none;
         }
-
-        .social-icon-btn:hover {
-            color: #72b4c2;
-            transform: scale(1.1);
+        .origin-route {
+          flex-wrap: wrap;
+          gap: 10px;
         }
-
-        /* Media Queries para Responsividad */
-        @media (max-width: 992px) {
-            .about-hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            .about-hero-content, .about-hero-image {
-                max-width: 100%;
-                width: 100%;
-            }
-            .about-hero-image {
-                margin-top: 30px;
-            }
-            .mission-vision-grid {
-                grid-template-columns: 1fr;
-            }
-            .divider-vertical {
-                display: none;
-            }
-            .valores-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .valor-item:not(:last-child)::after {
-                display: none;
-            }
-            .trabajos-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            footer {
-                grid-template-columns: 1fr 1fr;
-            }
+      }
+      @media (max-width: 560px) {
+        .origin-feature,
+        .origin-principles {
+          margin: 10px;
+          padding: 22px 16px;
         }
-    
-/* === NAUTILUS v2: menu movil, WhatsApp, legales, animaciones === */
-.main-header { position: relative; }
-.nav-toggle { display: none; background: none; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 6px; }
-.nav-toggle:hover { border-color: #72b4c2; color: #72b4c2; }
-@media (max-width: 900px) {
-  .nav-toggle { display: block; order: 3; }
-  .main-header { flex-wrap: wrap; padding: 12px 20px !important; gap: 10px; }
-  .main-nav { display: none; width: 100%; order: 4; }
-  .main-nav.open { display: block; }
-  .main-nav ul { flex-direction: column; align-items: flex-start; gap: 14px; padding: 10px 0 4px; }
-}
-.wa-float { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #72b4c2; color: #fff !important; display: flex; align-items: center; justify-content: center; font-size: 32px; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,.5); z-index: 900; transition: transform .2s; }
-.wa-float:hover { transform: scale(1.1); }
-.legal-bar { text-align: center; padding: 6px 20px 28px; font-size: 11px; color: #888; letter-spacing: .5px; }
-.legal-bar a { color: #aaa; text-decoration: underline; cursor: pointer; margin: 0 8px; }
-.legal-bar a:hover { color: #72b4c2; }
-.nx-modal { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 20px; }
-.nx-modal.open { display: flex; }
-.nx-modal-box { background: #0b0b12; border: 1px solid #193f49; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 32px; box-shadow: 0 0 30px rgba(43,0,176,.5); }
-.nx-modal-box h3 { font-size: 20px; margin-bottom: 14px; }
-.nx-modal-box p { font-size: 13px; color: #ccc; margin-bottom: 12px; line-height: 1.7; }
-.nx-modal-box button { margin-top: 10px; background: #193f49; color: #fff; border: 2px solid #76c3d0; padding: 10px 28px; font-weight: 700; cursor: pointer; letter-spacing: .5px; }
-.nx-modal-box button:hover { background: #2f7180; }
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-</style>
+        .origin-copy h2 {
+          font-size: 2rem;
+        }
+        .brand-meaning-card {
+          align-items: flex-start;
+        }
+        .origin-route {
+          font-size: 9px;
+          letter-spacing: 0.1em;
+        }
+      }
+    </style>
+    <style>
+      /* Tarjetas de significado: solo texto, sin imágenes */
+      .text-meaning {
+        display: block;
+        position: relative;
+        min-height: 176px;
+        padding: 24px 22px 20px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .text-meaning::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #72b4c2;
+        transform: scaleX(0.25);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+      }
+      .text-meaning:nth-child(1)::after {
+        background: #f2f5f5;
+      }
+      .text-meaning:nth-child(2)::after {
+        background: #fff;
+      }
+      .text-meaning:nth-child(3)::after {
+        background: #72b4c2;
+      }
+      .text-meaning:hover::after {
+        transform: scaleX(1);
+      }
+      .text-meaning:hover {
+        transform: translateY(-7px);
+      }
+      .text-meaning h3 {
+        font-size: 15px;
+        letter-spacing: 0.14em;
+        margin: 14px 0 10px;
+      }
+      .text-meaning p {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #bfcacc;
+        margin: 0;
+      }
+      .meaning-index {
+        display: block;
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+      }
+    </style>
+    <style>
+      /* Solo la tarjeta del logo lleva imagen; Negro y Blanco permanecen en texto. */
+      .logo-meaning {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .logo-meaning-image {
+        width: 62px;
+        height: 62px;
+        flex: 0 0 62px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #72b4c2;
+        background: #050708;
+        padding: 4px;
+        box-sizing: border-box;
+      }
+      .logo-meaning h3 {
+        margin-top: 8px;
+      }
+      .logo-meaning .meaning-index {
+        margin-top: 1px;
+      }
+      @media (max-width: 560px) {
+        .logo-meaning {
+          align-items: flex-start;
+        }
+        .logo-meaning-image {
+          width: 52px;
+          height: 52px;
+          flex-basis: 52px;
+        }
+      }
+    </style>
+    <style>
+      /* Indicadores visuales restaurados para Negro y Blanco; sin numeración. */
+      .color-meaning {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .color-meaning .meaning-circle {
+        margin-top: 4px;
+      }
+      .color-meaning h3 {
+        margin-top: 8px;
+      }
+      .black-mark {
+        background: #020303;
+      }
+      .white-mark {
+        background: #fff;
+        border-color: #fff;
+      }
+      .meaning-circle {
+        display: block;
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid #72b4c2;
+        box-shadow: 0 0 0 6px rgba(114, 180, 194, 0.06);
+      }
+      @media (max-width: 560px) {
+        .color-meaning {
+          align-items: flex-start;
+        }
+        .color-meaning .meaning-circle {
+          width: 42px;
+          height: 42px;
+          flex-basis: 42px;
+        }
+      }
 
-<style>
-/* Nautilus editorial polish: legibilidad, profundidad y responsive sin cambiar la estructura base */
-:root { --cyan-muted:#72b4c2; --cyan-soft:#9ad6dd; --ink:#050607; --panel:#0d1113; --line:rgba(114,180,194,.25); }
-html { scroll-behavior:smooth; }
-body { background:#050607 !important; color:#fff; overflow-x:hidden; }
-body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; background:radial-gradient(circle at 82% 12%, rgba(114,180,194,.07), transparent 32%), radial-gradient(circle at 12% 82%, rgba(255,255,255,.035), transparent 28%); }
-.hero-section, .card-section, .process-section, .nx-section, .pf-hero, .pf-grid, .main-container, .services-grid-container, .cta-banner { position:relative; }
-.hero-section, .card-section, .process-section, .nx-section, .pf-hero, .service-card, .pf-item, .form-card, .info-item, .cta-box, .visual-story, .trust-strip, .contact-tools, .map-card, .qr-card { border-color:var(--line) !important; box-shadow:0 18px 60px rgba(0,0,0,.18); }
-.hero-section::after, .card-section::after, .nx-section::after, .pf-hero::after { content:""; position:absolute; width:180px; height:180px; border:1px solid rgba(154,214,221,.12); border-radius:50%; right:-78px; top:-78px; pointer-events:none; }
-.hero-title, .about-hero-title, .services-hero-title, .pf-hero h1 { letter-spacing:-.035em; text-wrap:balance; }
-.hero-subtitle, .about-hero-text, .services-hero-text, .pf-hero p, .nx-card p, .visual-story p, .trust-strip p, .service-info p, .contact-intro { max-width:62ch; line-height:1.8; }
-.highlight, .hero-title .highlight, .pf-hero h1 span, .nx-eyebrow, .nx-card .num, .visual-story-kicker, .trust-number { color:var(--cyan-muted) !important; }
-.btn-primary, .btn-danger, .btn-login, .cta-btn, .btn-submit, .btn-cta-action { transition:transform .25s ease, box-shadow .25s ease, background .25s ease; }
-.btn-primary:hover, .btn-danger:hover, .btn-login:hover, .cta-btn:hover, .btn-submit:hover, .btn-cta-action:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(114,180,194,.18); }
-.visual-story { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:34px; align-items:center; margin:15px; padding:18px; background:linear-gradient(135deg,#0d1113,#07090a); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
-.visual-story.reverse { grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); }
-.visual-story.reverse .visual-story-image { order:2; }
-.visual-story-image { min-height:270px; overflow:hidden; border-radius:3px; }
-.visual-story-image img { width:100%; height:100%; min-height:270px; object-fit:cover; display:block; filter:saturate(.72) contrast(1.03); transition:transform .6s ease, filter .6s ease; }
-.visual-story:hover .visual-story-image img { transform:scale(1.045); filter:saturate(.92) contrast(1.06); }
-.visual-story-copy { padding:18px clamp(8px,3vw,34px); }
-.visual-story-copy h2 { font-size:clamp(1.7rem,3vw,2.8rem); line-height:1.08; margin:8px 0 15px; }
-.visual-story-copy p { color:#c7d0d2; margin:0 0 18px; }
-.visual-story-kicker { font-size:.72rem; font-weight:800; letter-spacing:.18em; text-transform:uppercase; }
-.trust-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin:15px; background:var(--line); border:1px solid var(--line); }
-.trust-strip > div { background:#090c0d; padding:28px 24px; }
-.trust-number { display:block; font-size:1.7rem; font-weight:800; margin-bottom:10px; }
-.trust-strip h3 { margin:0 0 8px; font-size:1rem; }
-.trust-strip p { margin:0; color:#aeb9bc; font-size:.9rem; }
-.contact-tools { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr); gap:18px; margin:28px 0; }
-.map-card, .qr-card { background:#090c0d; border:1px solid var(--line); padding:18px; }
-.map-card h3, .qr-card h3 { margin:0 0 8px; }
-.map-card p, .qr-card p { color:#b9c4c6; line-height:1.6; margin:0 0 14px; }
-.map-frame { width:100%; min-height:260px; border:0; display:block; filter:grayscale(.85) contrast(1.08); }
-.map-link { display:inline-flex; margin-top:12px; color:var(--cyan-soft); font-weight:700; text-decoration:none; }
-.qr-card { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-.qr-card img { width:min(190px,80%); background:#fff; padding:10px; border-radius:4px; margin:12px auto; }
-.qr-card a { color:var(--cyan-soft); font-size:.8rem; text-decoration:none; }
-.section-lead { max-width:680px; color:#bcc7c9; line-height:1.8; margin:0 auto 30px; text-align:center; }
-.card-section, .nx-section, .process-section, .pf-hero { overflow:hidden; }
-@media (max-width:900px) { .visual-story, .visual-story.reverse { grid-template-columns:1fr; gap:8px; } .visual-story.reverse .visual-story-image { order:0; } .visual-story-image, .visual-story-image img { min-height:210px; } .trust-strip { grid-template-columns:1fr; } .contact-tools { grid-template-columns:1fr; } }
-@media (max-width:600px) { .visual-story, .trust-strip, .contact-tools { margin:10px; } .visual-story { padding:10px; } .visual-story-copy { padding:18px 8px 12px; } .visual-story-copy h2 { font-size:1.75rem; } .map-frame { min-height:220px; } .hero-section, .card-section, .process-section, .nx-section { margin:10px !important; } }
-</style>
+      /* PRESENTACIÓN DE LA CREADORA */
+      .creator-section {
+        margin: 15px;
+        padding: clamp(30px, 6vw, 78px) clamp(24px, 6vw, 72px);
+        background: linear-gradient(
+          135deg,
+          #090d0f 0%,
+          #101a1d 55%,
+          #071013 100%
+        );
+        border: 1px solid rgba(114, 180, 194, 0.35);
+        position: relative;
+        overflow: hidden;
+      }
+      .creator-section::before,
+      .creator-section::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(114, 180, 194, 0.18);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .creator-section::before {
+        width: 360px;
+        height: 360px;
+        top: -220px;
+        right: -100px;
+      }
+      .creator-section::after {
+        width: 180px;
+        height: 180px;
+        bottom: -100px;
+        left: -65px;
+      }
+      .creator-layout {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+        gap: clamp(30px, 6vw, 90px);
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .creator-photo-wrap {
+        max-width: 430px;
+        justify-self: center;
+        position: relative;
+        padding: 12px;
+      }
+      .creator-photo-wrap::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid #72b4c2;
+        transform: rotate(-6deg);
+        transition: transform 0.5s ease;
+      }
+      .creator-photo-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 22px -10px -10px 22px;
+        background: rgba(114, 180, 194, 0.12);
+        z-index: -1;
+        transition: transform 0.5s ease;
+      }
+      .creator-photo-wrap:hover::before {
+        transform: rotate(0deg);
+      }
+      .creator-photo-wrap:hover::after {
+        transform: translate(-8px, -8px);
+      }
+      .creator-photo {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04);
+        position: relative;
+        z-index: 1;
+        transition:
+          transform 0.6s ease,
+          filter 0.6s ease;
+      }
+      .creator-photo-wrap:hover .creator-photo {
+        transform: scale(1.025);
+        filter: saturate(1.05) contrast(1.04);
+      }
+      .creator-copy {
+        max-width: 650px;
+      }
+      .creator-kicker {
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .creator-copy h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1.06;
+        letter-spacing: -0.045em;
+        margin-bottom: 22px;
+      }
+      .creator-copy h2 span {
+        color: #72b4c2;
+      }
+      .creator-copy p {
+        color: #c1ccce;
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 15px;
+      }
+      .creator-signature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 25px;
+        padding-top: 17px;
+        border-top: 1px solid rgba(114, 180, 194, 0.25);
+        color: #72b4c2;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .creator-signature::before {
+        content: "✦";
+        font-size: 18px;
+        font-weight: 400;
+      }
+      @media (max-width: 820px) {
+        .creator-layout {
+          grid-template-columns: 1fr;
+          gap: 42px;
+        }
+        .creator-photo-wrap {
+          width: min(100%, 430px);
+        }
+        .creator-copy {
+          max-width: none;
+        }
+      }
+    </style>
+    <style>
+      /* TARJETA DE PRESENTACIÓN INTERACTIVA */
+      .business-card-section {
+        margin: 15px;
+        padding: clamp(34px, 6vw, 76px) clamp(22px, 6vw, 72px);
+        background: linear-gradient(145deg, #050708, #0d1719 58%, #071012);
+        border: 1px solid rgba(114, 180, 194, 0.3);
+        overflow: hidden;
+        position: relative;
+      }
+      .business-card-section::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(114, 180, 194, 0.16);
+        border-radius: 50%;
+        right: -170px;
+        top: -250px;
+        pointer-events: none;
+      }
+      .business-card-heading {
+        max-width: 1180px;
+        margin: 0 auto 34px;
+        position: relative;
+        z-index: 1;
+      }
+      .business-card-kicker {
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .business-card-heading h2 {
+        font-size: clamp(1.9rem, 4vw, 3.2rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        margin-bottom: 12px;
+      }
+      .business-card-heading p {
+        color: #b8c7ca;
+        line-height: 1.75;
+        max-width: 600px;
+      }
+      .business-card-button {
+        display: grid;
+        grid-template-columns: minmax(230px, 390px) 1fr;
+        gap: clamp(28px, 6vw, 82px);
+        align-items: center;
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+        color: inherit;
+        background: none;
+        border: 0;
+        text-align: left;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+      }
+      .business-card-preview {
+        position: relative;
+        min-height: 245px;
+        transition: transform 0.5s ease;
+      }
+      .business-card-button:hover .business-card-preview {
+        transform: translateY(-8px) rotate(-1deg);
+      }
+      .business-card-image {
+        display: block;
+        width: min(78%, 310px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4);
+        transition:
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+      .business-card-image.back {
+        position: absolute;
+        left: 20%;
+        top: 48px;
+        z-index: 0;
+        transform: rotate(5deg);
+        opacity: 0.84;
+      }
+      .business-card-image.front {
+        position: relative;
+        z-index: 1;
+        transform: rotate(-4deg);
+      }
+      .business-card-button:hover .business-card-image.front {
+        transform: rotate(-1deg) translateY(-5px);
+        box-shadow: 0 30px 55px rgba(114, 180, 194, 0.2);
+      }
+      .business-card-button:hover .business-card-image.back {
+        transform: rotate(8deg) translate(12px, 5px);
+      }
+      .business-card-copy h3 {
+        font-size: clamp(1.35rem, 3vw, 2.1rem);
+        margin-bottom: 12px;
+      }
+      .business-card-copy p {
+        color: #c0ccce;
+        line-height: 1.8;
+        max-width: 520px;
+        margin-bottom: 17px;
+      }
+      .business-card-link {
+        color: #72b4c2;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .business-card-link::after {
+        content: "  →";
+        font-size: 17px;
+      }
+      .document-modal {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 22px;
+        background: rgba(0, 0, 0, 0.82);
+        backdrop-filter: blur(10px);
+        z-index: 10000;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+      }
+      .document-modal.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .document-modal-box {
+        width: min(100%, 1000px);
+        height: min(92vh, 780px);
+        background: #0b1113;
+        border: 1px solid rgba(114, 180, 194, 0.5);
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        position: relative;
+        transform: translateY(18px) scale(0.97);
+        transition: transform 0.35s ease;
+      }
+      .document-modal.open .document-modal-box {
+        transform: translateY(0) scale(1);
+      }
+      .document-modal-close {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #72b4c2;
+        border-radius: 50%;
+        background: #0b1113;
+        color: #fff;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 2;
+        transition:
+          background 0.25s ease,
+          color 0.25s ease,
+          transform 0.25s ease;
+      }
+      .document-modal-close:hover {
+        background: #72b4c2;
+        color: #071012;
+        transform: rotate(90deg);
+      }
+      .document-modal iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      @media (max-width: 760px) {
+        .business-card-button {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .business-card-preview {
+          width: min(100%, 390px);
+          margin: 0 auto;
+        }
+        .document-modal {
+          padding: 12px;
+        }
+        .document-modal-box {
+          height: 86vh;
+        }
+        .document-modal-close {
+          right: -4px;
+          top: -48px;
+        }
+      }
+    </style>
+    <style>
+      /* VIDEO DE LA AGENCIA Y AJUSTES GENERALES PARA MÓVIL */
+      html {
+        overflow-x: hidden;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      img,
+      video,
+      iframe {
+        max-width: 100%;
+      }
+      .agency-video-section {
+        margin: 15px;
+        padding: clamp(30px, 5vw, 64px) clamp(18px, 5vw, 64px);
+        background: #000;
+        border: 1px solid #15191a;
+        overflow: hidden;
+      }
+      .agency-video-layout {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(360px, 1.28fr);
+        gap: clamp(28px, 6vw, 82px);
+        align-items: center;
+      }
+      .agency-video-copy {
+        max-width: 430px;
+      }
+      .agency-video-copy h2 {
+        font-size: clamp(1.85rem, 3.7vw, 3.1rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        margin: 12px 0 16px;
+      }
+      .agency-video-copy h2 span {
+        color: #72b4c2;
+      }
+      .agency-video-copy p:not(.agency-video-kicker) {
+        color: #bdcacc;
+        line-height: 1.8;
+      }
+      .agency-video-kicker {
+        color: #72b4c2;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      .agency-video-frame {
+        width: min(100%, 760px);
+        margin-left: auto;
+        background: #000;
+        border: 1px solid #1c2426;
+        border-radius: 12px;
+        padding: 8px;
+        box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55);
+      }
+      .agency-video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 848 / 478;
+        object-fit: contain;
+        border-radius: 7px;
+        background: #000;
+      }
+      @media (max-width: 900px) {
+        .agency-video-layout {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .agency-video-copy {
+          max-width: 680px;
+        }
+        .agency-video-frame {
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 600px) {
+        .main-header {
+          padding-left: 14px !important;
+          padding-right: 14px !important;
+        }
+        .card-section,
+        .creator-section,
+        .business-card-section,
+        .agency-video-section {
+          margin: 10px;
+        }
+        .card-section {
+          padding: 28px 18px;
+        }
+        .about-hero-title {
+          font-size: clamp(2.1rem, 12vw, 3rem);
+        }
+        .about-hero-text {
+          font-size: 12px;
+        }
+        .hero-art {
+          max-height: 270px;
+          object-fit: contain;
+        }
+        .creator-section,
+        .business-card-section,
+        .agency-video-section {
+          padding: 28px 16px;
+        }
+        .agency-video-frame {
+          padding: 5px;
+          box-shadow:
+            8px 8px 0 rgba(114, 180, 194, 0.07),
+            0 15px 32px rgba(0, 0, 0, 0.35);
+        }
+        .business-card-preview {
+          min-height: 205px;
+          transform: scale(0.9);
+          transform-origin: center top;
+          margin-bottom: -15px;
+        }
+        footer {
+          padding: 30px 18px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="site-loader" aria-label="Cargando Nautilus">
+      <span class="loader-ring"></span
+      ><img
+        decoding="async"
+        class="loader-mark"
+        src="imagenes/01-logo.jpg.png"
+        alt="Nautilus"
+        width="68"
+        height="68"
+      />
+    </div>
 
-
-<style>
-/* Ajustes finales: tarjetas visuales, FAQ y microinteracciones */
-.faq-section { max-width:980px; margin-left:auto !important; margin-right:auto !important; }
-.faq-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:26px; }
-.faq-list details { background:linear-gradient(145deg,#0e1315,#080a0b); border:1px solid rgba(114,180,194,.22); border-radius:5px; padding:0 20px; transition:border-color .25s ease, transform .25s ease, background .25s ease; }
-.faq-list details:hover { border-color:rgba(154,214,221,.65); transform:translateY(-3px); background:#10181a; }
-.faq-list details[open] { border-color:#72b4c2; }
-.faq-list summary { cursor:pointer; list-style:none; padding:20px 28px 20px 0; font-weight:700; line-height:1.35; position:relative; }
-.faq-list summary::-webkit-details-marker { display:none; }
-.faq-list summary::after { content:'+'; position:absolute; right:0; top:17px; color:#72b4c2; font-size:1.4rem; font-weight:400; transition:transform .25s ease; }
-.faq-list details[open] summary::after { content:'–'; transform:rotate(180deg); }
-.faq-list details p { color:#b7c4c6; line-height:1.7; padding:0 0 20px; margin:0; }
-.service-card { overflow:hidden; transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
-.service-card:hover { transform:translateY(-7px); border-color:#72b4c2 !important; box-shadow:0 18px 34px rgba(0,0,0,.35); }
-.service-card-media { height:150px; overflow:hidden; margin:-1px -1px 22px; border-bottom:1px solid rgba(114,180,194,.22); }
-.service-card-media img { width:100%; height:100%; object-fit:cover; filter:saturate(.68) contrast(1.08); transition:transform .5s ease, filter .5s ease; }
-.service-card:hover .service-card-media img { transform:scale(1.06); filter:saturate(.95) contrast(1.04); }
-.pf-item { overflow:hidden; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
-.pf-item:hover { transform:translateY(-6px); border-color:#72b4c2; box-shadow:0 18px 34px rgba(0,0,0,.36); }
-.pf-item img { transition:transform .55s ease, filter .55s ease; filter:saturate(.72); }
-.pf-item:hover img { transform:scale(1.05); filter:saturate(1); }
-.trabajo-card, .valor-item { transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
-.trabajo-card:hover, .valor-item:hover { transform:translateY(-5px); box-shadow:0 16px 30px rgba(0,0,0,.28); }
-@media (max-width:700px) { .faq-list { grid-template-columns:1fr; } .service-card-media { height:170px; } }
-</style>
-
-<style>
-/* Carga de marca y mejoras de lectura */
-#site-loader{position:fixed;inset:0;background:#050607;display:grid;place-items:center;z-index:3000;transition:opacity .35s ease,visibility .35s ease}#site-loader.is-ready{opacity:0;visibility:hidden;pointer-events:none}.loader-mark{width:68px;height:68px;border-radius:50%;padding:7px;background:#fff;object-fit:cover;box-shadow:0 0 0 1px rgba(114,180,194,.35),0 0 28px rgba(114,180,194,.2);animation:loaderPulse 1.2s ease-in-out infinite}.loader-ring{position:absolute;width:86px;height:86px;border:2px solid rgba(114,180,194,.28);border-top-color:#72b4c2;border-radius:50%;animation:loaderSpin 1s linear infinite}@keyframes loaderSpin{to{transform:rotate(360deg)}}@keyframes loaderPulse{50%{transform:scale(.94);opacity:.78}}
-.pf-cap small{display:block;color:#c0cbcd;font-size:11px;line-height:1.45;margin-top:5px;max-width:28ch}.client-stars{color:#9ad6dd;letter-spacing:4px;font-size:14px;margin-bottom:12px}.client-card p{color:#c6d0d2;line-height:1.7}.client-card h3{font-size:13px;margin-top:14px;color:#fff}.service-info p{color:#c5ced0;line-height:1.75}.service-list li{line-height:1.5}
-</style>
-<link rel="icon" type="image/png" href="imagenes/01-logo.jpg.png">
-<link rel="preload" as="image" href="imagenes/01-logo.jpg.png">
-<style>
-/* Fallback de seguridad: el contenido nunca queda bloqueado por el loader */
-#site-loader{animation:loaderAutoHide .45s ease 1.35s forwards}
-@keyframes loaderAutoHide{to{opacity:0;visibility:hidden;pointer-events:none}}
-</style>
-<style>
-footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,footer p{overflow-wrap:anywhere}@media(max-width:700px){footer{grid-template-columns:1fr!important;gap:22px!important;padding:28px 18px!important;margin:10px!important}.footer-content{grid-template-columns:1fr!important;gap:20px!important;padding:28px 16px!important}.footer-brand,.footer-brand-col{align-items:center!important;text-align:center!important}.footer-col{min-width:0!important}.footer-col ul{padding-left:0!important}.contact-item,.contact-item-footer{align-items:flex-start!important;overflow-wrap:anywhere}.footer-logo-img,.brand-logo-svg{max-width:180px!important}}
-</style>
-<style>/* WhatsApp: único botón con el celeste Nautilus */
-.wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
-</style>
-<style>
-/* Origen: composición editorial limpia y sección complementaria con interacción */
-.origin-feature{margin:15px;padding:clamp(22px,4vw,54px);background:#070a0b;border:1px solid var(--line);overflow:hidden}.origin-layout{display:grid;grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);gap:clamp(24px,5vw,64px);align-items:center;max-width:1180px;margin:0 auto}.origin-image{order:-1;min-width:0;overflow:hidden;border:1px solid rgba(114,180,194,.42);border-radius:16px;background:#0b1011;box-shadow:18px 18px 0 rgba(114,180,194,.08),0 22px 55px rgba(0,0,0,.35)}.origin-image img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .6s ease,filter .6s ease}.origin-image:hover img{transform:scale(1.06);filter:saturate(1.08)}.origin-copy{max-width:650px}.origin-copy h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.04;letter-spacing:-.04em;margin:0 0 18px;color:#fff}.origin-copy p{color:#becacc;line-height:1.8;max-width:61ch;margin:0 0 12px}.origin-signature{display:flex;align-items:baseline;gap:12px;margin-top:22px;padding-top:14px;border-top:1px solid rgba(114,180,194,.22)}.origin-signature span{color:#72b4c2;font-size:12px;font-weight:800;letter-spacing:.2em}.origin-signature small{color:#93a5a8;font-size:11px}.brand-meaning-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1180px;margin:34px auto 0}.brand-meaning-card{display:flex;align-items:center;gap:15px;background:#0b1011;border:1px solid rgba(114,180,194,.2);padding:18px;border-radius:10px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}.brand-meaning-card:hover{transform:translateY(-7px);border-color:#72b4c2;box-shadow:0 18px 35px rgba(114,180,194,.12)}.brand-meaning-card h3{margin:0 0 5px;font-size:13px;letter-spacing:.1em}.brand-meaning-card p{margin:0;color:#adbabc;font-size:12px;line-height:1.55}.meaning-circle{display:block;flex:0 0 48px;width:48px;height:48px;border-radius:50%;border:2px solid #72b4c2;box-shadow:0 0 0 6px rgba(114,180,194,.06)}.black-mark{background:#020303}.white-mark{background:#fff;border-color:#fff}.cyan-mark{background:linear-gradient(135deg,#72b4c2,#d5edf0);border-color:#72b4c2}.origin-principles{margin:28px 15px 15px;padding:clamp(28px,5vw,62px);background:linear-gradient(145deg,#0a1012,#050607);border:1px solid var(--line);text-align:center;position:relative;overflow:hidden}.origin-principles::before{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(114,180,194,.12);border-radius:50%;left:-150px;bottom:-190px}.origin-principles h2{max-width:720px;margin:0 auto 12px;font-size:clamp(1.8rem,3vw,2.8rem);letter-spacing:-.035em}.origin-principles-lead{max-width:650px;margin:0 auto 30px;color:#b8c5c7;line-height:1.75}.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1050px;margin:0 auto}.principle-card{position:relative;text-align:left;min-height:205px;padding:24px;background:#090d0f;border:1px solid rgba(114,180,194,.2);border-radius:12px;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}.principle-card:nth-child(2){transform:translateY(18px)}.principle-card:hover,.principle-card:nth-child(2):hover{transform:translateY(-8px);border-color:#72b4c2;box-shadow:0 20px 38px rgba(0,0,0,.3)}.principle-number{position:absolute;right:16px;top:14px;color:#72b4c2;font-size:11px;font-weight:800;letter-spacing:.12em}.principle-icon{display:grid;place-items:center;width:44px;height:44px;border:1px solid #72b4c2;border-radius:50%;color:#72b4c2;font-size:24px;margin-bottom:20px}.principle-card h3{margin:0 0 8px;font-size:15px}.principle-card p{margin:0;color:#aebbbe;font-size:13px;line-height:1.65}.origin-route{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:34px;color:#72b4c2;font-size:11px;font-weight:800;letter-spacing:.16em}.origin-route i{font-size:18px;font-style:normal;color:#aebbbe}@media(max-width:820px){.origin-layout{grid-template-columns:1fr;gap:28px}.origin-image{max-width:520px;width:100%;margin:auto}.origin-copy{max-width:none}.brand-meaning-grid,.principles-grid{grid-template-columns:1fr}.principle-card:nth-child(2){transform:none}.origin-route{flex-wrap:wrap;gap:10px}}@media(max-width:560px){.origin-feature,.origin-principles{margin:10px;padding:22px 16px}.origin-copy h2{font-size:2rem}.brand-meaning-card{align-items:flex-start}.origin-route{font-size:9px;letter-spacing:.1em}}
-</style>
-<style>
-/* Tarjetas de significado: solo texto, sin imágenes */
-.text-meaning{display:block;position:relative;min-height:176px;padding:24px 22px 20px;border-radius:12px;overflow:hidden}.text-meaning::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:3px;background:#72b4c2;transform:scaleX(.25);transform-origin:left;transition:transform .35s ease}.text-meaning:nth-child(1)::after{background:#f2f5f5}.text-meaning:nth-child(2)::after{background:#fff}.text-meaning:nth-child(3)::after{background:#72b4c2}.text-meaning:hover::after{transform:scaleX(1)}.text-meaning:hover{transform:translateY(-7px)}.text-meaning h3{font-size:15px;letter-spacing:.14em;margin:14px 0 10px}.text-meaning p{font-size:13px;line-height:1.7;color:#bfcacc;margin:0}.meaning-index{display:block;color:#72b4c2;font-size:11px;font-weight:800;letter-spacing:.16em}
-</style>
-<style>
-/* Solo la tarjeta del logo lleva imagen; Negro y Blanco permanecen en texto. */
-.logo-meaning{display:flex;align-items:flex-start;gap:16px}.logo-meaning-image{width:62px;height:62px;flex:0 0 62px;object-fit:cover;border-radius:50%;border:1px solid #72b4c2;background:#050708;padding:4px;box-sizing:border-box}.logo-meaning h3{margin-top:8px}.logo-meaning .meaning-index{margin-top:1px}
-@media(max-width:560px){.logo-meaning{align-items:flex-start}.logo-meaning-image{width:52px;height:52px;flex-basis:52px}}
-</style>
-<style>
-/* Indicadores visuales restaurados para Negro y Blanco; sin numeración. */
-.color-meaning{display:flex;align-items:flex-start;gap:16px}.color-meaning .meaning-circle{margin-top:4px}.color-meaning h3{margin-top:8px}.black-mark{background:#020303}.white-mark{background:#fff;border-color:#fff}.meaning-circle{display:block;flex:0 0 48px;width:48px;height:48px;border-radius:50%;border:2px solid #72b4c2;box-shadow:0 0 0 6px rgba(114,180,194,.06)}
-@media(max-width:560px){.color-meaning{align-items:flex-start}.color-meaning .meaning-circle{width:42px;height:42px;flex-basis:42px}}
-</style>
-</head>
-<body>
-<div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
-
-<!-- NAVBAR HEADER ACTUALIZADO EN nosotros.html -->
-<header class="main-header">
-    <div class="brand-container" style="display: flex; align-items: center; gap: 12px;">
-        <img src="imagenes/01-logo.jpg.png" alt="Logo Nautilus" style="height: 40px; width: auto;">
+    <!-- NAVBAR HEADER ACTUALIZADO EN nosotros.html -->
+    <header class="main-header">
+      <div
+        class="brand-container"
+        style="display: flex; align-items: center; gap: 12px"
+      >
+        <img
+          src="imagenes/01-logo.jpg.png"
+          alt="Logo Nautilus"
+          style="height: 40px; width: auto"
+        />
         <div class="logo-text">
-            <h1>Nautilus</h1>
-            <span>Agencia multimedial</span>
+          <h1>Nautilus</h1>
+          <span>Agencia multimedial</span>
         </div>
-    </div>
+      </div>
 
-    <button class="nav-toggle" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
-    <nav class="main-nav">
+      <button class="nav-toggle" type="button" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="main-nav">
         <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="nosotros.html" class="active">QUIÉNES SOMOS</a></li>
-            <li><a href="servicios.html">SERVICIOS</a></li>
-            <li><a href="portafolio.html">PORTAFOLIO</a></li>
-            <li><a href="contactanos.html">CONTÁCTANOS</a></li>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="nosotros.html" class="active">QUIÉNES SOMOS</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="portafolio.html">PORTAFOLIO</a></li>
+          <li><a href="contactanos.html">CONTÁCTANOS</a></li>
         </ul>
-    </nav>
+      </nav>
 
-    <div class="user-actions" style="display: flex; align-items: center; gap: 15px;">
-        <a href="ingreso.html" class="user-icon" style="text-decoration: none;">
-            <i class="fa-regular fa-user"></i>
+      <div
+        class="user-actions"
+        style="display: flex; align-items: center; gap: 15px"
+      >
+        <a href="ingreso.html" class="user-icon" style="text-decoration: none">
+          <i class="fa-regular fa-user"></i>
         </a>
-        <a href="ingreso.html" class="btn-login" style="text-decoration: none;">INICIO DE SESIÓN</a>
-    </div>
-</header>
-
+        <a href="ingreso.html" class="btn-login" style="text-decoration: none"
+          >INICIO DE SESIÓN</a
+        >
+      </div>
+    </header>
 
     <!-- HERO QUIÉNES SOMOS -->
     <section class="card-section about-hero">
-        <div class="about-hero-content">
-            <h1 class="about-hero-title">
-                QUIÉNES
-                <span class="highlight">SOMOS</span>
-            </h1>
-            <p class="about-hero-text">
-                En Nautilus somos un equipo creativo apasionado por el diseño y la comunicación visual. Transformamos ideas en experiencias visuales que conectan, inspiran y generan valor para marcas y personas.<br><br>
-                Combinamos estrategia, creatividad y tecnología para construir identidades sólidas y soluciones visuales que hacen la diferencia.
-            </p>
-        </div>
+      <div class="about-hero-content">
+        <h1 class="about-hero-title">
+          QUIÉNES
+          <span class="highlight">SOMOS</span>
+        </h1>
+        <p class="about-hero-text">
+          En Nautilus somos un equipo creativo apasionado por el diseño y la
+          comunicación visual. Transformamos ideas en experiencias visuales que
+          conectan, inspiran y generan valor para marcas y personas.<br /><br />
+          Combinamos estrategia, creatividad y tecnología para construir
+          identidades sólidas y soluciones visuales que hacen la diferencia.
+        </p>
+      </div>
 
-        <div class="about-hero-image">
-            <div class="hero-image-wrapper">
-           <div class="hero-image-wrapper">
-  <img src="imagenes/24-nosotros-equipo.webp" alt="Equipo creativo de Nautilus" class="hero-art" loading="eager" fetchpriority="high">
-</div>
+      <div class="about-hero-image">
+        <div class="hero-image-wrapper">
+          <img
+            src="imagenes/24-nosotros-equipo.webp"
+            alt="Equipo creativo de Nautilus"
+            class="hero-art"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONOCE A LA CREADORA -->
+    <section
+      class="creator-section"
+      aria-label="Conoce a la creadora de Nautilus"
+    >
+      <div class="creator-layout">
+        <div class="creator-photo-wrap">
+          <img
+            src="imagenes/40-sara-muneton.png"
+            alt="Sara Muñeton, creadora de Nautilus"
+            class="creator-photo"
+            loading="lazy"
+          />
+        </div>
+        <div class="creator-copy">
+          <p class="creator-kicker">Una mirada detrás de cada idea</p>
+          <h2>Conoce a la <span>creadora</span> de Nautilus.</h2>
+          <p>
+            Soy Sara Muñeton, la creadora de Nautilus, una agencia creativa
+            enfocada en el diseño gráfico, la publicidad y el marketing digital.
+            Me interesa desarrollar ideas que tengan identidad propia y
+            encontrar nuevas formas de comunicar a través del diseño.
+          </p>
+          <p>
+            Con Nautilus busco construir un espacio donde la creatividad no
+            tenga que seguir siempre las mismas reglas, sino que pueda explorar,
+            experimentar y convertir cada proyecto en algo único.
+          </p>
+          <div class="creator-signature">Sara Muñeton · Nautilus</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO DE LA AGENCIA -->
+    <section
+      class="agency-video-section"
+      aria-label="Video de la agencia Nautilus"
+    >
+      <div class="agency-video-layout">
+        <div class="agency-video-copy">
+          <p class="agency-video-kicker">Conoce a Nautilus</p>
+          <h2>Ideas que toman forma y <span>conectan.</span></h2>
+          <p>
+            Conoce un poco más de nosotros en este video de nuestra agencia
+            multimedial.
+          </p>
+        </div>
+        <div class="agency-video-frame">
+          <video
+            class="agency-video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="imagenes/40-video-agencia-negro.jpg"
+          >
+            <source src="imagenes/40-video-agencia.mp4" type="video/mp4" />
+            Tu navegador no admite videos HTML5.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- TARJETA DE PRESENTACIÓN -->
+    <section
+      class="business-card-section"
+      aria-label="Tarjeta de presentación de Nautilus"
+    >
+      <div class="business-card-heading">
+        <p class="business-card-kicker">Una forma de encontrarnos</p>
+        <h2>Conoce nuestra tarjeta de presentación.</h2>
+        <p>
+          Haz clic en la tarjeta para verla completa y descubrir los datos de
+          contacto de Nautilus.
+        </p>
+      </div>
+      <button
+        class="business-card-button"
+        type="button"
+        data-document-modal="tarjetaModal"
+        aria-label="Abrir tarjeta de presentación de Nautilus"
+      >
+        <span class="business-card-preview" aria-hidden="true">
+          <img
+            class="business-card-image back"
+            src="imagenes/tarjeta/tarjeta-reverso.png"
+            alt=""
+          />
+          <img
+            class="business-card-image front"
+            src="imagenes/tarjeta/tarjeta-frente.png"
+            alt=""
+          />
+        </span>
+        <span class="business-card-copy">
+          <h3>Tu idea también merece una buena presentación.</h3>
+          <p>
+            Una pieza sencilla, elegante y pensada para que cada conversación
+            pueda convertirse en una nueva oportunidad.
+          </p>
+          <span class="business-card-link">Ver tarjeta completa</span>
+        </span>
+      </button>
     </section>
 
     <!-- MISIÓN Y VISIÓN -->
     <section class="card-section">
-        <div class="mission-vision-grid">
-            <div class="mv-card">
-                <div class="mv-icon">
-                    <i class="fa-solid fa-bullseye"></i>
-                </div>
-                <div class="mv-content">
-                    <h3>NUESTRA MISIÓN</h3>
-                    <p>Fortalecer la identidad visual de marcas y emprendimientos a través de soluciones creativas, estratégicas e innovadoras que generen impacto y crecimiento en el mercado.</p>
-                </div>
-            </div>
-
-            <div class="divider-vertical"></div>
-
-            <div class="mv-card">
-                <div class="mv-icon">
-                    <i class="fa-regular fa-eye"></i>
-                </div>
-                <div class="mv-content">
-                    <h3>NUESTRA VISIÓN</h3>
-                    <p>Ser reconocidos como una agencia multimedial líder en diseño gráfico y comunicación visual, destacándonos por nuestra creatividad, compromiso y resultados que trascienden.</p>
-                </div>
-            </div>
+      <div class="mission-vision-grid">
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <div class="mv-content">
+            <h3>NUESTRA MISIÓN</h3>
+            <p>
+              Fortalecer la identidad visual de marcas y emprendimientos a
+              través de soluciones creativas, estratégicas e innovadoras que
+              generen impacto y crecimiento en el mercado.
+            </p>
+          </div>
         </div>
+
+        <div class="divider-vertical"></div>
+
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fa-regular fa-eye"></i>
+          </div>
+          <div class="mv-content">
+            <h3>NUESTRA VISIÓN</h3>
+            <p>
+              Ser reconocidos como una agencia multimedial líder en diseño
+              gráfico y comunicación visual, destacándonos por nuestra
+              creatividad, compromiso y resultados que trascienden.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- NUESTROS VALORES -->
     <section class="card-section valores-section">
-        <h2 class="section-title">NUESTROS VALORES</h2>
-        <div class="valores-grid">
-            <div class="valor-item">
-                <div class="valor-icon">
-                    <i class="fa-regular fa-lightbulb"></i>
-                </div>
-                <h4>CREATIVIDAD</h4>
-                <p>Pensamos diferente para crear soluciones originales y efectivas.</p>
-            </div>
-
-            <div class="valor-item">
-                <div class="valor-icon">
-                    <i class="fa-solid fa-handshake"></i>
-                </div>
-                <h4>COMPROMISO</h4>
-                <p>Nos involucramos al 100% en cada proyecto como si fuera propio.</p>
-            </div>
-
-            <div class="valor-item">
-                <div class="valor-icon">
-                    <i class="fa-regular fa-gem"></i>
-                </div>
-                <h4>CALIDAD</h4>
-                <p>Buscamos la excelencia en cada detalle de nuestro trabajo.</p>
-            </div>
-
-            <div class="valor-item">
-                <div class="valor-icon">
-                    <i class="fa-solid fa-users"></i>
-                </div>
-                <h4>TRABAJO EN EQUIPO</h4>
-                <p>Creamos en conjunto, compartimos ideas y alcanzamos grandes resultados.</p>
-            </div>
-
-            <div class="valor-item">
-                <div class="valor-icon">
-                    <i class="fa-solid fa-rocket"></i>
-                </div>
-                <h4>INNOVACIÓN</h4>
-                <p>Exploramos nuevas ideas y tendencias para mantenernos siempre un paso adelante.</p>
-            </div>
+      <h2 class="section-title">NUESTROS VALORES</h2>
+      <div class="valores-grid">
+        <div class="valor-item">
+          <div class="valor-icon">
+            <i class="fa-regular fa-lightbulb"></i>
+          </div>
+          <h4>CREATIVIDAD</h4>
+          <p>
+            Pensamos diferente para crear soluciones originales y efectivas.
+          </p>
         </div>
+
+        <div class="valor-item">
+          <div class="valor-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h4>COMPROMISO</h4>
+          <p>Nos involucramos al 100% en cada proyecto como si fuera propio.</p>
+        </div>
+
+        <div class="valor-item">
+          <div class="valor-icon">
+            <i class="fa-regular fa-gem"></i>
+          </div>
+          <h4>CALIDAD</h4>
+          <p>Buscamos la excelencia en cada detalle de nuestro trabajo.</p>
+        </div>
+
+        <div class="valor-item">
+          <div class="valor-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h4>TRABAJO EN EQUIPO</h4>
+          <p>
+            Creamos en conjunto, compartimos ideas y alcanzamos grandes
+            resultados.
+          </p>
+        </div>
+
+        <div class="valor-item">
+          <div class="valor-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h4>INNOVACIÓN</h4>
+          <p>
+            Exploramos nuevas ideas y tendencias para mantenernos siempre un
+            paso adelante.
+          </p>
+        </div>
+      </div>
     </section>
-<!-- HISTORIA Y LENGUAJE DE MARCA -->
-<section class="brand-story-section origin-feature">
-  <div class="origin-layout">
-    <div class="origin-image"><img src="imagenes/39-nosotros-origen-nuevo.webp" alt="Proceso creativo del origen de Nautilus" loading="lazy"></div>
-    <div class="origin-copy">
-      <div class="section-kicker">✦ De dónde nace nuestra mirada</div>
-      <h2>De un boceto a una marca con sentido.</h2>
-      <p>Nautilus nació en Cali, entre bocetos, conversaciones y el deseo de ayudar a las marcas a expresar mejor lo que las hace únicas. Desde el comienzo entendimos que una buena identidad no aparece de la nada: se descubre cuando hay curiosidad, criterio y una intención clara.</p>
-      <p>Por eso construimos identidades visuales con personalidad y propósito. Cada color, forma y pieza encuentra su lugar para que la marca pueda presentarse con seguridad, cercanía y una voz propia.</p>
-      <div class="origin-signature"><span>NAUTILUS</span><small>Una mirada clara para ideas que quieren crecer.</small></div>
-    </div>
-  </div>
-  <div class="brand-meaning-grid">
-    <article class="brand-meaning-card text-meaning color-meaning"><span class="meaning-circle black-mark" aria-hidden="true"></span><div><h3>NEGRO</h3><p>La base con carácter: transmite presencia, profundidad y la confianza de una marca que no necesita exagerar para hacerse notar.</p></div></article>
-    <article class="brand-meaning-card text-meaning color-meaning"><span class="meaning-circle white-mark" aria-hidden="true"></span><div><h3>BLANCO</h3><p>El espacio que equilibra: aporta claridad, calma y una lectura limpia para que cada idea encuentre su lugar.</p></div></article>
-    <article class="brand-meaning-card text-meaning logo-meaning"><img class="logo-meaning-image" src="imagenes/01-logo.jpg.png" alt="Logo de Nautilus" loading="lazy"><div><h3>EL LOGO</h3><p>Un símbolo de movimiento y evolución que representa cómo una idea crece, cambia y encuentra su propia forma.</p></div></article>
-  </div>
-</section>
-<!-- LO QUE NOS MUEVE -->
-<section class="origin-principles" aria-label="Lo que mueve a Nautilus">
-  <div class="section-kicker">✦ Nuestra identidad visual</div>
-  <h2>Una identidad visual que se reconoce y se disfruta</h2>
-  <p class="origin-principles-lead">Cada decisión visual suma: una forma de ordenar, expresar y hacer que una marca conecte con naturalidad.</p>
-  <div class="principles-grid">
-    <article class="principle-card"><span class="principle-number">01</span><div class="principle-icon">⌁</div><h3>Observamos</h3><p>Miramos el contexto, los referentes y las oportunidades que hacen especial a cada proyecto.</p></article>
-    <article class="principle-card"><span class="principle-number">02</span><div class="principle-icon">◈</div><h3>Componemos</h3><p>Elegimos ritmo, color y forma para construir una identidad visual con equilibrio.</p></article>
-    <article class="principle-card"><span class="principle-number">03</span><div class="principle-icon">✧</div><h3>Proyectamos</h3><p>Llevamos la idea a piezas concretas para que pueda crecer en cada punto de contacto.</p></article>
-  </div>
-  <div class="origin-route"><span>OBSERVAR</span><i>→</i><span>COMPONER</span><i>→</i><span>PROYECTAR</span></div>
-</section>
-<!-- FOOTER -->
-     <footer>
-        <!-- COLUMNA 1: LOGO + TEXTO -->
-        <div class="footer-brand">
-            <img src="imagenes/01-logo.jpg.png" alt="Logo Nautilus" class="footer-logo-img">
-            <h2>Nautilus</h2>
+    <!-- HISTORIA Y LENGUAJE DE MARCA -->
+    <section class="brand-story-section origin-feature">
+      <div class="origin-layout">
+        <div class="origin-image">
+          <img
+            src="imagenes/39-nosotros-origen-nuevo.webp"
+            alt="Proceso creativo del origen de Nautilus"
+            loading="lazy"
+          />
         </div>
+        <div class="origin-copy">
+          <div class="section-kicker">✦ De dónde nace nuestra mirada</div>
+          <h2>De un boceto a una marca con sentido.</h2>
+          <p>
+            Nautilus nació en Cali, entre bocetos, conversaciones y el deseo de
+            ayudar a las marcas a expresar mejor lo que las hace únicas. Desde
+            el comienzo entendimos que una buena identidad no aparece de la
+            nada: se descubre cuando hay curiosidad, criterio y una intención
+            clara.
+          </p>
+          <p>
+            Por eso construimos identidades visuales con personalidad y
+            propósito. Cada color, forma y pieza encuentra su lugar para que la
+            marca pueda presentarse con seguridad, cercanía y una voz propia.
+          </p>
+          <div class="origin-signature">
+            <span>NAUTILUS</span
+            ><small>Una mirada clara para ideas que quieren crecer.</small>
+          </div>
+        </div>
+      </div>
+      <div class="brand-meaning-grid">
+        <article class="brand-meaning-card text-meaning color-meaning">
+          <span class="meaning-circle black-mark" aria-hidden="true"></span>
+          <div>
+            <h3>NEGRO</h3>
+            <p>
+              La base con carácter: transmite presencia, profundidad y la
+              confianza de una marca que no necesita exagerar para hacerse
+              notar.
+            </p>
+          </div>
+        </article>
+        <article class="brand-meaning-card text-meaning color-meaning">
+          <span class="meaning-circle white-mark" aria-hidden="true"></span>
+          <div>
+            <h3>BLANCO</h3>
+            <p>
+              El espacio que equilibra: aporta claridad, calma y una lectura
+              limpia para que cada idea encuentre su lugar.
+            </p>
+          </div>
+        </article>
+        <article class="brand-meaning-card text-meaning logo-meaning">
+          <img
+            class="logo-meaning-image"
+            src="imagenes/01-logo.jpg.png"
+            alt="Logo de Nautilus"
+            loading="lazy"
+          />
+          <div>
+            <h3>EL LOGO</h3>
+            <p>
+              Un símbolo de movimiento y evolución que representa cómo una idea
+              crece, cambia y encuentra su propia forma.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- LO QUE NOS MUEVE -->
+    <section class="origin-principles" aria-label="Lo que mueve a Nautilus">
+      <div class="section-kicker">✦ Nuestra identidad visual</div>
+      <h2>Una identidad visual que se reconoce y se disfruta</h2>
+      <p class="origin-principles-lead">
+        Cada decisión visual suma: una forma de ordenar, expresar y hacer que
+        una marca conecte con naturalidad.
+      </p>
+      <div class="principles-grid">
+        <article class="principle-card">
+          <span class="principle-number">01</span>
+          <div class="principle-icon">⌁</div>
+          <h3>Observamos</h3>
+          <p>
+            Miramos el contexto, los referentes y las oportunidades que hacen
+            especial a cada proyecto.
+          </p>
+        </article>
+        <article class="principle-card">
+          <span class="principle-number">02</span>
+          <div class="principle-icon">◈</div>
+          <h3>Componemos</h3>
+          <p>
+            Elegimos ritmo, color y forma para construir una identidad visual
+            con equilibrio.
+          </p>
+        </article>
+        <article class="principle-card">
+          <span class="principle-number">03</span>
+          <div class="principle-icon">✧</div>
+          <h3>Proyectamos</h3>
+          <p>
+            Llevamos la idea a piezas concretas para que pueda crecer en cada
+            punto de contacto.
+          </p>
+        </article>
+      </div>
+      <div class="origin-route">
+        <span>OBSERVAR</span><i>→</i><span>COMPONER</span><i>→</i
+        ><span>PROYECTAR</span>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <!-- COLUMNA 1: LOGO + TEXTO -->
+      <div class="footer-brand">
+        <img
+          src="imagenes/01-logo.jpg.png"
+          alt="Logo Nautilus"
+          class="footer-logo-img"
+        />
+        <h2>Nautilus</h2>
+      </div>
 
-        <!-- COLUMNA 2: NAVEGACIÓN -->
-        <div class="footer-col">
-            <h3>NAVEGACIÓN</h3>
-            <ul>
-                <li><a href="index.html" style="color: #76c3d0;">INICIO</a></li>
-                <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
-                <li><a href="servicios.html">SERVICIOS</a></li>
-            <li><a href="portafolio.html">PORTAFOLIO</a></li>
-                <li><a href="contactanos.html">CONTÁCTANOS</a></li>
-            </ul>
-        </div>
+      <!-- COLUMNA 2: NAVEGACIÓN -->
+      <div class="footer-col">
+        <h3>NAVEGACIÓN</h3>
+        <ul>
+          <li><a href="index.html" style="color: #76c3d0">INICIO</a></li>
+          <li><a href="nosotros.html">QUIÉNES SOMOS</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="portafolio.html">PORTAFOLIO</a></li>
+          <li><a href="contactanos.html">CONTÁCTANOS</a></li>
+        </ul>
+      </div>
 
-        <!-- COLUMNA 3: SERVICIOS -->
-        <div class="footer-col">
-            <h3>SERVICIOS</h3>
-            <ul>
-                <li><a href="servicios.html">IDENTIDAD VISUAL</a></li>
-                <li><a href="servicios.html">DISEÑO GRÁFICO</a></li>
-                <li><a href="servicios.html">DISEÑO DIGITAL</a></li>
-                <li><a href="servicios.html">MARKETING VISUAL</a></li>
-            </ul>
-        </div>
+      <!-- COLUMNA 3: SERVICIOS -->
+      <div class="footer-col">
+        <h3>SERVICIOS</h3>
+        <ul>
+          <li><a href="servicios.html">IDENTIDAD VISUAL</a></li>
+          <li><a href="servicios.html">DISEÑO GRÁFICO</a></li>
+          <li><a href="servicios.html">DISEÑO DIGITAL</a></li>
+          <li><a href="servicios.html">MARKETING VISUAL</a></li>
+        </ul>
+      </div>
 
-        <!-- COLUMNA 4: CONTÁCTANOS -->
-        <div class="footer-col">
-            <h3>CONTÁCTANOS</h3>
-            <div class="contact-list">
-                <div class="contact-item">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>HolaNautilus@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+57 320 545 4084</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Cali, Colombia</span>
-                </div>
-            </div>
+      <!-- COLUMNA 4: CONTÁCTANOS -->
+      <div class="footer-col">
+        <h3>CONTÁCTANOS</h3>
+        <div class="contact-list">
+          <div class="contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>HolaNautilus@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+57 320 545 4084</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Cali, Colombia</span>
+          </div>
         </div>
+      </div>
 
-        <!-- COLUMNA 5: SÍGUENOS -->
-        <div class="footer-col">
-            <h3>SÍGUENOS</h3>
-            <div class="social-icons">
-                <a href="#" class="social-icon-btn"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-icon-btn"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#" class="social-icon-btn"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
+      <!-- COLUMNA 5: SÍGUENOS -->
+      <div class="footer-col">
+        <h3>SÍGUENOS</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon-btn"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-icon-btn"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="social-icon-btn"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
         </div>
+      </div>
     </footer>
-<!-- Botón flotante de WhatsApp -->
-<a class="wa-float" href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      class="wa-float"
+      href="https://wa.me/573205454084?text=Hola%20Nautilus%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20sus%20servicios"
+      target="_blank"
+      rel="noopener"
+      aria-label="Escríbenos por WhatsApp"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
 
-<div class="legal-bar">&copy; 2026 Nautilus · <a data-modal="modal-privacidad">Política de privacidad</a> · <a data-modal="modal-terminos">Términos y condiciones</a></div>
+    <div class="legal-bar">
+      &copy; 2026 Nautilus ·
+      <a data-modal="modal-privacidad">Política de privacidad</a> ·
+      <a data-modal="modal-terminos">Términos y condiciones</a>
+    </div>
 
-<div class="nx-modal" id="modal-privacidad" role="dialog" aria-modal="true" aria-label="Política de privacidad">
-  <div class="nx-modal-box">
-    <h3>Política de privacidad</h3>
-    
-        <p>En Nautilus Agencia Multimedial usamos los datos que compartes para responder solicitudes, preparar propuestas y coordinar proyectos de comunicación visual.</p>
-    <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
-    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
-    <button type="button" data-close>ACEPTAR</button>
-  </div>
-</div>
-<div class="nx-modal" id="modal-terminos" role="dialog" aria-modal="true" aria-label="Términos y condiciones">
-  <div class="nx-modal-box">
-    <h3>Términos y condiciones</h3>
-    
-        <p>Al usar este sitio aceptas utilizar sus formularios, enlaces y contenidos de forma responsable y únicamente para solicitar información sobre los servicios de Nautilus.</p>
-    <p>Los contenidos de este sitio (textos, imágenes, logos y diseños) pertenecen a Nautilus o se usan con autorización. Su reproducción total o parcial requiere permiso previo.</p>
-    <p>La información publicada es de carácter informativo. Las condiciones, plazos y precios de cada proyecto se acuerdan por escrito entre Nautilus y el cliente antes de iniciar el trabajo.</p>
-    <button type="button" data-close>ACEPTAR</button>
-  </div>
-</div>
+    <div
+      class="nx-modal"
+      id="modal-privacidad"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Política de privacidad"
+    >
+      <div class="nx-modal-box">
+        <h3>Política de privacidad</h3>
 
-<script>
-/* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
-(function () {
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.querySelector('.main-nav');
-  if (toggle && nav) toggle.addEventListener('click', function () { nav.classList.toggle('open'); });
+        <p>
+          En Nautilus Agencia Multimedial usamos los datos que compartes para
+          responder solicitudes, preparar propuestas y coordinar proyectos de
+          comunicación visual.
+        </p>
+        <p>
+          Nautilus recopila únicamente los datos que usted nos comparte
+          voluntariamente (nombre, correo, teléfono y mensaje) a través del
+          formulario de contacto o por WhatsApp, con el fin de responder su
+          solicitud y enviarle propuestas relacionadas con nuestros servicios.
+        </p>
+        <p>
+          No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en
+          cualquier momento la consulta, corrección o eliminación de su
+          información escribiendo a HolaNautilus@gmail.com.
+        </p>
+        <button type="button" data-close>ACEPTAR</button>
+      </div>
+    </div>
+    <div
+      class="nx-modal"
+      id="modal-terminos"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Términos y condiciones"
+    >
+      <div class="nx-modal-box">
+        <h3>Términos y condiciones</h3>
 
-  document.querySelectorAll('[data-modal]').forEach(function (a) {
-    a.addEventListener('click', function () { document.getElementById(a.getAttribute('data-modal')).classList.add('open'); });
-  });
-  document.querySelectorAll('.nx-modal').forEach(function (m) {
-    m.addEventListener('click', function (e) { if (e.target === m || e.target.hasAttribute('data-close')) m.classList.remove('open'); });
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') document.querySelectorAll('.nx-modal.open').forEach(function (m) { m.classList.remove('open'); });
-  });
+        <p>
+          Al usar este sitio aceptas utilizar sus formularios, enlaces y
+          contenidos de forma responsable y únicamente para solicitar
+          información sobre los servicios de Nautilus.
+        </p>
+        <p>
+          Los contenidos de este sitio (textos, imágenes, logos y diseños)
+          pertenecen a Nautilus o se usan con autorización. Su reproducción
+          total o parcial requiere permiso previo.
+        </p>
+        <p>
+          La información publicada es de carácter informativo. Las condiciones,
+          plazos y precios de cada proyecto se acuerdan por escrito entre
+          Nautilus y el cliente antes de iniciar el trabajo.
+        </p>
+        <button type="button" data-close>ACEPTAR</button>
+      </div>
+    </div>
 
-  var targets = document.querySelectorAll('section');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
-    }, { threshold: 0.08 });
-    targets.forEach(function (t) { t.classList.add('reveal'); io.observe(t); });
-  }
-})();
-</script>
+    <div
+      class="document-modal"
+      id="tarjetaModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Tarjeta de presentación de Nautilus"
+      aria-hidden="true"
+    >
+      <div class="document-modal-box">
+        <button
+          class="document-modal-close"
+          type="button"
+          data-close-document
+          aria-label="Cerrar tarjeta"
+        >
+          &times;
+        </button>
+        <iframe
+          src="documentos/tarjeta-de-presentacion-nautilus.pdf"
+          title="Tarjeta de presentación de Nautilus"
+        ></iframe>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var documentModal = document.getElementById("tarjetaModal");
+        if (!documentModal) return;
+        var openButton = document.querySelector(
+          "[data-document-modal='tarjetaModal']",
+        );
+        var closeButton = documentModal.querySelector("[data-close-document]");
+        function closeDocument() {
+          documentModal.classList.remove("open");
+          documentModal.setAttribute("aria-hidden", "true");
+        }
+        if (openButton)
+          openButton.addEventListener("click", function () {
+            documentModal.classList.add("open");
+            documentModal.setAttribute("aria-hidden", "false");
+          });
+        closeButton.addEventListener("click", closeDocument);
+        documentModal.addEventListener("click", function (event) {
+          if (event.target === documentModal) closeDocument();
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeDocument();
+        });
+      })();
+      /* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
+      (function () {
+        var toggle = document.querySelector(".nav-toggle");
+        var nav = document.querySelector(".main-nav");
+        if (toggle && nav)
+          toggle.addEventListener("click", function () {
+            nav.classList.toggle("open");
+          });
 
-<script>
-(function(){
-  function hideNautilusLoader(){
-    var loader=document.getElementById('site-loader');
-    if(loader){ loader.classList.add('is-ready'); loader.setAttribute('aria-hidden','true'); }
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',hideNautilusLoader,{once:true});
-  else hideNautilusLoader();
-  window.addEventListener('load',hideNautilusLoader,{once:true});
-  setTimeout(hideNautilusLoader,1400);
-})();
-</script>
+        document.querySelectorAll("[data-modal]").forEach(function (a) {
+          a.addEventListener("click", function () {
+            document
+              .getElementById(a.getAttribute("data-modal"))
+              .classList.add("open");
+          });
+        });
+        document.querySelectorAll(".nx-modal").forEach(function (m) {
+          m.addEventListener("click", function (e) {
+            if (e.target === m || e.target.hasAttribute("data-close"))
+              m.classList.remove("open");
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape")
+            document.querySelectorAll(".nx-modal.open").forEach(function (m) {
+              m.classList.remove("open");
+            });
+        });
+
+        var targets = document.querySelectorAll("section");
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (en) {
+                if (en.isIntersecting) {
+                  en.target.classList.add("visible");
+                  io.unobserve(en.target);
+                }
+              });
+            },
+            { threshold: 0.08 },
+          );
+          targets.forEach(function (t) {
+            t.classList.add("reveal");
+            io.observe(t);
+          });
+        }
+      })();
+    </script>
+
+    <script>
+      (function () {
+        function hideNautilusLoader() {
+          var loader = document.getElementById("site-loader");
+          if (loader) {
+            loader.classList.add("is-ready");
+            loader.setAttribute("aria-hidden", "true");
+          }
+        }
+        if (document.readyState === "loading")
+          document.addEventListener("DOMContentLoaded", hideNautilusLoader, {
+            once: true,
+          });
+        else hideNautilusLoader();
+        window.addEventListener("load", hideNautilusLoader, { once: true });
+        setTimeout(hideNautilusLoader, 1400);
+      })();
+    </script>
+  </body>
+</html>

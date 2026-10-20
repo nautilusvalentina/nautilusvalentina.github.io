@@ -571,6 +571,74 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
 <style>/* WhatsApp: único botón con el celeste Nautilus */
 .wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
 </style>
+
+<style>
+/* Proyecto audiovisual destacado: formato compacto, adaptable y accesible */
+.pf-featured-project {
+  width: min(1100px, calc(100% - 30px)); box-sizing: border-box; margin: 38px auto 24px;
+  padding: clamp(18px, 3vw, 30px); display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, .85fr); gap: clamp(22px, 4vw, 44px);
+  align-items: center; background: linear-gradient(135deg, #0d1113, #07090a);
+  border: 1px solid rgba(114,180,194,.3); border-radius: 12px;
+}
+.pf-featured-media { min-width: 0; }
+.pf-featured-media video {
+  display: block; width: 100%; max-height: 330px; aspect-ratio: 40 / 17; object-fit: contain;
+  background: #000; border: 1px solid rgba(114,180,194,.24); border-radius: 8px;
+}
+.pf-featured-copy { min-width: 0; }
+.pf-featured-kicker { color: #9ad6dd; font-size: .72rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.pf-featured-copy h2 { margin: 9px 0 12px; font-size: clamp(1.5rem, 2.6vw, 2.15rem); line-height: 1.15; }
+.pf-featured-copy p { color: #c7d0d2; line-height: 1.75; margin: 0 0 12px; }
+.pf-featured-client { color: #fff !important; font-size: .92rem; font-weight: 700; }
+@media (max-width: 760px) {
+  .pf-featured-project { grid-template-columns: minmax(0,1fr); gap: 18px; margin-top: 28px; }
+  .pf-featured-media video { max-height: 250px; }
+}
+@media (prefers-reduced-motion: reduce) { .pf-featured-project * { scroll-behavior: auto; } }
+</style>
+
+
+<style>
+/* Fundación Tambosí: dupla de logotipos con brillo suave e interacción discreta */
+.pf-tambosi-project {
+  width: min(1100px, calc(100% - 30px)); box-sizing: border-box; margin: 0 auto 54px;
+  padding: clamp(18px, 3vw, 30px); display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); gap: clamp(22px, 4vw, 44px);
+  align-items: center; background: linear-gradient(135deg, #0d1113, #07090a);
+  border: 1px solid rgba(114,180,194,.3); border-radius: 12px;
+}
+.pf-tambosi-logos { min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: clamp(10px, 2vw, 18px); }
+.pf-tambosi-logo-card {
+  position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 1; max-height: 250px;
+  display: grid; place-items: center; padding: 10px; box-sizing: border-box;
+  background: #f8f8f7; border: 1px solid rgba(114,180,194,.4); border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.24); transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.pf-tambosi-logo-card::after {
+  content: ""; position: absolute; z-index: 2; inset: -55%; pointer-events: none;
+  background: linear-gradient(112deg, transparent 42%, rgba(255,255,255,.44) 50%, transparent 58%);
+  transform: translateX(-72%) rotate(10deg); transition: transform .7s ease;
+}
+.pf-tambosi-logo-card img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 6px; transition: transform .35s ease; }
+@media (hover: hover) {
+  .pf-tambosi-logo-card:hover { transform: translateY(-5px); border-color: #9ad6dd; box-shadow: 0 16px 36px rgba(34,133,151,.24), 0 0 22px rgba(114,180,194,.12); }
+  .pf-tambosi-logo-card:hover::after { transform: translateX(72%) rotate(10deg); }
+  .pf-tambosi-logo-card:hover img { transform: scale(1.035); }
+}
+.pf-tambosi-copy { min-width: 0; }
+.pf-tambosi-copy h2 { margin: 0 0 14px; font-size: clamp(1.35rem, 2.5vw, 2rem); line-height: 1.2; text-wrap: balance; }
+.pf-tambosi-copy p { margin: 0; color: #c7d0d2; line-height: 1.8; }
+@media (max-width: 760px) {
+  .pf-tambosi-project { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .pf-tambosi-logos { width: 100%; max-width: 500px; margin-inline: auto; }
+  .pf-tambosi-logo-card { max-height: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pf-tambosi-logo-card, .pf-tambosi-logo-card::after, .pf-tambosi-logo-card img { transition: none !important; }
+}
+</style>
+
 </head>
 <body>
 <div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
@@ -630,11 +698,40 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
     <div class="pf-item" data-cat="grafico" data-title="Piezas que hacen visible tu idea"><img src="imagenes/29-grafico-ciencia.webp" alt="Piezas que hacen visible tu idea" loading="lazy"><div class="pf-cap"><span>Diseño gráfico</span><h3>Piezas que hacen visible tu idea</h3><small>Composición clara para comunicar mejor.</small></div></div>
     <div class="pf-item" data-cat="digital" data-title="Experiencia digital clara"><img src="imagenes/30-digital-interface.webp" alt="Experiencia digital clara" loading="lazy"><div class="pf-cap"><span>Diseño digital</span><h3>Experiencia digital clara</h3><small>Interfaces pensadas para orientar y conectar.</small></div></div>
     <div class="pf-item" data-cat="marketing" data-title="Campaña para conectar"><img src="imagenes/31-marketing-campana.webp" alt="Campaña para conectar" loading="lazy"><div class="pf-cap"><span>Marketing visual</span><h3>Campaña para conectar</h3><small>Concepto visual llevado a distintos formatos.</small></div></div>
-    <div class="pf-item" data-cat="identidad" data-title="Lenguaje visual consistente"><img src="imagenes/28-identidad-ciencia.webp" alt="Lenguaje visual consistente" loading="lazy"><div class="pf-cap"><span>Identidad visual</span><h3>Lenguaje visual consistente</h3><small>Un sistema que mantiene la marca reconocible.</small></div></div>
-    <div class="pf-item" data-cat="digital" data-title="Diseño que guía la experiencia"><img src="imagenes/30-digital-interface.webp" alt="Diseño que guía la experiencia" loading="lazy"><div class="pf-cap"><span>Diseño digital</span><h3>Diseño que guía la experiencia</h3><small>Jerarquía visual para una navegación simple.</small></div></div>
-    <div class="pf-item" data-cat="grafico" data-title="Composición y narrativa"><img src="imagenes/29-grafico-ciencia.webp" alt="Composición y narrativa" loading="lazy"><div class="pf-cap"><span>Diseño gráfico</span><h3>Composición y narrativa</h3><small>Piezas que cuentan una historia visual.</small></div></div>
     <div class="pf-item" data-cat="marketing" data-title="Contenido con intención"><img src="imagenes/31-marketing-campana.webp" alt="Contenido con intención" loading="lazy"><div class="pf-cap"><span>Marketing visual</span><h3>Contenido con intención</h3><small>Mensajes visuales pensados para cada canal.</small></div></div>
     <div class="pf-item" data-cat="identidad" data-title="Identidad lista para crecer"><img src="imagenes/32-cta-idea.webp" alt="Identidad lista para crecer" loading="lazy"><div class="pf-cap"><span>Identidad visual</span><h3>Identidad lista para crecer</h3><small>Una base visual preparada para expandirse.</small></div></div>
+</section>
+
+<!-- PROYECTO AUDIOVISUAL DESTACADO: debajo de la galería -->
+<section class="pf-featured-project" aria-labelledby="math-project-title">
+  <div class="pf-featured-media">
+    <video controls preload="metadata" playsinline poster="videos/dia-de-las-matematicas-poster.jpg" aria-label="Video del Día de las Matemáticas realizado para la I.E. Eustaquio Palacios">
+      <source src="videos/dia-de-las-matematicas-eustaquio-palacios.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video. Prueba con un navegador actualizado.
+    </video>
+  </div>
+  <div class="pf-featured-copy">
+    <span class="pf-featured-kicker">Proyecto audiovisual · Educación</span>
+    <h2 id="math-project-title">Día de las Matemáticas</h2>
+    <p class="pf-featured-client">Cliente: I.E. Eustaquio Palacios</p>
+    <p>Una pieza animada que acerca las matemáticas a los estudiantes con referencias a π y Al‑Juarismi, junto a escenas de participación y aprendizaje. Un relato visual pensado para celebrar la curiosidad y hacer más cercana esta materia.</p>
+  </div>
+</section>
+
+<!-- PROYECTO DE IDENTIDAD VISUAL: FUNDACIÓN TAMBOSÍ -->
+<section class="pf-tambosi-project" aria-labelledby="tambosi-project-title">
+  <div class="pf-tambosi-logos" aria-label="Logotipos diseñados para Fundación Tambosí">
+    <figure class="pf-tambosi-logo-card">
+      <img src="imagenes/fundacion-tambosi-logo-institucional.jpeg" alt="Logotipo institucional de Fundación Tambosí con tambor y elementos culturales" loading="lazy">
+    </figure>
+    <figure class="pf-tambosi-logo-card">
+      <img src="imagenes/fundacion-tambosi-logo-digital.jpeg" alt="Versión digital del logotipo de Fundación Tambosí" loading="lazy">
+    </figure>
+  </div>
+  <div class="pf-tambosi-copy">
+    <h2 id="tambosi-project-title">FUNDACIÓN TAMBOSÍ — DISEÑO DE LOGOTIPO</h2>
+    <p>La Fundación Tambosí buscaba una propuesta visual que representara su identidad y pudiera utilizarse en sus perfiles digitales. Desde Nautilus, desarrollamos una propuesta gráfica inspirada en la música, la percusión y la identidad cultural de la fundación, integrando colores y elementos representativos para crear una imagen llamativa, reconocible y adaptable a sus redes sociales.</p>
+  </div>
 </section>
 
 <div class="pf-lightbox" id="pfLightbox"><img src="" alt=""><p></p></div>

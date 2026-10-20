@@ -619,6 +619,58 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
 <style>/* WhatsApp: único botón con el celeste Nautilus */
 .wa-float{background:#72b4c2!important;color:#050607!important;border-color:#72b4c2!important}.wa-float i{color:#050607!important}@media(max-width:700px){.wa-float{background:#72b4c2!important;color:#050607!important}}
 </style>
+
+<style>
+/* Portafolio destacado: brillo sutil y movimiento accesible */
+.portfolio-feature { margin: 34px 15px 42px; }
+.portfolio-feature-link {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
+  padding: clamp(24px, 4vw, 42px); color: #fff; text-decoration: none;
+  background: radial-gradient(ellipse at 12% 50%, rgba(114,180,194,.20), transparent 48%), linear-gradient(120deg,#10191c,#080b0c 62%,#111819);
+  border: 1px solid rgba(114,180,194,.52); border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.28), inset 0 0 28px rgba(114,180,194,.035);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+  animation: portfolioRise .8s cubic-bezier(.2,.75,.25,1) both;
+}
+.portfolio-feature-link::before {
+  content: ""; position: absolute; z-index: -1; top: -45%; left: -35%; width: 28%; height: 190%;
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.11),transparent);
+  transform: rotate(18deg); transition: left .7s ease;
+}
+.portfolio-feature-link:hover, .portfolio-feature-link:focus-visible {
+  transform: translateY(-5px); border-color: #9ce7f1;
+  box-shadow: 0 18px 44px rgba(28,115,132,.23), 0 0 0 3px rgba(114,180,194,.12);
+}
+.portfolio-feature-link:hover::before, .portfolio-feature-link:focus-visible::before { left: 115%; }
+.portfolio-feature-link:focus-visible { outline: 2px solid #9ce7f1; outline-offset: 4px; }
+ .portfolio-feature-icon {
+  width: clamp(128px, 18vw, 190px); aspect-ratio: 16 / 9; display: block; overflow: hidden;
+  border: 1px solid rgba(141,213,225,.6); border-radius: 12px; flex: 0 0 auto;
+  background: #050607; box-shadow: 0 8px 30px rgba(0,0,0,.42), 0 0 26px rgba(114,180,194,.2);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.portfolio-feature-icon img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.portfolio-feature-link:hover .portfolio-feature-icon { transform: rotate(-1.5deg) scale(1.035); box-shadow: 0 12px 36px rgba(0,0,0,.5), 0 0 32px rgba(114,180,194,.34); }
+.portfolio-feature-copy small { color: #8dd5e1; font-size: 10px; font-weight: 800; letter-spacing: 2.1px; }
+.portfolio-feature-copy h2 { margin: 7px 0 8px; color: #fff; font-size: clamp(19px,2.4vw,27px); line-height: 1.2; }
+.portfolio-feature-copy p { max-width: 650px; color: #c1ced0; font-size: 13px; line-height: 1.7; }
+.portfolio-feature-cta { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; color: #9ce7f1; font-size: 11px; font-weight: 800; letter-spacing: .8px; }
+.portfolio-feature-cta i { transition: transform .25s ease; }
+.portfolio-feature-link:hover .portfolio-feature-cta i { transform: translateX(5px); }
+@keyframes portfolioRise { from {opacity:0; transform:translateY(16px)} to {opacity:1; transform:translateY(0)} }
+@media (max-width: 680px) {
+  .portfolio-feature { margin: 26px 15px 34px; }
+  .portfolio-feature-link { grid-template-columns: auto 1fr; gap: 16px; padding: 22px 18px; }
+  .portfolio-feature-icon { width: min(42vw, 174px); border-radius: 10px; }
+  .portfolio-feature-copy p { font-size: 12px; }
+  .portfolio-feature-cta { grid-column: 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-feature-link, .portfolio-feature-link::before, .portfolio-feature-cta i { animation: none !important; transition: none !important; }
+}
+</style>
+
 </head>
 <body>
 <div id="site-loader" aria-label="Cargando Nautilus"><span class="loader-ring"></span><img decoding="async" class="loader-mark" src="imagenes/01-logo.jpg.png" alt="Nautilus" width="68" height="68"></div>
@@ -773,6 +825,19 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
     <a href="contactanos.html" class="btn-primary">CUÉNTANOS QUÉ NECESITAS <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
+<!-- PORTAFOLIO DE SERVICIOS -->
+<section class="portfolio-feature" aria-label="Portafolio de servicios Nautilus">
+  <a class="portfolio-feature-link" href="documentos/portafolio-servicios-nautilus.pdf" target="_blank" rel="noopener" type="application/pdf" aria-label="Abrir el portafolio de servicios Nautilus en una pestaña nueva">
+    <span class="portfolio-feature-icon"><img src="documentos/portada-portafolio-nautilus-preview.png" alt="Portada del portafolio de servicios Nautilus" loading="lazy"></span>
+    <span class="portfolio-feature-copy">
+      <small>NAUTILUS · PORTAFOLIO DE SERVICIOS</small>
+      <h2>Conoce todo lo que podemos crear contigo</h2>
+      <p>Descubre nuestra historia, misión, visión, servicios y formas de contacto en el portafolio completo.</p>
+    </span>
+    <span class="portfolio-feature-cta">VER PORTAFOLIO <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+  </a>
+</section>
+
 <!-- BANNER CTA -->
   <section class="cta-banner">
     <!-- IMAGEN IZQUIERDA -->
