@@ -677,29 +677,7 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
 <section class="pf-hero">
   <div class="nx-eyebrow" style="color:#72b4c2;font-size:12px;font-weight:700;letter-spacing:3px;margin-bottom:12px">✦ NUESTRO TRABAJO</div>
   <h1>Portafolio <span>Nautilus</span></h1>
-  <p>Una selección de soluciones visuales pensadas para comunicar mejor, ordenar la presencia de una marca y generar confianza.</p>
-</section>
-
-<section class="trust-strip">
-  <div><span class="trust-number">01</span><h3>Concepto</h3><p>Cada pieza comienza con una idea y una intención clara.</p></div>
-  <div><span class="trust-number">02</span><h3>Coherencia</h3><p>El sistema visual se mantiene reconocible en cada formato.</p></div>
-  <div><span class="trust-number">03</span><h3>Resultado</h3><p>Diseños listos para conectar y crecer contigo.</p></div>
-</section>
-<div class="pf-filters" id="pfFilters">
-  <button class="active" data-filter="all">Todos</button>
-  <button data-filter="identidad">Identidad visual</button>
-  <button data-filter="grafico">Diseño gráfico</button>
-  <button data-filter="digital">Diseño digital</button>
-  <button data-filter="marketing">Marketing visual</button>
-</div>
-
-<section class="pf-grid" id="pfGrid">
-    <div class="pf-item" data-cat="identidad" data-title="Sistema visual con propósito"><img src="imagenes/28-identidad-ciencia.webp" alt="Sistema visual con propósito" loading="lazy"><div class="pf-cap"><span>Identidad visual</span><h3>Sistema visual con propósito</h3><small>Dirección, color y tipografía alineados.</small></div></div>
-    <div class="pf-item" data-cat="grafico" data-title="Piezas que hacen visible tu idea"><img src="imagenes/29-grafico-ciencia.webp" alt="Piezas que hacen visible tu idea" loading="lazy"><div class="pf-cap"><span>Diseño gráfico</span><h3>Piezas que hacen visible tu idea</h3><small>Composición clara para comunicar mejor.</small></div></div>
-    <div class="pf-item" data-cat="digital" data-title="Experiencia digital clara"><img src="imagenes/30-digital-interface.webp" alt="Experiencia digital clara" loading="lazy"><div class="pf-cap"><span>Diseño digital</span><h3>Experiencia digital clara</h3><small>Interfaces pensadas para orientar y conectar.</small></div></div>
-    <div class="pf-item" data-cat="marketing" data-title="Campaña para conectar"><img src="imagenes/31-marketing-campana.webp" alt="Campaña para conectar" loading="lazy"><div class="pf-cap"><span>Marketing visual</span><h3>Campaña para conectar</h3><small>Concepto visual llevado a distintos formatos.</small></div></div>
-    <div class="pf-item" data-cat="marketing" data-title="Contenido con intención"><img src="imagenes/31-marketing-campana.webp" alt="Contenido con intención" loading="lazy"><div class="pf-cap"><span>Marketing visual</span><h3>Contenido con intención</h3><small>Mensajes visuales pensados para cada canal.</small></div></div>
-    <div class="pf-item" data-cat="identidad" data-title="Identidad lista para crecer"><img src="imagenes/32-cta-idea.webp" alt="Identidad lista para crecer" loading="lazy"><div class="pf-cap"><span>Identidad visual</span><h3>Identidad lista para crecer</h3><small>Una base visual preparada para expandirse.</small></div></div>
+  <p>Conoce dos proyectos destacados: un video para el Día de las Matemáticas y la identidad visual de la Fundación Tambosí.</p>
 </section>
 
 <!-- PROYECTO AUDIOVISUAL DESTACADO: debajo de la galería -->
@@ -714,7 +692,7 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
     <span class="pf-featured-kicker">Proyecto audiovisual · Educación</span>
     <h2 id="math-project-title">Día de las Matemáticas</h2>
     <p class="pf-featured-client">Cliente: I.E. Eustaquio Palacios</p>
-    <p>Una pieza animada que acerca las matemáticas a los estudiantes con referencias a π y Al‑Juarismi, junto a escenas de participación y aprendizaje. Un relato visual pensado para celebrar la curiosidad y hacer más cercana esta materia.</p>
+    <p>Un video que presenta las matemáticas de forma clara y entretenida. Con una propuesta visual dinámica, invita a los estudiantes a descubrir esta materia desde otra perspectiva.</p>
   </div>
 </section>
 
@@ -734,33 +712,7 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
   </div>
 </section>
 
-<div class="pf-lightbox" id="pfLightbox"><img alt=""><p></p></div>
 
-<script>
-/* Filtro por categoría y visor de imágenes del portafolio */
-(function () {
-  var btns = document.querySelectorAll('#pfFilters button');
-  var items = document.querySelectorAll('.pf-item');
-  btns.forEach(function (b) {
-    b.addEventListener('click', function () {
-      btns.forEach(function (x) { x.classList.remove('active'); });
-      b.classList.add('active');
-      var f = b.getAttribute('data-filter');
-      items.forEach(function (it) { it.classList.toggle('hide', f !== 'all' && it.getAttribute('data-cat') !== f); });
-    });
-  });
-  var lb = document.getElementById('pfLightbox');
-  items.forEach(function (it) {
-    it.addEventListener('click', function () {
-      lb.querySelector('img').src = it.querySelector('img').src;
-      lb.querySelector('p').textContent = it.getAttribute('data-title');
-      lb.classList.add('open');
-    });
-  });
-  lb.addEventListener('click', function () { lb.classList.remove('open'); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
-})();
-</script>
 
 <!-- FOOTER -->
  <!-- FOOTER -->
@@ -800,11 +752,11 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
             <div class="contact-list">
                 <div class="contact-item">
                     <i class="fa-regular fa-envelope"></i>
-                    <span>nautilusagency07@gmail.com</span>
+                    <a class="contact-link" href="mailto:nautilusagency07@gmail.com" aria-label="Enviar correo a nautilusagency07@gmail.com">nautilusagency07@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>+57 320 545 4084</span>
+                    <a class="contact-link" href="https://wa.me/573205454084?text=Hola%20Nautilus" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp al +57 320 545 4084">+57 320 545 4084</a>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>
@@ -1000,5 +952,9 @@ img,video,iframe { max-width:100%; }
 </style>
 <style id="nautilus-mobile-footer-fit">@media(max-width:760px){footer{width:calc(100% - 20px)!important;max-width:calc(100% - 20px)!important;margin-left:10px!important;margin-right:10px!important}footer>*,footer .footer-content>*{min-width:0}}</style>
 <style id="process-section-width-fix">.process-section{width:auto!important;max-width:100%;box-sizing:border-box}</style>
+<style id="clickable-contact-links">
+.contact-item a.contact-link,.info-data a.contact-link{display:inline-block;max-width:100%;color:inherit;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;text-underline-offset:4px;transition:color .18s ease}
+.contact-item a.contact-link:hover,.contact-item a.contact-link:focus-visible,.info-data a.contact-link:hover,.info-data a.contact-link:focus-visible{color:#72b4c2;text-decoration:underline}
+</style>
 </body>
 </html>

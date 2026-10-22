@@ -760,11 +760,11 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
             <div class="contact-list">
                 <div class="contact-item">
                     <i class="fa-regular fa-envelope"></i>
-                    <span>nautilusagency07@gmail.com</span>
+                    <a class="contact-link" href="mailto:nautilusagency07@gmail.com" aria-label="Enviar correo a nautilusagency07@gmail.com">nautilusagency07@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>+57 320 545 4084</span>
+                    <a class="contact-link" href="https://wa.me/573205454084?text=Hola%20Nautilus" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp al +57 320 545 4084">+57 320 545 4084</a>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>
@@ -1025,5 +1025,9 @@ img,video,iframe { max-width:100%; }
 @media(max-width:360px){.main-header,header.main-header{grid-template-columns:minmax(0,1fr) auto 38px;gap:7px}.main-header .btn-login{max-width:100px;font-size:8px}.main-header .nav-toggle{width:38px;height:38px}}
 </style>
 <style id="nautilus-mobile-footer-fit">@media(max-width:760px){footer{width:calc(100% - 20px)!important;max-width:calc(100% - 20px)!important;margin-left:10px!important;margin-right:10px!important}footer>*,footer .footer-content>*{min-width:0}}</style>
+<style id="clickable-contact-links">
+.contact-item a.contact-link,.info-data a.contact-link{display:inline-block;max-width:100%;color:inherit;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;text-underline-offset:4px;transition:color .18s ease}
+.contact-item a.contact-link:hover,.contact-item a.contact-link:focus-visible,.info-data a.contact-link:hover,.info-data a.contact-link:focus-visible{color:#72b4c2;text-decoration:underline}
+</style>
 </body>
 </html>
