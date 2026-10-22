@@ -718,13 +718,11 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
         </div>
 
         <div class="services-hero-image">
-    <div class="hero-image-wrapper">
-           <div class="hero-image-wrapper">
-  <img src="imagenes/06-servicios.jpg.png" alt="Ilustración principal" class="hero-art">
-</div>
-
+            <div class="hero-image-wrapper">
+                <img src="imagenes/06-servicios.jpg.png" alt="Ilustración principal" class="hero-art">
+            </div>
+        </div>
     </section>
-
     <!-- GRID DE SERVICIOS -->
     <div class="services-grid-container">
         
@@ -897,7 +895,7 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
             <div class="contact-list">
                 <div class="contact-item">
                     <i class="fa-regular fa-envelope"></i>
-                    <span>HolaNautilus@gmail.com</span>
+                    <span>nautilusagency07@gmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
@@ -932,7 +930,7 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
     
         <p>En Nautilus Agencia Multimedial usamos los datos que compartes para responder solicitudes, preparar propuestas y coordinar proyectos de comunicación visual.</p>
     <p>Nautilus recopila únicamente los datos que usted nos comparte voluntariamente (nombre, correo, teléfono y mensaje) a través del formulario de contacto o por WhatsApp, con el fin de responder su solicitud y enviarle propuestas relacionadas con nuestros servicios.</p>
-    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a HolaNautilus@gmail.com.</p>
+    <p>No vendemos ni cedemos sus datos a terceros. Usted puede solicitar en cualquier momento la consulta, corrección o eliminación de su información escribiendo a nautilusagency07@gmail.com.</p>
     <button type="button" data-close>ACEPTAR</button>
   </div>
 </div>
@@ -986,3 +984,116 @@ footer{overflow:hidden}footer img{max-width:100%;height:auto}footer a,footer li,
   setTimeout(hideNautilusLoader,1400);
 })();
 </script>
+
+<style id="nautilus-mobile-polish">
+html { scroll-padding-top: 82px; }
+body { max-width:100%; overflow-x:hidden; }
+*,*::before,*::after { box-sizing:border-box; }
+img,video,iframe { max-width:100%; }
+@media (max-width:760px) {
+  body { overflow-x:hidden; }
+  main,section,article,figure,form,footer,header { min-width:0; }
+  .main-container,.container,.section-container,.content-container { width:min(100% - 28px,100%); max-width:100%; margin-left:auto; margin-right:auto; }
+  .main-header,header.main-header { width:100%; max-width:100%; padding:12px 16px !important; gap:12px; }
+  .brand-container,.header-actions,.main-nav { min-width:0; }
+  .header-logo-img { max-width:148px; height:auto; max-height:42px; }
+  .hero-section,.hero-contact-section,.pf-hero,.visual-story,.trust-strip,.contact-grid,.contact-tools,.nx-cta-visual { min-width:0; }
+  .hero-contact-section,.visual-story,.visual-story.reverse { display:grid; grid-template-columns:minmax(0,1fr); gap:20px; }
+  .hero-image-wrapper,.hero-contact-section .hero-image-wrapper { width:100% !important; max-width:100%; height:auto !important; aspect-ratio:16 / 9; flex:0 1 auto; }
+  .hero-art,.hero-image-wrapper img { display:block; width:100%; height:100%; object-fit:contain !important; object-position:center; }
+  .visual-story-image { width:100%; min-height:0 !important; height:auto; aspect-ratio:16 / 10; }
+  .visual-story-image img { display:block; width:100%; height:100%; min-height:0 !important; object-fit:contain !important; }
+  .nx-cards,.service-grid,.services-grid,.faq-list,.pf-grid,.process-grid,.contact-grid,.contact-tools,.footer-content,.nx-cta-visual { grid-template-columns:minmax(0,1fr) !important; }
+  .nx-card,.client-card,.service-card,.pf-item,.form-card,.info-item,.map-card,.qr-card,.login-card { min-width:0; max-width:100%; height:auto; }
+  .nx-card,.client-card,.service-card,.faq-list details { overflow-wrap:anywhere; }
+  .client-card { min-height:0 !important; align-items:flex-start; }
+  .client-card p,.client-card h3,.client-card .client-role { max-width:100%; white-space:normal; overflow-wrap:anywhere; }
+  .client-avatar { flex:0 0 54px; width:54px; height:54px; object-fit:cover; }
+  .service-card-media { width:100%; height:auto !important; aspect-ratio:16 / 10; min-height:0; background:#080b0c; }
+  .service-card-media img { display:block; width:100%; height:100%; object-fit:contain !important; }
+  .pf-item { aspect-ratio:auto !important; }
+  .pf-item img { display:block; width:100%; height:auto !important; max-height:none; object-fit:contain !important; }
+  .pf-cap { position:relative; inset:auto; opacity:1; padding:14px; }
+  .contact-grid { gap:22px !important; }
+  .right-col,.left-col,.right-col .form-card { width:100%; min-width:0; }
+  .contact-form { display:grid; grid-template-columns:minmax(0,1fr) !important; }
+  .contact-form input,.contact-form textarea,.contact-form button { width:100%; min-width:0; grid-column:auto !important; }
+  .contact-support-band { grid-template-columns:minmax(0,1fr) !important; }
+  .support-pill { border-left:0 !important; border-top:1px solid rgba(114,180,194,.28); }
+  .map-frame { display:block; width:100%; min-height:250px; }
+  .qr-card img { display:block; width:min(100%,220px); height:auto; margin-inline:auto; object-fit:contain; }
+  .hero-title,.hero-section h1,.pf-hero h1 { max-width:100%; font-size:clamp(1.8rem,8vw,2.65rem); line-height:1.12; overflow-wrap:anywhere; }
+  .cta-box { width:100%; padding:20px; gap:18px; align-items:flex-start; }
+  .cta-left { align-items:flex-start; gap:14px; }
+  .cta-right { width:100%; align-items:stretch; }
+  .footer-content { gap:24px !important; }
+  .footer-col,.footer-brand-col { min-width:0; }
+  .footer-col a,.footer-col p,.contact-item-footer span { overflow-wrap:anywhere; }
+  button,a { touch-action:manipulation; }
+}
+@media (max-width:480px) {
+  .main-container,.container,.section-container,.content-container { width:calc(100% - 24px); }
+  .main-header,header.main-header { padding-inline:12px !important; }
+  .login-card,.form-card { padding:20px 16px !important; border-radius:12px; }
+  .hero-title,.hero-section h1,.pf-hero h1 { font-size:clamp(1.7rem,8vw,2.2rem); }
+  .btn-primary,.btn-danger,.btn-submit,.btn-login,.btn-cta-action { max-width:100%; white-space:normal; }
+}
+</style>
+<style id="nautilus-mobile-layout-fixes">
+@media (max-width:900px) {
+ .main-header .user-actions,.main-header .header-actions { order:2; margin-left:auto; min-width:0; }
+ .main-header .nav-toggle { order:3; flex:0 0 40px; }
+ .main-header .main-nav { order:4; flex-basis:100%; min-width:0; }
+ .main-header .btn-login { max-width:clamp(108px,28vw,170px); padding:8px 10px; font-size:10px; }
+}
+@media (max-width:600px) {
+ .hero-buttons { display:flex; flex-direction:column; align-items:stretch; gap:12px; width:100%; }
+ .hero-buttons>a { width:100%; margin:0 !important; text-align:center; justify-content:center; }
+ .process-section { width:auto !important; margin:10px !important; padding:38px 16px !important; }
+ .process-flow { display:grid !important; grid-template-columns:minmax(0,1fr); gap:12px; }
+ .process-step { width:100% !important; min-width:0 !important; }
+ .flow-arrow { margin:0 !important; transform:rotate(90deg); line-height:1; }
+ .step-icon-box { overflow:visible; }
+ .client-reviews-grid { grid-template-columns:minmax(0,1fr) !important; }
+ .client-stars { letter-spacing:2px !important; }
+ .nx-cta-visual .cta-visual-image { width:100%; aspect-ratio:16/9; }
+ .nx-cta-visual .cta-visual-image img { height:100%; object-fit:contain !important; }
+ .service-card { padding:22px 18px !important; }
+ .service-card-top { align-items:flex-start; gap:14px !important; }
+ .service-info { min-width:0; }
+ .service-card-bottom { display:flex; flex-wrap:wrap; align-items:flex-start; gap:14px; }
+ .service-list { min-width:0; flex:1 1 140px; }
+ .btn-ver-servicio,.cta-btn,.portfolio-feature-cta { white-space:normal !important; max-width:100%; }
+ .portfolio-feature-cta { grid-column:1/-1 !important; width:100%; justify-content:center; }
+ .trabajos-grid { grid-template-columns:minmax(0,1fr) !important; }
+ .trabajo-img-box { height:auto !important; aspect-ratio:4/3; }
+ .trabajo-img-box img { width:100%; height:100%; object-fit:contain !important; }
+ .valores-grid { grid-template-columns:minmax(0,1fr) !important; }
+ .origin-signature { flex-wrap:wrap; gap:8px 14px; }
+ .origin-signature small { min-width:0; letter-spacing:.08em; overflow-wrap:anywhere; }
+ .pf-featured-media video { width:100%; aspect-ratio:16/9 !important; max-height:none !important; object-fit:contain; }
+ .pf-lightbox p { max-width:92vw; overflow-wrap:anywhere; text-align:center; }
+ .contact-form { grid-template-columns:minmax(0,1fr) !important; }
+}
+.register-prompt { margin:16px 0 0; color:#bdc8ca; font-size:.86rem; line-height:1.6; }
+.register-prompt a { color:#72b4c2; font-weight:800; text-decoration:none; }
+.register-prompt a:hover { text-decoration:underline; }
+</style>
+<style id="nautilus-mobile-header-polish">
+@media(max-width:760px){
+ .main-header,header.main-header{display:grid!important;grid-template-columns:minmax(0,1fr) auto 40px;align-items:center;gap:8px 10px;padding:10px 12px!important;}
+ .main-header .brand-container{grid-column:1;grid-row:1;display:flex;flex-direction:row;align-items:center;gap:8px;min-width:0;}
+ .main-header .header-actions,.main-header .user-actions{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:flex-end;gap:0;margin:0;min-width:0;}
+ .main-header .user-icon{display:none;}
+ .main-header .nav-toggle{grid-column:3;grid-row:1;display:flex;align-items:center;justify-content:center;order:initial;margin:0;width:40px;height:40px;flex:none;}
+ .main-header .main-nav{grid-column:1/-1;grid-row:2;order:initial;flex-basis:auto;width:100%;min-width:0;}
+ .main-header .header-logo-img{width:38px;height:38px;max-width:38px;object-fit:contain;}
+ .main-header .logo-text h1,.main-header .logo-text h2{font-size:clamp(15px,4vw,19px);margin:0;white-space:nowrap;}
+ .main-header .logo-text span{font-size:9px;white-space:nowrap;}
+ .main-header .btn-login{display:inline-flex;align-items:center;justify-content:center;width:auto;max-width:clamp(104px,28vw,130px);min-height:40px;padding:7px 9px;font-size:9px;line-height:1.2;white-space:normal;}
+}
+@media(max-width:360px){.main-header,header.main-header{grid-template-columns:minmax(0,1fr) auto 38px;gap:7px}.main-header .btn-login{max-width:100px;font-size:8px}.main-header .nav-toggle{width:38px;height:38px}}
+</style>
+<style id="nautilus-mobile-footer-fit">@media(max-width:760px){footer{width:calc(100% - 20px)!important;max-width:calc(100% - 20px)!important;margin-left:10px!important;margin-right:10px!important}footer>*,footer .footer-content>*{min-width:0}}</style>
+</body>
+</html>
