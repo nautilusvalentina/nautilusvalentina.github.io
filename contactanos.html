@@ -625,6 +625,8 @@ body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index
 .map-link { display:inline-flex; margin-top:12px; color:var(--cyan-soft); font-weight:700; text-decoration:none; }
 .qr-card { text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; }
 .qr-card img { width:min(190px,80%); background:#fff; padding:10px; border-radius:4px; margin:12px auto; }
+.qr-code-box { width:min(210px,80%); aspect-ratio:1; box-sizing:border-box; display:grid; place-items:center; overflow:hidden; background:#fff; padding:10px; border-radius:4px; margin:12px auto; color:#222; font-size:.75rem; }
+.qr-code-box img,.qr-code-box canvas { display:block; width:100% !important; height:auto !important; max-width:100%; margin:0 auto; background:#fff; padding:0; border-radius:0; image-rendering:pixelated; }
 .qr-card a { color:var(--cyan-soft); font-size:.8rem; text-decoration:none; }
 .section-lead { max-width:680px; color:#bcc7c9; line-height:1.8; margin:0 auto 30px; text-align:center; }
 .card-section, .nx-section, .process-section, .pf-hero { overflow:hidden; }
@@ -840,8 +842,10 @@ body .wa-float i{display:block!important;visibility:visible!important;color:#050
   <div class="qr-card">
     <h3>Visita nuestra página</h3>
     <p>Escanea el código para abrir directamente la página de Nautilus.</p>
-    <a href="https://8100-ihfysy6hnv1bdoexrplp2-00344511.us5.manus.computer/index.html" target="_blank" rel="noopener"><img src="imagenes/20-qr-agencia.png" alt="Código QR para visitar la página de Nautilus" loading="lazy"></a>
-    <a href="https://8100-ihfysy6hnv1bdoexrplp2-00344511.us5.manus.computer/index.html" target="_blank" rel="noopener">TOCA O ESCANEA PARA ENTRAR</a>
+    <a id="nautilus-qr-link" href="index.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir la página principal de Nautilus">
+      <div id="nautilus-qr" class="qr-code-box" role="img" aria-label="Código QR para abrir la página principal de Nautilus">Preparando código QR…</div>
+    </a>
+    <a id="nautilus-page-link" href="index.html" target="_blank" rel="noopener noreferrer">TOCA O ESCANEA PARA ENTRAR</a>
   </div>
 </section>
 <section class="visual-story reverse" style="margin-top:28px">
@@ -1123,5 +1127,50 @@ img,video,iframe { max-width:100%; }
 .contact-item a.contact-link,.info-data a.contact-link{display:inline-block;max-width:100%;color:inherit;text-decoration:none;overflow-wrap:anywhere;cursor:pointer;text-underline-offset:4px;transition:color .18s ease}
 .contact-item a.contact-link:hover,.contact-item a.contact-link:focus-visible,.info-data a.contact-link:hover,.info-data a.contact-link:focus-visible{color:#72b4c2;text-decoration:underline}
 </style>
+
+<script src="js/qrcode.min.js"></script>
+<script>
+(function () {
+  var qrBox = document.getElementById('nautilus-qr');
+  var qrLink = document.getElementById('nautilus-qr-link');
+  var pageLink = document.getElementById('nautilus-page-link');
+  if (!qrBox || !qrLink || !pageLink) return;
+
+  function showMessage(message) {
+    qrBox.textContent = message;
+    qrBox.setAttribute('role', 'status');
+    qrBox.setAttribute('aria-label', message);
+  }
+
+  if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
+    showMessage('Publica el sitio en una dirección web para generar el QR.');
+    return;
+  }
+  if (typeof window.QRCode !== 'function') {
+    showMessage('No se pudo cargar el generador del QR. Usa el enlace para abrir la página.');
+    return;
+  }
+
+  try {
+    var destination = new URL('./index.html', window.location.href).href;
+    qrLink.href = destination;
+    pageLink.href = destination;
+    qrBox.textContent = '';
+    qrBox.setAttribute('role', 'img');
+    qrBox.setAttribute('aria-label', 'Código QR para abrir ' + destination);
+    new window.QRCode(qrBox, {
+      text: destination,
+      width: 190,
+      height: 190,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: window.QRCode.CorrectLevel.M
+    });
+  } catch (error) {
+    showMessage('No se pudo generar el QR. Usa el enlace para abrir la página.');
+  }
+})();
+</script>
+
 </body>
 </html>
