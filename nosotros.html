@@ -2123,6 +2123,16 @@
         }
       }
     </style>
+
+<style id="document-book-viewer-styles">
+.document-book{display:flex;flex-direction:column;height:100%;padding:62px 22px 18px;background:radial-gradient(circle at 50% 20%,rgba(114,180,194,.12),transparent 55%),#080e10}.document-book-stage{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;overflow:hidden;padding:10px}.document-book-page{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;background:#fff;box-shadow:0 18px 45px rgba(0,0,0,.58);opacity:0;transform:translateY(8px) scale(.985);transition:opacity .22s ease,transform .28s ease}.document-book-page.is-visible{opacity:1;transform:none}.document-book-controls{display:flex;align-items:center;justify-content:center;gap:22px;padding-top:14px;color:#d7f8fb;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.document-book-controls button{width:38px;height:34px;border:1px solid rgba(141,208,218,.6);border-radius:7px;background:#102226;color:#e8fdff;font-size:1.1rem;cursor:pointer;transition:background .2s ease,transform .2s ease}.document-book-controls button:hover:not(:disabled){background:#72b4c2;color:#071012;transform:translateY(-2px)}.document-book-controls button:disabled{cursor:not-allowed;opacity:.3}.document-modal-heading{pointer-events:none}.document-modal-heading a{pointer-events:auto}@media(max-width:760px){.document-book{padding:54px 8px 12px}.document-book-stage{padding:5px}.document-book-controls{gap:14px;font-size:.62rem}}
+</style>
+<style id="brief-document-viewer-styles">
+.brief-showcase{position:relative;isolation:isolate;margin:22px 15px;padding:clamp(22px,5vw,62px);overflow:hidden;border:1px solid rgba(114,180,194,.38);border-radius:18px;background:radial-gradient(ellipse at 12% 8%,rgba(114,180,194,.17),transparent 38%),linear-gradient(140deg,#071013 0%,#111c1f 52%,#070b0c 100%);box-shadow:0 22px 70px rgba(0,0,0,.28)}
+.brief-showcase-inner{display:grid;grid-template-columns:minmax(270px,.78fr) minmax(0,1fr);align-items:center;gap:clamp(28px,6vw,86px);width:min(100%,1180px);margin:auto}.brief-cover-link{display:block;width:100%;max-width:500px;margin:auto;border:0;padding:0;background:transparent;cursor:pointer;perspective:1000px;text-align:left}.brief-cover-frame{position:relative;display:block;padding:9px;border:1px solid rgba(177,235,242,.38);border-radius:12px;background:linear-gradient(145deg,rgba(146,213,223,.19),rgba(5,10,12,.9));box-shadow:0 24px 48px rgba(0,0,0,.48),0 0 34px rgba(114,180,194,.14);transform:rotate(-1.3deg);transition:transform .35s ease,box-shadow .35s ease}.brief-cover-link:hover .brief-cover-frame,.brief-cover-link:focus-visible .brief-cover-frame{transform:rotate(0) translateY(-5px);box-shadow:0 30px 60px rgba(0,0,0,.52),0 0 44px rgba(114,180,194,.28)}.brief-cover-frame img{display:block;width:100%;height:auto;aspect-ratio:1200/848;object-fit:cover;border-radius:5px;background:#000}.brief-cover-hint{position:absolute;right:20px;bottom:19px;display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid rgba(183,239,245,.46);border-radius:999px;background:rgba(4,12,14,.88);backdrop-filter:blur(8px);color:#e8fdff;font-size:.7rem;font-weight:700;opacity:0;transform:translateY(6px);transition:opacity .25s ease,transform .25s ease}.brief-cover-link:hover .brief-cover-hint,.brief-cover-link:focus-visible .brief-cover-hint{opacity:1;transform:none}.brief-copy{min-width:0}.brief-kicker{display:flex;align-items:center;gap:9px;margin:0 0 13px;color:#8dd0da;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.brief-copy h2{max-width:16ch;margin:0 0 14px;font-size:clamp(1.8rem,4vw,3.05rem);line-height:1.08;letter-spacing:-.035em}.brief-copy>p:not(.brief-kicker){max-width:50ch;margin:0;color:#c0ccce;line-height:1.75}.brief-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin-top:24px}.brief-open-button{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:48px;padding:12px 17px;border:1px solid #79c8d5;border-radius:8px;background:linear-gradient(105deg,#72b4c2,#92d5df);box-shadow:0 8px 28px rgba(76,168,184,.2);color:#061012;font-size:.77rem;font-weight:800;letter-spacing:.05em;text-align:center;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}.brief-open-button:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(76,168,184,.3);filter:brightness(1.06)}.brief-direct-link{color:#a9dbe2;font-size:.75rem;text-underline-offset:4px;overflow-wrap:anywhere}.document-modal-box{overflow:hidden;border-radius:14px}.document-modal-heading{position:absolute;z-index:1;top:0;left:0;right:0;height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 62px 0 18px;background:linear-gradient(180deg,rgba(5,12,14,.98),rgba(5,12,14,.72),transparent);color:#e9fdff;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}.document-modal-heading a{pointer-events:auto;color:#9ce4ed;text-decoration:none;font-size:.68rem;letter-spacing:.04em}.document-modal-heading a:hover{text-decoration:underline}.document-modal iframe{padding-top:0}
+@media(max-width:760px){.brief-showcase{margin:14px 10px;padding:22px 17px;border-radius:14px}.brief-showcase-inner{grid-template-columns:minmax(0,1fr);gap:24px}.brief-cover-link{width:min(100%,440px)}.brief-copy h2{max-width:19ch;font-size:clamp(1.7rem,7vw,2.25rem)}.brief-actions{align-items:stretch;flex-direction:column;gap:12px}.brief-open-button{width:100%;min-height:48px}.brief-direct-link{text-align:center}.brief-cover-hint{opacity:1;transform:none}.document-modal-heading{font-size:.66rem;padding-left:12px}.document-modal-heading a{font-size:.58rem}}
+@media(prefers-reduced-motion:reduce){.brief-cover-frame,.brief-cover-hint,.brief-open-button{transition:none!important}}
+</style>
   </head>
   <body>
     <div id="site-loader" aria-label="Cargando Nautilus">
@@ -2308,9 +2318,30 @@
             Una pieza sencilla, elegante y pensada para que cada conversación
             pueda convertirse en una nueva oportunidad.
           </p>
-          <span class="business-card-link">Ver tarjeta completa</span>
+          <span class="business-card-link">Ver tarjeta en Google</span>
         </span>
       </button>
+    </section>
+
+    <!-- BRIEF DE NAUTILUS -->
+    <section class="brief-showcase" id="briefNautilus" aria-labelledby="briefTitle">
+      <div class="brief-showcase-inner">
+        <button class="brief-cover-link document-trigger" type="button" data-document-modal="briefModal" aria-label="Abrir el brief de Nautilus en Google">
+          <span class="brief-cover-frame">
+            <img src="imagenes/brief-nautilus-preview.jpg" alt="Portada del Brief de Nautilus" width="1200" height="848" loading="lazy" decoding="async">
+            <span class="brief-cover-hint"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver brief</span>
+          </span>
+        </button>
+        <div class="brief-copy">
+          <p class="brief-kicker"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Brief creativo</p>
+          <h2 id="briefTitle">Una idea clara abre nuevas posibilidades.</h2>
+          <p>Conoce el brief de Nautilus y descubre el enfoque, la personalidad y la dirección creativa que hacen parte de nuestra agencia multimedial.</p>
+          <div class="brief-actions">
+            <button class="brief-open-button document-trigger" type="button" data-document-modal="briefModal"><i class="fa-brands fa-google-drive" aria-hidden="true"></i><span>Ver brief en Google</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+            <a class="brief-direct-link" href="documentos/brief-nautilus.pdf" target="_blank" rel="noopener noreferrer">o abrir el PDF directamente</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- MANUAL DE MARCA -->
@@ -2321,13 +2352,13 @@
           <h2 id="manualTitle">La esencia de Nautilus, en cada detalle.</h2>
           <p>Explora el manual operativo de marca: una guía visual sobre la identidad, el tono y el universo de Nautilus.</p>
           <div class="manual-actions">
-            <a class="manual-open-google" data-google-manual href="documentos/manual-nautilus.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir el manual de Nautilus en el visor de Google">
+            <a class="manual-open-google" data-google-document="documentos/manual-nautilus.pdf" href="documentos/manual-nautilus.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir el manual de Nautilus en el visor de Google">
               <i class="fa-brands fa-google-drive" aria-hidden="true"></i><span>Abrir manual en Google</span><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
             <a class="manual-direct-link" href="documentos/manual-nautilus.pdf" target="_blank" rel="noopener noreferrer">o abrir el PDF directamente</a>
           </div>
         </div>
-        <a class="manual-cover-link" data-google-manual href="documentos/manual-nautilus.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver portada y abrir el manual de Nautilus en Google">
+        <a class="manual-cover-link" data-google-document="documentos/manual-nautilus.pdf" href="documentos/manual-nautilus.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver portada y abrir el manual de Nautilus en Google">
           <span class="manual-cover-frame"><img src="imagenes/portada-manual-nautilus.png" alt="Portada del Manual Operativo de Marca Nautilus" width="1400" height="990" loading="eager" fetchpriority="high" decoding="async"><span class="manual-cover-hint"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver manual</span></span>
         </a>
       </div>
@@ -2677,52 +2708,76 @@
       </div>
     </div>
 
-    <div
-      class="document-modal"
-      id="tarjetaModal"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Tarjeta de presentación de Nautilus"
-      aria-hidden="true"
-    >
+    <div class="document-modal" id="tarjetaModal" role="dialog" aria-modal="true" aria-label="Tarjeta de presentación de Nautilus" aria-hidden="true" data-document-url="documentos/tarjeta-de-presentacion-nautilus.pdf" data-preview-path="imagenes/documentos-preview/tarjeta/page-%02d.jpg" data-preview-pages="2">
       <div class="document-modal-box">
-        <button
-          class="document-modal-close"
-          type="button"
-          data-close-document
-          aria-label="Cerrar tarjeta"
-        >
-          &times;
-        </button>
-        <iframe
-          src="documentos/tarjeta-de-presentacion-nautilus.pdf"
-          title="Tarjeta de presentación de Nautilus"
-        ></iframe>
+        <div class="document-modal-heading"><span>Tarjeta de presentación</span><a class="document-modal-google" data-google-open target="_blank" rel="noopener noreferrer">Abrir en Google <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+        <button class="document-modal-close" type="button" data-close-document aria-label="Cerrar tarjeta">&times;</button>
+        <div class="document-book" role="group" aria-label="Visor de páginas de la tarjeta">
+          <div class="document-book-stage"><img class="document-book-page" alt="Página de la tarjeta de presentación"></div>
+          <div class="document-book-controls"><button type="button" class="document-book-prev" data-book-prev aria-label="Página anterior">←</button><span class="document-book-count" aria-live="polite">Página 1 de 2</span><button type="button" class="document-book-next" data-book-next aria-label="Página siguiente">→</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="document-modal" id="briefModal" role="dialog" aria-modal="true" aria-label="Brief de Nautilus" aria-hidden="true" data-document-url="documentos/brief-nautilus.pdf" data-preview-path="imagenes/documentos-preview/brief/page-%02d.jpg" data-preview-pages="9">
+      <div class="document-modal-box">
+        <div class="document-modal-heading"><span>Brief de Nautilus</span><a class="document-modal-google" data-google-open target="_blank" rel="noopener noreferrer">Abrir en Google <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+        <button class="document-modal-close" type="button" data-close-document aria-label="Cerrar brief">&times;</button>
+        <div class="document-book" role="group" aria-label="Visor de páginas del brief">
+          <div class="document-book-stage"><img class="document-book-page" alt="Página del brief de Nautilus"></div>
+          <div class="document-book-controls"><button type="button" class="document-book-prev" data-book-prev aria-label="Página anterior">←</button><span class="document-book-count" aria-live="polite">Página 1 de 9</span><button type="button" class="document-book-next" data-book-next aria-label="Página siguiente">→</button></div>
+        </div>
       </div>
     </div>
     <script>
       (function () {
-        var documentModal = document.getElementById("tarjetaModal");
-        if (!documentModal) return;
-        var openButton = document.querySelector(
-          "[data-document-modal='tarjetaModal']",
-        );
-        var closeButton = documentModal.querySelector("[data-close-document]");
-        function closeDocument() {
-          documentModal.classList.remove("open");
-          documentModal.setAttribute("aria-hidden", "true");
+        function googleViewer(url) {
+          var absolute = new URL(url, window.location.href).href;
+          return "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(absolute);
         }
-        if (openButton)
-          openButton.addEventListener("click", function () {
-            documentModal.classList.add("open");
-            documentModal.setAttribute("aria-hidden", "false");
+        document.querySelectorAll(".document-modal").forEach(function (modal) {
+          var url = modal.getAttribute("data-document-url");
+          var viewer = googleViewer(url);
+          var frame = modal.querySelector("iframe");
+          var book = modal.querySelector(".document-book");
+          var pageImage = modal.querySelector(".document-book-page");
+          var count = modal.querySelector(".document-book-count");
+          var prev = modal.querySelector("[data-book-prev]");
+          var next = modal.querySelector("[data-book-next]");
+          var openGoogle = modal.querySelector("[data-google-open]");
+          var close = modal.querySelector("[data-close-document]");
+          var total = Number(modal.getAttribute("data-preview-pages")) || 1;
+          var template = modal.getAttribute("data-preview-path");
+          var current = 1;
+          function showPage(n) {
+            current = Math.max(1, Math.min(total, n));
+            if (pageImage && template) {
+              pageImage.classList.remove("is-visible");
+              pageImage.src = template.replace("%02d", String(current).padStart(2, "0"));
+              pageImage.alt = "Página " + current + " del documento";
+              pageImage.onload = function () { pageImage.classList.add("is-visible"); };
+            }
+            if (count) count.textContent = "Página " + current + " de " + total;
+            if (prev) prev.disabled = current === 1;
+            if (next) next.disabled = current === total;
+          }
+          function closeDocument() {
+            modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
+            if (frame) frame.src = "about:blank";
+          }
+          document.querySelectorAll("[data-document-modal='" + modal.id + "']").forEach(function (trigger) {
+            trigger.addEventListener("click", function () {
+              showPage(1);
+              if (openGoogle) openGoogle.href = viewer;
+              modal.classList.add("open");
+              modal.setAttribute("aria-hidden", "false");
+            });
           });
-        closeButton.addEventListener("click", closeDocument);
-        documentModal.addEventListener("click", function (event) {
-          if (event.target === documentModal) closeDocument();
-        });
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape") closeDocument();
+          if (prev) prev.addEventListener("click", function () { showPage(current - 1); });
+          if (next) next.addEventListener("click", function () { showPage(current + 1); });
+          if (close) close.addEventListener("click", closeDocument);
+          modal.addEventListener("click", function (event) { if (event.target === modal) closeDocument(); });
+          document.addEventListener("keydown", function (event) { if (event.key === "Escape" && modal.classList.contains("open")) closeDocument(); });
         });
       })();
       /* === NAUTILUS v2: menú móvil, modales legales y animaciones al hacer scroll === */
@@ -2907,7 +2962,7 @@ img,video,iframe { max-width:100%; }
 (function(){
   var pdfUrl = new URL("documentos/manual-nautilus.pdf", window.location.href).href;
   var googleViewer = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(pdfUrl);
-  document.querySelectorAll("[data-google-manual]").forEach(function(link){ link.href = googleViewer; });
+  document.querySelectorAll("[data-google-document]").forEach(function(link){ link.href = googleViewer; });
 })();
 </script>
 <style id="manual-showcase-and-mobile-fixes">
